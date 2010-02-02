@@ -1,0 +1,7 @@
+*.pyc
+*~
+*swp
+*.sqlite
+*.log
+.DS_Store
+local_settings.py
