@@ -1,0 +1,43 @@
+# SmallActsManifesto.org
+
+This project contains the source code for the [SmallActsManifesto.org][sam] website.
+
+## Development Environment
+
+1. Create a [Virtualenv][v] for the project:
+
+        mkdir -p ~/pythoncampus
+        cd ~/pythoncampus
+        virtualenv --no-site-packages --unzip-setuptools .
+        source ./bin/activate
+    
+2. Install [Pip][p], [iPython][ip] and [Django][d]:
+
+    	easy_install -U pip
+    	pip install ipython
+    	pip install django
+
+3. Clone your forked repository:
+
+    	git clone git@github.com:[YOUR NAME]/smallactsmanifesto.git src
+    	cd src
+
+4. Change whatever you want!
+
+## Dependencies
+
+* [Django][d]
+* [DreamHost][dh]
+
+## License
+
+This code is free to be used under the terms of the [MIT license][mit].
+
+
+[sam]:	http://smallactsmanifesto.org
+[d]:	http://djangoproject.org
+[dh]:	http://dreamhost.com
+[v]:	http://pypi.python.org/pypi/virtualenv
+[p]:	http://pypi.python.org/pypi/pip
+[ip]:	http://ipython.scipy.org/moin/
+[mit]:	http://www.opensource.org/licenses/mit-license.php
