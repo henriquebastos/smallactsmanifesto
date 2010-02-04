@@ -6,8 +6,8 @@ This project contains the source code for the [SmallActsManifesto.org][sam] webs
 
 1. Create a [Virtualenv][v] for the project:
 
-        mkdir -p ~/pythoncampus
-        cd ~/pythoncampus
+        mkdir -p ~/smallactsmanifesto
+        cd ~/smallactsmanifesto
         virtualenv --no-site-packages --unzip-setuptools .
         source ./bin/activate
     
