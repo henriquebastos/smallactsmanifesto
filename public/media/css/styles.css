@@ -159,6 +159,66 @@ ul#members li {
 }
 
 /*
+Forms
+*/
+
+form {
+  margin: 20px 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 20px;
+}
+
+form div {
+  padding: 0 0 10px 0;
+}
+
+form .textfield {
+  font-size: 1.4em;
+  padding: 2px;
+  display: block;
+  width: 400px;
+}
+
+.error {
+  color: #900;
+}
+
+form p {
+  margin: -45px 0 0 440px;
+  padding: 8px;
+  width: 300px;
+  position: absolute;
+  border: 1px solid #033649;
+  background-color: #036564;
+  color: #fff;
+  font-size: .9em;
+  font-family: Arial, Helvetica, Sans-Serif;
+}
+
+form p em {
+  font-size: 1.2em;
+  display: block;
+}
+
+.info_label {
+  display: none;
+}
+
+.button {
+  width: 200px;
+  text-align: center;
+  padding: 4px;
+  font-size: 1.4em;
+  background-color: #031634;
+  color: #fff;
+  border: none;
+}
+
+/*
 Footer
 */
 

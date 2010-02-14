@@ -1,12 +1,18 @@
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.core.urlresolvers import reverse
+from django.conf import settings
 
 from forms import SignatoryForm
 
 def new(request):
     form = SignatoryForm()
-    return render_to_response('signatures/form.html', {'form': form})
+    return render_to_response('signatures/form.html', {'form': form, 'MEDIA_URL': settings.MEDIA_URL})
 
 def create(request):
-    return HttpResponse("Create")
+    form = SignatoryForm(request.POST)
+    try:
+        form.save()
+    except ValueError:
+        return render_to_response('signatures/form.html', {'form': form, 'MEDIA_URL': settings.MEDIA_URL})
+    return render_to_response('signatures/signed.html', {'MEDIA_URL': settings.MEDIA_URL})
