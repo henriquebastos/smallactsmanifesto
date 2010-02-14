@@ -1,6 +1,8 @@
 # -*- coding UTF-8 -*-
 from django.db import models
 
+from utils import generate_confirmation_key
+
 
 class Signatory(models.Model):
     """
@@ -22,3 +24,9 @@ class Signatory(models.Model):
     def __unicode__(self):
         return "%s - %s" % (self.name, self.email)
 
+    def save(self, *args, **kwargs):
+        # create a confirmation_key
+        if not self.confirmation_key:
+            self.confirmation_key = generate_confirmation_key(self.email)
+
+        return super(Signatory, self).save(*args, **kwargs)
