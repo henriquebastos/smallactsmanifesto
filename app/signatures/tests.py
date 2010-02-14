@@ -11,7 +11,8 @@ def factory(**kwargs):
     param = dict(name="Henrique Bastos", 
                  email="henrique@bastos.net",
                  url="http://henriquebastos.net", 
-                 location="Rio de Janeiro/Brazil")
+                 location="Rio de Janeiro/Brazil",
+                 confirmation_key="somecrazyhash")
     param.update(**kwargs)
     return Signatory(**param)
 
