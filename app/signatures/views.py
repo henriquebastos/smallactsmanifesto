@@ -10,7 +10,11 @@ from utils import send_email_confirmation
 
 def new(request):
     form = SignatoryForm()
-    return render_to_response('signatures/form.html', {'form': form})
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+        'form': form
+    }
+    return render_to_response('signatures/form.html', context)
 
 def create(request):
     form = SignatoryForm(request.POST)
