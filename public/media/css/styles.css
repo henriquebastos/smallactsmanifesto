@@ -51,7 +51,7 @@ a:hover {
 blockquote {
   margin: auto;
   padding: 0;
-  width: 500px;
+  width: 520px;
   background: transparent url(../images/quote-left.gif) no-repeat 0 0;
   text-align: center;
   color: #033649;
@@ -138,6 +138,10 @@ Content
 #content {
   margin: 0 20px;
   font-size: 1.4em;
+}
+
+ul#acts li {
+  line-height: 1.4em;
 }
 
 ul#members {
