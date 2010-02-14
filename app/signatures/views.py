@@ -6,7 +6,7 @@ from forms import SignatoryForm
 
 def new(request):
     form = SignatoryForm()
-    return render_to_response('signatures/new.html', {'form': form})
+    return render_to_response('signatures/form.html', {'form': form})
 
 def create(request):
     return HttpResponse("Create")

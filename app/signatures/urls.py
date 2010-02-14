@@ -5,5 +5,5 @@ from views import new, create
 
 
 urlpatterns = patterns('',
-    route(r'^signup/', GET=new, POST=create)
+    route(r'^signup/', GET=new, POST=create, name="signup")
 )

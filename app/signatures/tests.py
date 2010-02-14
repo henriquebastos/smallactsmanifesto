@@ -2,6 +2,7 @@ from datetime import datetime as dt
 
 from django.test import TestCase
 from django.db import IntegrityError
+from django.core.urlresolvers import reverse
 
 from models import Signatory
 
@@ -45,3 +46,9 @@ class TestModels(TestCase):
     def test_raises_on_blank_location(self):
         s = factory(location=None)
         self.assertRaises(IntegrityError, s.save)
+
+class TestViews(TestCase):
+    def test_render_signup_form(self):
+        response = self.client.get(reverse('signup'))
+        self.assertTemplateUsed(response, 'signatures/form.html')
+
