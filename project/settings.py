@@ -7,6 +7,7 @@ PROJECT_ROOT = abspath(join(dirname(__file__), pardir))
 ADMINS = (
     ('Small Acts Manifesto', 'admin@smallactsmanifesto.org'),
 )
+DEFAULT_FROM_EMAIL = 'admin@smallactsmanifesto.org'
 
 MANAGERS = ADMINS
 
