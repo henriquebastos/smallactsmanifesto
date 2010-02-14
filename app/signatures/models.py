@@ -11,7 +11,7 @@ class Signatory(models.Model):
     name = models.CharField("Name", max_length=200)
     email = models.EmailField("E-mail", unique=True)
     url = models.URLField("Url", blank=True)
-    location = models.CharField("Location", max_length=200)
+    location = models.CharField("Location", max_length=200, blank=True)
 
     signed_at = models.DateTimeField("Signed At", auto_now_add=True)
     is_active = models.BooleanField("Is active?", default=False)
