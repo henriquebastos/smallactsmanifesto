@@ -1,4 +1,36 @@
 <form action="." method="POST">
-  {{ form.as_p }}
+  <div>
+    <label>Name <span>*</span></label>
+    {{ form.name }}
+    {{ form.name.errors.as_text }}
+    <p>
+      <small>Your name to be shown on the signatories list.</small>
+    </p>
+  </div>
+  <div>
+    <label>Email <span>*</span></label>
+    {{ form.email }}
+    {{ form.email.errors.as_text }}
+    <p>
+      <small>Your email is important so we can send you a confirmation email.<br /> 
+      Your email will not be published or used in any other way.</small>
+    </p>
+  </div>
+  <div>
+    <label>Url</label>
+    {{ form.url }}
+    {{ form.url.errors.as_text }}
+    <p>
+      <small><em>This field is optional.</em> An url that will be linked to you name on the signatories list.</small>
+    </p>
+  </div>
+  <div>
+    <label>Location</label>
+    {{ form.location }}
+    {{ form.location.errors.as_text }}
+    <p>
+      <small><em>This field is optional.</em> Where are you from?</small>
+    </p>
+  </div>
   <input type="submit">
 </form>
