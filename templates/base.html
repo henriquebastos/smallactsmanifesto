@@ -14,19 +14,24 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 </head>
 <body>
-  <h1><a href="/">Small Acts Manifesto</a></h1>
-  <hr />
-  <div id="content">
-    {% block content %}
-	  {% endblock content %}
-  </div>
-  <hr />
-  <div id="footer">
-    <div id="info">
-      <p>&copy Small Acts Manifesto</p>
+  <div id="page">
+    <div id="header">
+      <div id="logo"><a href="http://smallactsmanifesto.org/">Small Acts</a></div>
+      <div id="quote">
+		    <blockquote><p>Small Acts Make Great Revolutions</p></blockquote>
+	    </div>
+    </div>
+    <hr>
+    <div id="content">
+      {% block content %}
+	    {% endblock content %}
+    </div>
+    <hr>
+    <div id="footer">
+		  <p>&copy; 2010. Small Acts Manifesto</p>
     </div>
   </div>
-  <script type="text/javascript">
+<script type="text/javascript">
   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
   </script>

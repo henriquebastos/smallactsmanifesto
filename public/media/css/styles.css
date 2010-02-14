@@ -5,27 +5,130 @@ CSS
 body {
   margin: 0;
   padding: 0;
-  font: .625em Arial, Helvetica, Sans-serif;
-  background-color: black;
+  font: .625em Georgia, Serif;
+  background-color: #E8DDCB;
+  color: #363636;
+}
+
+#page {
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  width: 800px;
+  font-size: 1.2em;
 }
 
 /*
 General
 */
 
-h1 {
-	margin-left: 1em;
-	padding: 0;
-}
- 
 p {
 	margin: 1.4em 0;
 	padding: 0;
 	line-height: 1.4em;
 }
 
+img {
+	border: 0;
+}
+
 hr {
 	display: none;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+	color: #033649;
+	text-decoration: none;
+	border-bottom: 1px dotted #033649;
+}
+
+a:hover {
+	border-bottom: 1px solid #033649;
+}
+
+blockquote {
+  margin: auto;
+  padding: 0;
+  width: 500px;
+  background: transparent url(../images/quote-left.gif) no-repeat 0 0;
+  text-align: center;
+  color: #033649;
+  font-size: 2em;
+  font-style: italic;
+}
+
+blockquote p {
+	line-height: 2em;
+	background: transparent url(../images/quote-right.gif) no-repeat bottom right;
+}
+
+/*
+Headers
+*/
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.286;
+	margin: .4em 0;
+	padding: 0;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 2.2em;
+	text-align: center; 		
+	color: #031634;
+} 
+ 
+h2 {
+	margin: .643em 0;
+	font-weight: normal;
+	font-size: 1.8em; 
+	color: #033649;
+	font-style: italic;
+	clear: both;
+}
+
+h3 {
+	margin: .643em 0;
+	font-weight: normal;
+	font-size: 1.6em;
+	color: #036564;
+}  
+
+h4 {
+	margin: .643em 0;
+	font-weight: normal;
+	font-size: 1.4em; 
+	color: #036564;
+}  
+
+
+/*
+Header
+*/
+
+#header {
+  border-bottom: 1px dotted #CDB380;
+}
+
+#header #logo {
+  margin: auto;
+  width: 410px;
+  height: 260px;  
+  background: transparent url(../images/logo-small-acts.png) no-repeat 0 0;
+  text-indent: -9999px;
+}
+
+#header #logo a {
+  display: block;
+  width: 410px;
+  height: 260px;
+  border: none;	
 }
 
 /*
@@ -34,11 +137,22 @@ Content
 
 #content {
   margin: 0 20px;
-  font-size: 2.2em;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, serif;
-  color: white;
+  font-size: 1.4em;
 }
 
+ul#members {
+	list-style-type: none;
+	margin: 0 0 20px 0;
+	padding: 0;
+	font-size: .8em;
+}
+
+ul#members li {
+	width: 190px;
+	line-height: 2em;
+	text-align: center;
+	float: left;
+}
 
 /*
 Footer
@@ -46,13 +160,33 @@ Footer
 
 #footer {
   clear: both;
-  height: 60px;
-  padding: 10px 20px;
-  border-top: 8px solid gray;
-  color: #fff;
+  font-size: .9em;
+  padding: 0 20px;
+  border-top: 1px dotted #CDB380;
 }
 
-#footer #info {
-  float: right;
-  text-align: right;
+/*
+Clearfix
+*/
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
 }
+
+.clearfix {
+	display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+.clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
