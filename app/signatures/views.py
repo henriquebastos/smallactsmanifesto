@@ -9,4 +9,10 @@ def new(request):
     return render_to_response('signatures/form.html', {'form': form})
 
 def create(request):
-    return HttpResponse("Create")
+    form = SignatoryForm(request.POST)
+    try:
+        form.save()
+    except ValueError:
+        return render_to_response('signatures/form.html', {'form': form})
+    return render_to_response('signatures/signed.html')
+
