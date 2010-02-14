@@ -169,6 +169,14 @@ Footer
   border-top: 1px dotted #CDB380;
 }
 
+#footer img {
+  vertical-align: middle;
+}
+
+#footer #django {
+  float: right;
+}
+
 /*
 Clearfix
 */
