@@ -5,6 +5,8 @@ from django.conf import settings
 
 from models import Signatory
 from forms import SignatoryForm
+from utils import send_email_confirmation
+
 
 def new(request):
     form = SignatoryForm()
@@ -13,7 +15,8 @@ def new(request):
 def create(request):
     form = SignatoryForm(request.POST)
     try:
-        form.save()
+        signatory = form.save()
+        send_email_confirmation(signatory)
     except ValueError:
         return render_to_response('signatures/form.html', {'form': form})
     return render_to_response('signatures/signed.html')
@@ -25,3 +28,6 @@ def index(request):
         'signatures': signatures
     }
     return render_to_response('signatures/list.html', context)
+
+def confirm_email(request, confirmation_key):
+    return HttpResponse()
