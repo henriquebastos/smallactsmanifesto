@@ -48,6 +48,18 @@ class TestModels(TestCase):
         s = factory(location=None)
         self.assertRaises(IntegrityError, s.save)
 
+    def test_ordered_asc(self):
+        sb = factory(name="b", email="b@b.com")
+        sb.save()
+        sc = factory(name="c", email="c@b.com")
+        sc.save()
+        sa = factory(name="a", email="a@b.com")
+        sa.save()
+
+        ordered_list = list(Signatory.objects.all())
+        self.assertEquals(ordered_list, [sa, sb, sc])
+
+
 class TestViews(TestCase):
     def test_render_signup_form(self):
         response = self.client.get(reverse('signup'))

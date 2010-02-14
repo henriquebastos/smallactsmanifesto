@@ -15,6 +15,10 @@ class Signatory(models.Model):
     is_active = models.BooleanField("Is active?", default=False)
 
     confirmation_key = models.CharField(max_length=40)
+
+    class Meta:
+        ordering = ['name', 'signed_at']
+
     def __unicode__(self):
         return "%s - %s" % (self.name, self.email)
 
