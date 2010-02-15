@@ -10,8 +10,8 @@ urlpatterns = patterns('',
     url(r'^signup/confirm_email/(\w+)/$', confirm_email, name='confirm_email'),
 )
 
-if settings.DEBUG:
-    urlpatterns += patterns('django.views.generic.simple',
-        (r'^signed/$', 'direct_to_template', {'template': 'signatures/signed.html'},
-            {'MEDIA_URL': settings.MEDIA_URL}),
-    )
+#if settings.DEBUG:
+#    urlpatterns += patterns('django.views.generic.simple',
+#        (r'^signed/$', 'direct_to_template', {'template': 'signatures/signed.html'},
+#            {'MEDIA_URL': settings.MEDIA_URL}),
+#    )
