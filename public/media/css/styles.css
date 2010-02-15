@@ -186,7 +186,7 @@ form div {
   padding: 0 0 5px 0;
 }
 
-form .textfield {
+form input {
   font-size: 1.1em;
   padding: 2px;
   display: block;

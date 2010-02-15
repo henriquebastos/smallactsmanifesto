@@ -1,9 +1,18 @@
 $(document).ready(function() {
-  $(".textfield").bind('mouseover focus',function() {
-    $("#info_"+$(this).attr("id")).show();
+  $(".field").bind('mouseover focus',function() {
+    $(".info_label", this).show();
   });
-  
-  $(".textfield").bind('mouseout blur',function() {
-    $("#info_"+$(this).attr("id")).hide();
+
+  $(".field").bind('mouseout',function() {
+    $(".info_label", this).hide();
   });
+
+  $(".field > input").bind('focus',function() {
+    $(".info_label", $(this).parent()).show();
+  });
+
+  $(".field > input").bind('blur',function() {
+    $(".info_label", $(this).parent()).hide();
+  });
+
 });
