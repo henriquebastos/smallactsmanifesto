@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import Http404
 from django.shortcuts import render_to_response, redirect
 from django.core.urlresolvers import reverse
 from django.conf import settings
@@ -38,4 +38,16 @@ def index(request):
     return render_to_response('signatures/list.html', context)
 
 def confirm_email(request, confirmation_key):
-    return HttpResponse()
+    try:
+        signatory = Signatory.objects.get(confirmation_key=confirmation_key)
+        signatory.is_active = True
+        signatory.save()
+    except Signatory.DoesNotExist:
+        raise Http404
+
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+        'signatory': signatory,
+    }
+    return render_to_response('signatures/confirmed.html', context)
+
