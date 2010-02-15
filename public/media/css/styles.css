@@ -238,7 +238,8 @@ Footer
 }
 
 #footer #django {
-  float: right;
+ float: right;
+ border: none;
 }
 
 /*
