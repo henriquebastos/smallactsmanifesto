@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".textfield").mouseover(function() {
+  $(".textfield").bind('mouseover focus',function() {
     $("#info_"+$(this).attr("id")).show();
   });
   
