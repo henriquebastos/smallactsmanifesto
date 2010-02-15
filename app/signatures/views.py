@@ -23,7 +23,7 @@ def create(request):
         'form': form
     }
     try:
-        signatory = form.save()
+        signatory = form.save_if_new()
         send_email_confirmation(signatory)
     except ValueError:
         return render_to_response('signatures/form.html', context)
