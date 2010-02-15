@@ -10,7 +10,10 @@ def cssclass(value, arg):
     Replace the attribute css class for Field 'value' with 'arg'.
     """
     attrs = value.field.widget.attrs
-    orig = attrs['class'] if 'class' in attrs else None
+    if 'class' in attrs:
+        orig = attrs['class']
+    else:
+        orig = None
 
     attrs['class'] = arg
     rendered = str(value)
