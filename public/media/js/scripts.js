@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#info_"+$(this).attr("id")).show();
   });
   
-  $(".textfield").bind('click mouseout',function() {
+  $(".textfield").bind('mouseout blur',function() {
     $("#info_"+$(this).attr("id")).hide();
   });
 });

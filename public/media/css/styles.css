@@ -177,11 +177,11 @@ fieldset {
 }
 
 form div {
-  padding: 0 0 10px 0;
+  padding: 0 0 5px 0;
 }
 
 form .textfield {
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 2px;
   display: block;
   width: 400px;
@@ -192,7 +192,7 @@ form .textfield {
 }
 
 form p {
-  margin: -45px 0 0 440px;
+  margin: -35px 0 0 440px;
   padding: 8px;
   width: 300px;
   position: absolute;
@@ -216,7 +216,7 @@ form p em {
   width: 200px;
   text-align: center;
   padding: 4px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   background-color: #031634;
   color: #fff;
   border: none;
@@ -239,6 +239,7 @@ Footer
 
 #footer #django {
   float: right;
+  border: none;
 }
 
 /*
