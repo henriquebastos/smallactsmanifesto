@@ -1,6 +1,6 @@
 Hello {{ name }}!
 
-You have just signed up to the SmallActs Manifesto.
+You have just signed up to the Small Acts Manifesto.
 
 To confirm your subscription please access the link:
 
