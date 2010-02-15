@@ -7,6 +7,7 @@ PROJECT_ROOT = abspath(join(dirname(__file__), pardir))
 ADMINS = (
     ('Small Acts Manifesto', 'admin@smallactsmanifesto.org'),
 )
+DEFAULT_FROM_EMAIL = 'admin@smallactsmanifesto.org'
 
 MANAGERS = ADMINS
 
@@ -19,7 +20,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'pt-br'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 

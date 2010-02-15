@@ -11,7 +11,8 @@ def factory(**kwargs):
     param = dict(name="Henrique Bastos", 
                  email="henrique@bastos.net",
                  url="http://henriquebastos.net", 
-                 location="Rio de Janeiro/Brazil")
+                 location="Rio de Janeiro/Brazil",
+                 confirmation_key="somecrazyhash")
     param.update(**kwargs)
     return Signatory(**param)
 
@@ -47,8 +48,31 @@ class TestModels(TestCase):
         s = factory(location=None)
         self.assertRaises(IntegrityError, s.save)
 
+    def test_ordered_asc(self):
+        sb = factory(name="b", email="b@b.com")
+        sb.save()
+        sc = factory(name="c", email="c@b.com")
+        sc.save()
+        sa = factory(name="a", email="a@b.com")
+        sa.save()
+
+        ordered_list = list(Signatory.objects.all())
+        self.assertEquals(ordered_list, [sa, sb, sc])
+
+
 class TestViews(TestCase):
     def test_render_signup_form(self):
         response = self.client.get(reverse('signup'))
         self.assertTemplateUsed(response, 'signatures/form.html')
+
+    def test_valid_form_signup(self):
+        post_data = {
+            'name': 'Henrique Bastos',
+            'email': 'henrique@bastos.net',
+            'url': 'http://henriquebastos.net',
+            'location': 'Rio de Janeiro/Brazil',
+        }
+        response = self.client.post(reverse('signup'), post_data)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'signatures/signed.html')
 

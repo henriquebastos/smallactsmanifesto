@@ -13,9 +13,6 @@ urlpatterns = patterns('',
     (r'^', include('signatures.urls')),
 )
 
-urlpatterns+= patterns('django.views.generic.simple',
-    (r'^$', 'direct_to_template', {'template': 'index.html'}),
-)
 
 if settings.DEBUG:
     urlpatterns += patterns('',

@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block signatures %} 
+<ul id="members" class="clearfix">
+  {% for signatory in signatures %}
+    <li>
+      {% if signatory.url %}
+        <a href="{{ signatory.url }}">{{ signatory.name }}</a>
+      {% else %}
+        {{ signatory.name }}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+{% endblock signatures %} 
