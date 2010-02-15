@@ -18,12 +18,16 @@ def new(request):
 
 def create(request):
     form = SignatoryForm(request.POST)
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+        'form': form
+    }
     try:
         signatory = form.save()
         send_email_confirmation(signatory)
     except ValueError:
-        return render_to_response('signatures/form.html', {'form': form})
-    return render_to_response('signatures/signed.html')
+        return render_to_response('signatures/form.html', context)
+    return render_to_response('signatures/signed.html', context)
 
 def index(request):
     signatures = Signatory.objects.filter(is_active=True)
