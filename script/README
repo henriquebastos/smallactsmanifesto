@@ -1,0 +1,6 @@
+BOOTSTRAP SCRIPT
+================
+
+Run the below command to create a virtualenv
+
+$ python scripts/bootstrap.py --source . $WORKON_HOME/smallactsmanifesto
