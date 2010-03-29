@@ -1131,9 +1131,9 @@ import subprocess
 
 def extend_parser(parser):
     # overide default options
-    parser.set_default('no_site_packages', True)
-    parser.set_default('unzip_setuptools', True)
-    parser.set_default('use_distribute', True)
+    parser.set_defaults(no_site_packages=True,
+                        unzip_setuptools=True,
+                        use_distribute=True)
 
     # where is the source code?
     default_project_src = abspath(join(dirname(__file__), '..'))
