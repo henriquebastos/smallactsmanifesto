@@ -50,9 +50,11 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 ROOT_URLCONF = 'project.urls'
@@ -72,6 +74,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'signatures',
 )
+
+CACHE_BACKEND = 'file://%s' %  join(PROJECT_ROOT, 'cache')
+CACHE_MIDDLEWARE_SECONDS = 60 * 5
 
 try:
     from local_settings import *
