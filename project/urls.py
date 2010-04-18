@@ -13,6 +13,9 @@ urlpatterns = patterns('',
     (r'^', include('signatures.urls')),
 )
 
+urlpatterns+= patterns('django.views.generic.simple',
+    (r'^community-badges/$', 'direct_to_template', {'template': 'community-badges.html'}),
+)
 
 if settings.DEBUG:
     urlpatterns += patterns('',

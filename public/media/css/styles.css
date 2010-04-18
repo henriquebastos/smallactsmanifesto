@@ -88,12 +88,6 @@ h1 {
 	color: #031634;
 } 
 
-h1#about {
-  margin: 1em 0 .4em 0;
-  font-size: 1.3em;
-  color: #363636;
-}
-
 h2 {
 	margin: .643em 0;
 	font-weight: normal;
@@ -117,6 +111,16 @@ h4 {
 	color: #036564;
 }  
 
+h1#about,
+h2#badge-subtitle {
+  margin: 1em 0 .4em 0;
+  font-size: 1.3em;
+  color: #363636;
+}
+
+h2#badge-subtitle {
+  text-align: center;
+}
 
 /*
 Header
@@ -166,6 +170,42 @@ ul#members li {
 	line-height: 2em;
 	text-align: center;
 	float: left;
+}
+
+#badge-content {
+  font-size: .8em;
+  margin: 0 0 20px 0;
+}
+
+#badge-content p {
+  margin: 1em 0 0 0;
+}
+
+#badge-content a {
+  border: none;
+}
+
+#badge-content form,
+#badge-content fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+#badge-content fieldset {
+  border: none;
+}
+
+#badge-content textarea {
+  margin: 0;
+  padding: 10px;
+  display: block;
+  width: 650px;
+  height: 50px;
+  border: none;
+  border-top: 1px solid #036564;
+  border-bottom: 1px solid #036564;
+  color: #031634;
+  background-color: #fff;
 }
 
 /*
