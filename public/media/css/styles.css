@@ -84,9 +84,9 @@ h4 {
 h1 {
 	font-weight: normal;
 	font-size: 2.2em;
-	text-align: center; 		
+	text-align: center;
 	color: #031634;
-} 
+}
 
 h2 {
 	margin: .643em 0;
@@ -102,14 +102,14 @@ h3 {
 	font-weight: normal;
 	font-size: 1.6em;
 	color: #036564;
-}  
+}
 
 h4 {
 	margin: .643em 0;
 	font-weight: normal;
 	font-size: 1.4em; 
 	color: #036564;
-}  
+}
 
 h1#about,
 h2#badge-subtitle {
@@ -133,7 +133,7 @@ Header
 #header #logo {
   margin: auto;
   width: 300px;
-  height: 215px;  
+  height: 215px;
   background: transparent url(../images/logo-small-acts.png) no-repeat 0 0;
   text-indent: -9999px;
 }
@@ -142,7 +142,7 @@ Header
   display: block;
   width: 300px;
   height: 215px;
-  border: none;	
+  border: none;
 }
 
 /*
