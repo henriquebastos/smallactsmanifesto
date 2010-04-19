@@ -12,7 +12,7 @@
 
 {% for b in badges %}
 
-<p><img src="{{ MEDIA_URL }}images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="Small Acts Manifesto" /><strong>{{ b.size }}</strong> {{ b.name }}</p>
+<p><img src="{{ MEDIA_URL }}images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="Small Acts Manifesto" /> <strong>{{ b.size }}</strong> {{ b.name }}</p>
 <textarea cols="50" rows="3">&lt;a href="http://smallactsmanifesto.org" title="Small Acts Manifesto"&gt;&lt;img src="http://smallactsmanifesto.org/media/images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="Small Acts Manifesto" /&gt;&lt;/a&gt;</textarea>
 
 {% endfor %}
