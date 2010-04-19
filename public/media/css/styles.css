@@ -185,16 +185,6 @@ ul#members li {
   border: none;
 }
 
-#badge-content form,
-#badge-content fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-#badge-content fieldset {
-  border: none;
-}
-
 #badge-content textarea {
   margin: 0;
   padding: 10px;
