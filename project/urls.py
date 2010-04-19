@@ -26,9 +26,9 @@ badges = (
 )
 
 urlpatterns += patterns('django.views.generic.simple',
-    (r'^community-badges/$', 'direct_to_template', 
+    (r'^community-badges/$', 'direct_to_template',
         {
-            'template': 'community-badges.html', 
+            'template': 'community-badges.html',
             'extra_context': { 'badges': badges },
         }
     ),
