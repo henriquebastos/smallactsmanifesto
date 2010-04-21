@@ -79,6 +79,7 @@ h4 {
 	line-height: 1.286;
 	margin: .4em 0;
 	padding: 0;
+	text-shadow: 1px 1px 0 #fff;
 }
 
 h1 {
@@ -145,6 +146,10 @@ Header
   border: none;
 }
 
+#header blockquote p {
+  text-shadow: 1px 1px 0 #fff;
+}
+
 /*
 Content
 */
@@ -152,6 +157,7 @@ Content
 #content {
   margin: 0 20px;
   font-size: 1.4em;
+  text-shadow: 1px 1px 0 #fff;
 }
 
 ul#acts li {
@@ -246,6 +252,7 @@ form p em {
 
 .info_label {
   display: none;
+  text-shadow: none;
 }
 
 .button {
@@ -256,6 +263,7 @@ form p em {
   background-color: #031634;
   color: #fff;
   border: none;
+  text-shadow: -1px -1px 0 #000;
 }
 
 /*
