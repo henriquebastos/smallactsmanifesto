@@ -164,6 +164,51 @@ ul#acts li {
   line-height: 1.4em;
 }
 
+a#get-involved,
+.button {
+  margin: auto;
+  display: block;
+  width: 140px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #033649;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  text-align: center;
+  border: solid 1px #b7b7b7;
+  background: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+  background: -moz-linear-gradient(top,  #fff,  #ededed);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+  -webkit-border-radius: .5em;
+  -moz-border-radius: .5em;
+  border-radius: .5em;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+a#get-involved:hover,
+.button:hover {
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+  background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
+a#get-involved:active,
+.button:active {
+  color: #363636;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+  background: -moz-linear-gradient(top,  #ededed,  #fff);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+.button {
+  font-size: 1em;
+  padding: 4px 8px;
+  margin: 0;
+}
+
 ul#members {
 	list-style-type: none;
 	margin: 0 0 20px 0;
@@ -238,9 +283,10 @@ form p {
   padding: 8px;
   width: 300px;
   position: absolute;
-  border: 1px solid #033649;
-  background-color: #036564;
-  color: #fff;
+  border: 1px dotted #CDB380;
+  background-color: #fafafa;
+  color: #363636;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
   font-size: .9em;
   font-family: Arial, Helvetica, Sans-Serif;
 }
@@ -253,17 +299,6 @@ form p em {
 .info_label {
   display: none;
   text-shadow: none;
-}
-
-.button {
-  width: 200px;
-  text-align: center;
-  padding: 4px;
-  font-size: 1.1em;
-  background-color: #031634;
-  color: #fff;
-  border: none;
-  text-shadow: -1px -1px 0 #000;
 }
 
 /*
