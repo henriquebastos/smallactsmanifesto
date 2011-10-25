@@ -1,6 +1,0 @@
-DATABASE_ENGINE = '%(db_engine)s'
-DATABASE_NAME = '%(db_name)s'
-DATABASE_USER = '%(db_user)s'
-DATABASE_PASSWORD = '%(db_passwd)s'
-DATABASE_HOST = '%(db_host)s'
-DATABASE_PORT = ''
