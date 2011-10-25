@@ -7,6 +7,7 @@
 <h1>Get involved</h1>
 
 <form action="." method="POST">
+  {% csrf_token %}
   <div class="field">
     <label for="id_name">Name <span>*</span></label>
     {{ form.name }}
