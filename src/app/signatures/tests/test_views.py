@@ -23,7 +23,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'signatures/signed.html')
 
     def test_resubmit_form_signup(self):
-        from signatures.models import Signatory
+        from app.signatures.models import Signatory
         post_data = {
             'name': 'Henrique Bastos',
             'email': 'henrique@bastos.net',

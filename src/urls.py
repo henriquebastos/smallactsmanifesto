@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
 
     # signatures
-    (r'^', include('signatures.urls')),
+    (r'^', include('app.signatures.urls')),
 )
 
 # BADGES
