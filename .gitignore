@@ -10,3 +10,4 @@ lib
 *.log
 .DS_Store
 local_settings.py
+*.db
