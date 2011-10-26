@@ -11,6 +11,11 @@ urlpatterns = patterns('',
 
     # signatures
     (r'^', include('app.signatures.urls')),
+
+    (r'^static/(?P<path>.*)$', 'django.contrib.staticfiles.views.serve', {
+        'document_root': settings.STATIC_ROOT,
+        'insecure': True,
+    })
 )
 
 # BADGES
@@ -34,8 +39,3 @@ urlpatterns += patterns('django.views.generic.simple',
     ),
 )
 
-if settings.DEBUG:
-    urlpatterns += patterns('',
-        (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT}),
-    )
