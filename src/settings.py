@@ -14,6 +14,16 @@ DEFAULT_FROM_EMAIL = 'admin@smallactsmanifesto.org'
 
 MANAGERS = ADMINS
 
+
+if os.environ.has_key('EMAIL_HOST_PASSWORD') and os.environ.has_key('EMAIL_HOST_USER'):
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 993
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+    EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
