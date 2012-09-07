@@ -15,3 +15,21 @@ class IndexViewTest(TestCase):
     def test_template(self):
         'Index must be rendered with index.html.'
         self.assertTemplateUsed(self.resp, 'index.html')
+
+
+class CommunityBadgesViewTest(TestCase):
+    'Community badges page tests.'
+    def setUp(self):
+        self.resp = self.client.get(r('core:community-badges'))
+
+    def test_get(self):
+        'GET must return 200 as status code.'
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_template(self):
+        'Index must be rendered with index.html.'
+        self.assertTemplateUsed(self.resp, 'community-badges.html')
+
+    def test_context(self):
+        'Context must contain badges.'
+        self.assertIn('badges', self.resp.context)
