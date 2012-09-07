@@ -1,16 +1,17 @@
-"""
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
-"""
-
+# coding: utf-8
 from django.test import TestCase
+from django.core.urlresolvers import reverse as r
 
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+class IndexViewTest(TestCase):
+    'Site index tests.'
+    def setUp(self):
+        self.resp = self.client.get(r('core:index'))
+
+    def test_get(self):
+        'GET must return 200 as status code.'
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_template(self):
+        'Index must be rendered with index.html.'
+        self.assertTemplateUsed(self.resp, 'index.html')
