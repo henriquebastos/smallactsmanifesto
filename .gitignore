@@ -1,3 +1,9 @@
+bin
+build
+include
+lib
+share
+.Python
 *.pyc
 *~
 *swp
@@ -5,4 +11,4 @@
 *.log
 .DS_Store
 local_settings.py
-cache/
+*.db

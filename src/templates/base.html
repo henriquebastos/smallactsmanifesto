@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="SmallActs Manifesto" />
+	<meta name="keywords" content="small acts, manifesto, small acts manifesto, principles, community" />
+	<meta http-equiv='content-Language' content='en-US' /> 
+ 	<link type="image/x-icon" href="{{ STATIC_URL }}favicon.ico" rel="shortcut icon" />
+ 	
+  <title>Small Acts Manifesto</title>
+        
+	<link type="text/css" href="{{ STATIC_URL }}css/styles.css" rel="stylesheet" media="screen" />
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/scripts.js"></script>
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <div id="logo"><a href="/">Small Acts Manifesto</a></div>
+      <div id="quote">
+		    <blockquote><p>Small Acts Make Great Revolutions</p></blockquote>
+	    </div>
+    </div>
+    <hr>
+    <div id="content">
+      {% block content %}
+	    {% endblock content %}
+    </div>
+    <hr>
+    <div id="footer">
+		  <p>&copy; 2010. <a rel="license" href="http://smallactsmanifesto.org">Small Acts Manifesto</a>, some rights reserved. <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" /></a> | <a href="/community-badges">Community badges</a> <a href="http://www.djangoproject.com/" id="django"><img src="http://media.djangoproject.com/img/badges/djangosite80x15.gif" border="0" alt="A Django site." title="A Django site." /></a></p>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-12791385-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+</body>
+</html>

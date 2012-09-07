@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load cssclass %}
+
+<h1>Get involved</h1>
+
+<form action="." method="POST">
+  {% csrf_token %}
+  <div class="field">
+    <label for="id_name">Name <span>*</span></label>
+    {{ form.name }}
+    <div class="error">{{ form.name.errors.as_text }}</div>
+    <p id="info" class="info_label">
+      <small>Your name to be shown on the signatories list.</small>
+    </p>
+  </div>
+  <div class="field">
+    <label for="id_email">Email <span>*</span></label>
+    {{ form.email }}
+    <div class="error">{{ form.email.errors.as_text }}</div>
+    <p id="info_id_email" class="info_label">
+      <small>Your email is important so we can send you a confirmation email.<br /> 
+      Your email will not be published or used in any other way.</small>
+    </p>
+  </div>
+  <div class="field">
+    <label for="id_url">Url</label>
+    {{ form.url }}
+    <div class="error">{{ form.url.errors.as_text }}</div>
+    <p id="info_id_url" class="info_label">
+      <small><em>This field is optional.</em> An url that will be linked to you name on the signatories list.</small>
+    </p>
+  </div>
+  <div class="field">
+    <label for="id_location">Location</label>
+    {{ form.location }}
+    <div class="error">{{ form.location.errors.as_text }}</div>
+    <p id="info_id_location" class="info_label">
+      <small><em>This field is optional.</em> Where are you from?</small>
+    </p>
+  </div>
+  <input type="submit" class="button" value="Send" />
+</form>
+
+{% endblock content %}
