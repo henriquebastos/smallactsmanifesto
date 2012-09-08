@@ -45,5 +45,5 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'smallacts.core',
-    #'signatures',
+    'smallacts.signatures',
 )

@@ -5,6 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^signup/', include('smallacts.signatures.urls', namespace='signatures')),
     url(r'^', include('smallacts.core.urls', namespace='core')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
