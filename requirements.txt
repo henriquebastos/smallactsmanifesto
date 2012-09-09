@@ -2,3 +2,4 @@ django==1.4.1
 mock==1.0b1
 south==0.7.6
 Unipath==0.2.1
+model_mommy==0.8
