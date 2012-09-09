@@ -34,7 +34,7 @@ class SignupViewTest(TestCase):
         self.assertContains(self.resp, 'type="submit"')
 
 
-class SignupViewPostSuccessTest(TestCase):
+class SignupViewPostTest(TestCase):
     'Signup POST success tests.'
     def setUp(self):
         data = dict(name='Henrique Bastos', email='henrique@bastos.net',
@@ -67,7 +67,7 @@ class SignupViewPostSuccessTest(TestCase):
         self.assertIn(settings.DEFAULT_FROM_EMAIL, mail.outbox[0].to)
 
 
-class SignupSuccessViewTest(TestCase):
+class SuccessViewTest(TestCase):
     'Signup success GET tests.'
     def setUp(self):
         self.resp = self.client.get(r('signatures:success'))
