@@ -1,7 +1,9 @@
 # coding: UTF-8
+import hashlib
+from django.contrib.sites.models import Site
+from django.core.urlresolvers import reverse as r
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from .utils import generate_confirmation_key
 
 
 class Signatory(models.Model):
@@ -26,6 +28,14 @@ class Signatory(models.Model):
     def save(self, *args, **kwargs):
         # create a confirmation_key
         if not self.confirmation_key:
-            self.confirmation_key = generate_confirmation_key(self.email)
+            self.confirmation_key = self._generate_confirmation_key()
 
         return super(Signatory, self).save(*args, **kwargs)
+
+    def _generate_confirmation_key(self):
+        return hashlib.sha1(self.email).hexdigest()[:5]
+
+    def get_confirm_url(self):
+        site = Site.objects.get_current()
+        path = r('signatures:confirm', args=[self.confirmation_key])
+        return u"http://%s%s" % (site.domain, path)
