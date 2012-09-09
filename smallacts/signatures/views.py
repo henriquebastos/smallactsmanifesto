@@ -38,14 +38,9 @@ class SignupView(CreateView):
                   [self.object.email, settings.DEFAULT_FROM_EMAIL])
 
 
-signup = SignupView.as_view()
-
-
 class SignupSuccessView(TemplateView):
     'Shows a success page after user has signedup.'
     template_name='signatures/signup_success.html'
-
-success = SignupSuccessView.as_view()
 
 
 class ConfirmView(DetailView):
@@ -60,5 +55,3 @@ class ConfirmView(DetailView):
         obj.is_active = True
         obj.save()
         return obj
-
-confirm = ConfirmView.as_view()
