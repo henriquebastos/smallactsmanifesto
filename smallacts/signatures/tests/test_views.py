@@ -1,7 +1,10 @@
 # coding: utf-8
+from django.conf import settings
+from django.core import mail
 from django.test import TestCase
 from django.core.urlresolvers import reverse as r
 from ..forms import SignupForm
+from ..models import Signatory
 
 
 class SignupViewTest(TestCase):
@@ -29,4 +32,37 @@ class SignupViewTest(TestCase):
         self.assertContains(self.resp, "type='hidden'")
         self.assertContains(self.resp, 'type="text"', 4)
         self.assertContains(self.resp, 'type="submit"')
+
+
+class SignupViewPostSuccessTest(TestCase):
+    'Signup POST success tests.'
+    def setUp(self):
+        data = dict(name='Henrique Bastos', email='henrique@bastos.net',
+                    url='http://henriquebastos.net', location='Brasil')
+        self.resp = self.client.post(r('signatures:signup'), data)
+
+    def test_post(self):
+        'POST must return 302 as status code.'
+        self.assertEqual(302, self.resp.status_code)
+
+    def test_redirect_to(self):
+        'POST must redirect to /signup/success/.'
+        endswith_regex = r('signatures:success') + '$'
+        self.assertRegexpMatches(self.resp['Location'], endswith_regex)
+
+    def test_save(self):
+        'POST must save the signature.'
+        self.assertTrue(Signatory.objects.exists())
+
+    def test_mail(self):
+        'POST must send a confirmation email.'
+        self.assertEqual(1, len(mail.outbox))
+
+    def test_mail_to_signatory(self):
+        'POST must send a confirmation email to the signatory'
+        self.assertIn('henrique@bastos.net', mail.outbox[0].to)
+
+    def test_mail_admin(self):
+        'POST must send a copy of the feedback email to the admin.'
+        self.assertIn(settings.DEFAULT_FROM_EMAIL, mail.outbox[0].to)
 
