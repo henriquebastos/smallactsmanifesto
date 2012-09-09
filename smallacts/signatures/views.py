@@ -5,7 +5,9 @@ from django.core.urlresolvers import reverse as r
 from django.template.loader import render_to_string
 from django.views.generic import CreateView
 from django.views.generic import TemplateView
+from django.views.generic import DetailView
 from .forms import SignupForm
+from .models import Signatory
 
 
 class SignupView(CreateView):
@@ -45,5 +47,18 @@ class SignupSuccessView(TemplateView):
 
 success = SignupSuccessView.as_view()
 
-def confirm(request):
-    return direct_to_template(request, 'signatures/confirmed.html')
+
+class ConfirmView(DetailView):
+    template_name = 'signatures/signup_confirm.html'
+    slug_field = 'confirmation_key'
+    model = Signatory
+
+    def get_object(self, queryset=None):
+        'Load and update Signatory active status.'
+        obj = super(ConfirmView, self).get_object(queryset)
+
+        obj.is_active = True
+        obj.save()
+        return obj
+
+confirm = ConfirmView.as_view()
