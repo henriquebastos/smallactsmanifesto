@@ -78,3 +78,21 @@ class SignupSuccessViewTest(TestCase):
     def test_template(self):
         self.assertTemplateUsed(self.resp, 'signatures/signup_success.html')
 
+
+class SingupViewInvalidPostTest(TestCase):
+    'Signup POST failure tests.'
+    def setUp(self):
+        data = dict(name='', email='', url='', location='')
+        self.resp = self.client.post(r('signatures:signup'), data)
+
+    def test_post(self):
+        'POST must return 200 as status_code.'
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_form_errors(self):
+        'Errors must be displayed.'
+        self.assertTrue(self.resp.context['form'].errors)
+
+    def test_must_not_save(self):
+        'Data must not be saved.'
+        self.assertFalse(Signatory.objects.exists())
