@@ -33,7 +33,7 @@ class Signatory(models.Model):
         return super(Signatory, self).save(*args, **kwargs)
 
     def _generate_confirmation_key(self):
-        return hashlib.sha1(self.email).hexdigest()[:5]
+        return hashlib.sha1(self.email).hexdigest()
 
     def get_confirm_url(self):
         site = Site.objects.get_current()

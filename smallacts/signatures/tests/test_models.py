@@ -16,11 +16,12 @@ class SignatoryModelTest(TestCase):
         self.assertEqual(1, self.object.pk)
 
     def test_generate_confirmation_key(self):
-        self.assertEqual('70698', self.object.confirmation_key)
+        self.assertEqual('70698fbcf410f6538a6367d9a6260d95d366e9c5',
+                         self.object.confirmation_key)
 
     def test_get_confirm_url(self):
         'Returns the absolute email confirmation url.'
-        url = 'http://smallactsmanifesto.org/signup/confirm/70698/'
+        url = 'http://smallactsmanifesto.org/signup/confirm/70698fbcf410f6538a6367d9a6260d95d366e9c5/'
         self.assertEqual(url, self.object.get_confirm_url())
 
     def test_allow_blank_url(self):
