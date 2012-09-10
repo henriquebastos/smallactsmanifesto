@@ -8,12 +8,10 @@ class SignupForm(forms.ModelForm):
         model = Signatory
         fields = ('name', 'email', 'url', 'location')
 
-    def save_if_new(self):
-        self.full_clean()
-        # verify if signatory has already submited this form.
-        q = Signatory.objects.filter(email=self.data['email'])
-        if q:
-            instance = q.get()
-        else:
-            instance = self.save()
-        return instance
+    def save(self, commit=True):
+        try:
+            return Signatory.objects.get(email=self.instance.email)
+        except Signatory.DoesNotExist:
+            pass
+
+        return super(SignupForm, self).save(commit)
