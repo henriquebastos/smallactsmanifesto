@@ -10,7 +10,7 @@ class Signatory(models.Model):
     "Manifesto's signatory"
 
     name = models.CharField(_('Name'), max_length=200)
-    email = models.EmailField(_('E-mail'), unique=True)
+    email = models.EmailField(_('E-mail'))
     url = models.URLField(_('Url'), blank=True)
     location = models.CharField(_('Location'), max_length=200, blank=True)
 

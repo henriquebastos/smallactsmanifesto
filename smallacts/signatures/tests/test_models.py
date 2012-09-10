@@ -31,10 +31,3 @@ class SignatoryModelTest(TestCase):
         'Default order must be by name and signed_at.'
         self.assertListEqual(['name', 'signed_at'],
                              Signatory._meta.ordering)
-
-class SignatoryUniquenessTest(TestCase):
-    def test_email(self):
-        'Email must be unique.'
-        mommy.make_one(Signatory, email='henrique@bastos.net')
-        object = mommy.prepare_one(Signatory, email='henrique@bastos.net')
-        self.assertRaises(IntegrityError, object.save)
