@@ -66,6 +66,13 @@ class SignupViewPostTest(TestCase):
         'POST must send a copy of the feedback email to the admin.'
         self.assertIn(settings.DEFAULT_FROM_EMAIL, mail.outbox[0].to)
 
+    def test_mail_has_name(self):
+        self.assertIn('Henrique Bastos', mail.outbox[0].body)
+
+    def test_mail_has_link(self):
+        obj = Signatory.objects.get(pk=1)
+        self.assertIn(obj.get_confirm_url(), mail.outbox[0].body)
+
 
 class SingupViewInvalidPostTest(TestCase):
     'Signup POST failure tests.'

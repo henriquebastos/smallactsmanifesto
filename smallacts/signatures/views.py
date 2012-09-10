@@ -30,7 +30,7 @@ class SignupView(CreateView):
         Sends the signup confirmation email to the Signatory.
         He will only be listed after access the confirmation link.
         """
-        context = { object: self.object }
+        context = { 'object': self.object }
         subject = render_to_string(self.template_email_subject, context)
         message = render_to_string(self.template_email_body, context)
 
