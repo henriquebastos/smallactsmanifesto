@@ -84,3 +84,36 @@ class SingupViewInvalidPostTest(TestCase):
     def test_must_not_save(self):
         'Data must not be saved.'
         self.assertFalse(Signatory.objects.exists())
+
+
+class SignupViewResendConfirmationMailTest(TestCase):
+    """
+    Given that a signatory already signed up
+    When he signup again with the same email
+    Then the system only resends the email without saving anything.
+    """
+    def setUp(self):
+        Signatory.objects.create(email='henrique@bastos.net',
+             name='dummy', url='dummy', location='dummy')
+
+        data = dict(name='Henrique Bastos', email='henrique@bastos.net')
+        self.resp = self.client.post(r('signatures:signup'), data)
+
+    def test_redirect_to(self):
+        'POST must redirect to /signup/success/.'
+        endswith_regex = r('signatures:success') + '$'
+        self.assertRegexpMatches(self.resp['Location'], endswith_regex)
+
+    def test_resend_confirmation_email(self):
+        'Email must be sent.'
+        self.assertEqual(1, len(mail.outbox))
+
+    def test_do_not_save(self):
+        'No new Signatory should be saved.'
+        self.assertTrue(1, Signatory.objects.count())
+
+    def test_do_not_update(self):
+        'No changes to the previews Signatory should be made.'
+        expected = [(1, u'dummy', u'henrique@bastos.net', u'dummy', u'dummy')]
+        result = Signatory.objects.values_list('pk', 'name', 'email', 'url', 'location')
+        self.assertListEqual(expected, list(result))
