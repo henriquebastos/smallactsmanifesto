@@ -48,3 +48,6 @@ INSTALLED_APPS = (
     'smallacts.core',
     'smallacts.signatures',
 )
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
