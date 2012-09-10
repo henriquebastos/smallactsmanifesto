@@ -48,3 +48,5 @@ INSTALLED_APPS = (
     'smallacts.core',
     'smallacts.signatures',
 )
+
+SOUTH_TESTS_MIGRATE = False
