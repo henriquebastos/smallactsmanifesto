@@ -16,6 +16,10 @@ class IndexViewTest(TestCase):
         'Index must be rendered with index.html.'
         self.assertTemplateUsed(self.resp, 'index.html')
 
+    def test_context(self):
+        'Signatories must be in context.'
+        self.assertIn('signatories', self.resp.context)
+
 
 class CommunityBadgesViewTest(TestCase):
     'Community badges page tests.'

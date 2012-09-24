@@ -1,9 +1,12 @@
 # coding: utf-8
 from django.views.generic.simple import direct_to_template
+from smallacts.signatures.models import Signatory
 
 
 def index(request):
-    return direct_to_template(request, 'index.html')
+    return direct_to_template(request, 'index.html', {
+        'signatories' : Signatory.objects.all(),
+    })
 
 
 def community_badges(request):
