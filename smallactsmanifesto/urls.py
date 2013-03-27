@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^signup/', include('smallacts.signatures.urls', namespace='signatures')),
-    url(r'^', include('smallacts.core.urls', namespace='core')),
+    url(r'^signup/', include('smallactsmanifesto.signatures.urls', namespace='signatures')),
+    url(r'^', include('smallactsmanifesto.core.urls', namespace='core')),
     url(r'^admin/', include(admin.site.urls)),
 )

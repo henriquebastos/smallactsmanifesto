@@ -1,4 +1,4 @@
-# Django settings for smallacts project.
+# Django settings for smallactsmanifesto project.
 from unipath import Path
 
 PROJECT_ROOT = Path(__file__).parent
@@ -32,9 +32,9 @@ STATIC_URL = '/static/'
 
 SECRET_KEY = '4&7-+%-5xeha_awet(s3**b!6+-29k*qq=r@xi!=@#v@f9^l6i'
 
-ROOT_URLCONF = 'smallacts.urls'
+ROOT_URLCONF = 'smallactsmanifesto.urls'
 
-WSGI_APPLICATION = 'smallacts.wsgi.application'
+WSGI_APPLICATION = 'smallactsmanifesto.wsgi.application'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -45,8 +45,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
-    'smallacts.core',
-    'smallacts.signatures',
+    'smallactsmanifesto.core',
+    'smallactsmanifesto.signatures',
 )
 
 if DEBUG:
