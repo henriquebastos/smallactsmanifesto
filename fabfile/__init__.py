@@ -23,7 +23,7 @@ def stage():
     env.user = 'smallactsmanifesto'
     env.hosts = ['stage.smallactsmanifesto.org']
     env.settings = 'smallactsmanifesto.settings'
-    env.PROJECT = Project('~' + env.user, env.hosts[0])
+    env.PROJECT = Project('~', env.hosts[0])
 
 
 def manage(command):
