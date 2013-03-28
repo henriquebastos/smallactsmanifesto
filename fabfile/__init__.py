@@ -8,7 +8,7 @@ import deploy
 
 
 # Always run fabric from the repository root dir.
-Path(__file__).parent.chdir()
+Path(__file__).parent.parent.chdir()
 
 '''
 production
