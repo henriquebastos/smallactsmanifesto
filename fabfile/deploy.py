@@ -11,7 +11,6 @@ def push(revision):
     '''
     rev = local('git rev-parse %s' % revision, capture=True)
     local_archive = Path('/tmp/%s.tar.bz2' % rev)
-    import ipdb; ipdb.set_trace()
     remote_archive = Path(env.PROJECT.tmp, local_archive.name)
 
     local('git archive --format=tar %s | bzip2 -c > %s' % (rev, local_archive))
