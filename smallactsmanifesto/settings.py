@@ -25,9 +25,9 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_L10N = True
 USE_TZ = True
 
-MEDIA_ROOT = PROJECT_ROOT.child('public', 'media')
+MEDIA_ROOT = PROJECT_ROOT.parent.child('public', 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = PROJECT_ROOT.child('public', 'static')
+STATIC_ROOT = PROJECT_ROOT.parent.child('public', 'static')
 STATIC_URL = '/static/'
 
 SECRET_KEY = '4&7-+%-5xeha_awet(s3**b!6+-29k*qq=r@xi!=@#v@f9^l6i'
