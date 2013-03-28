@@ -23,7 +23,7 @@ def server():
     5.  Find the section "Users, Files, and Paths".
     6.  on "Run this domain under user" select the option "Create a new
         user" and define the user as: myproject
-    7.  Set "Web directory" to: myproject.com.br/current/public
+    7.  Set "Web directory" to: myproject.com.br/releases/current/public
     8.  Find the section "Web options";
     9.  Check the option "Passenger (Ruby/Python apps only)"
     10. Click on the "Fully host this domain" button to save.
