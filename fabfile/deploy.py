@@ -1,14 +1,14 @@
 # coding: utf-8
 from unipath import Path
-from fabric.api import task, local, run, lcd, put, env
+from fabric.api import task, local, run, cd, put, env, prefix, require
 from .helpers import timestamp
 
 
 @task
 def push(revision):
-    '''
+    """
     Push the code to the right place on the server.
-    '''
+    """
     rev = local('git rev-parse %s' % revision, capture=True)
     local_archive = Path('/tmp/%s.tar.bz2' % rev)
     remote_archive = Path(env.PROJECT.tmp, local_archive.name)
@@ -23,51 +23,47 @@ def push(revision):
     return release_dir
 
 
-def build():
-    '''
+@task
+def build(release_dir):
+    """
     Build the pushed version installing packages, running migrations, etc.
-    '''
-    pass
+    """
+    with cd(release_dir):
+        run("python bootstrap")
+        with prefix('source bin/activate'):
+            run("python manage.py syncdb --noinput --migrate --settings=%(settings)s" % env)
+            run("python manage.py collectstatic --noinput --settings=%(settings)s" % env)
 
 
-def release():
-    '''
+@task
+def release(release_dir):
+    """
     Release the current build activating it on the server.
-    '''
+    """
+    with cd(env.PROJECT.releases):
+        run('rm -rf current')
+        run('ln -s %s current' % release_dir)
 
+
+@task
 def restart():
-    '''
+    """
     Restart all services.
-    '''
+    """
+    run('pkill python')
+    run('touch %(current)s/passenger_wsgi.py' % env.PROJECT)
 
 
 @task(default=True)
 def deploy(revision):
-    '''
+    """
     Make the application deploy.
 
     Example: fab production deploy:1.2
-    '''
-    require('settings')
-    env.user = 'deploy'
-    release_dir = _upload_source(revision)
+    """
+    require('PROJECT', provided_by=['stage', 'production'])
 
-    with cd(release_dir):
-        run("sudo pip install -r host/requirements.txt")
-        run("python manage.py syncdb --noinput --migrate --settings=%(settings)s" % env)
-        run("python manage.py collectstatic --noinput --settings=%(settings)s" % env)
-
-    with cd(env.PROJECT_RELEASES):
-        run('rm -rf current')
-        run('ln -s %s current' % release_dir)
-
-    run('sudo /etc/init.d/nginx restart')
-    run("sudo init Q")
-    with settings(warn_only=True):
-        run('sudo initctl stop wttd instance=%(settings)s' % env)
-    run('sudo initctl start wttd instance=%(settings)s' % env)
-
-    crontab_file = os.path.join(env.PROJECT_CURRENT, 'host/wttd.cron')
-    run('sed -i "s|ENVIRONMENT|%s|g" %s' % (env.environment, crontab_file))
-    run('sed -i "s|HOST|%s|g" %s' % (env.hosts[0], crontab_file))
-    run('crontab %s' % crontab_file)
+    release_dir = push(revision)
+    build(release_dir)
+    release(release_dir)
+    restart()
