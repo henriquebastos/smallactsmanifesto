@@ -1,5 +1,5 @@
 # coding: utf-8
-from fabric.api import env, task, settings, hide, cd, run
+from fabric.api import env, task, settings, hide, cd, run, prefix
 from unipath import Path
 from .helpers import timestamp, Project
 
@@ -20,8 +20,10 @@ def stage():
     env.PROJECT = Project('~', env.hosts[0])
 
 
+@task
 def manage(command):
     assert command
-    with settings(hide('warnings'), user='deploy', warn_only=True):
-        with cd(env.PROJECT_CURRENT):
-            run('python manage.py %s --settings=%s' % (command, env.settings))
+    with settings(hide('warnings'), warn_only=True):
+        with cd(env.PROJECT.current):
+            with prefix('source bin/activate'):
+                run('python manage.py %s' % command)
