@@ -68,8 +68,13 @@ def application():
     run('mkdir -m 755 -p %(releases)s' % env.PROJECT)
     run('mkdir -m 755 -p %(current)s' % env.PROJECT)
     run('mkdir -m 755 -p %(share)s' % env.PROJECT)
+    run('mkdir -m 755 -p %(media)s' % env.PROJECT)
     run('mkdir -m 755 -p %(tmp)s' % env.PROJECT)
     run('mkdir -m 755 -p %(logs)s' % env.PROJECT)
+
+    # Initialize environment settings file
+    run('touch %(settings)s' % env.PROJECT)
+    run('chmod 600 %(settings)s' % env.PROJECT)
 
 
 @task

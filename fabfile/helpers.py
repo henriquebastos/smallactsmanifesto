@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class Project(dict):
-    def __init__(self, rootdir, appname):
+    def __init__(self, rootdir, appname, package):
         appdir = '%s/%s' % (rootdir, appname)
 
         super(Project, self).__init__(
@@ -11,8 +11,12 @@ class Project(dict):
             releases = '%s/releases' % appdir,
             current  = '%s/releases/current' % appdir,
             share    = '%s/share' % appdir,
+            media    = '%s/share/media' % appdir,
+            settings = '%s/share/settings.ini' % appdir,
             tmp      = '%s/tmp' % appdir,
             logs     = '%s/logs/%s' % (rootdir, appname),
+
+            package  = package,
         )
 
     def __getattr__(self, item):

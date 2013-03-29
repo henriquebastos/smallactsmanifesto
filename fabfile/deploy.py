@@ -29,10 +29,21 @@ def build(release_dir):
     Build the pushed version installing packages, running migrations, etc.
     """
     with cd(release_dir):
+        release_static = Path(release_dir, env.PROJECT.package, 'static')
+        release_media = Path(release_dir, env.PROJECT.package, 'media')
+        release_settings = Path(release_dir, env.PROJECT.package, 'settings.ini')
+
+        run('ln -s %s %s' % (env.PROJECT.settings, release_settings))
         run("python bootstrap")
+
         with prefix('source bin/activate'):
             run("python manage.py syncdb --noinput --migrate --settings=%(settings)s" % env)
             run("python manage.py collectstatic --noinput --settings=%(settings)s" % env)
+
+        run('mkdir -p public')
+        run('ln -s %s public/' % release_static)
+        run('ln -s %s public/' % env.PROJECT.media)
+        run('ln -s %s %s' % (env.PROJECT.media, release_media))
 
 
 @task
