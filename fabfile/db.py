@@ -1,10 +1,12 @@
 # coding: utf-8
-from fabric.api import task, get, env, put, abort
-from unittest import Path
+import os
+from fabric.api import task, get, env, put, abort, run, cd, require, prefix
+from unipath import Path
+from .helpers import timestamp
 
 
 @task
-def dump():
+def dumpdata(apps_or_models=''):
     '''
     Connect to Dreamhost server, generate a database dump and
     download it.
@@ -13,15 +15,16 @@ def dump():
     '''
     require('PROJECT', provided_by=['stage', 'production'])
 
-    dumpfile = '%s/%s-%s.sql.bz2' % (env.PROJECT.tmp, env.host, timestamp())
+    remote_file = '%s/%s-%s.json.bz2' % (env.PROJECT.tmp, env.host, timestamp())
 
     with cd(env.PROJECT.current):
-        run('python manage.py dumpdata --all --indent 4 | bzip2 -c  > %(dumpfile)s' % dumpfile)
-        get(dumpfile, os.getcwd())
+        with prefix('source bin/activate'):
+            run('python manage.py dumpdata %s --indent 4 | bzip2 -c  > %s' % (apps_or_models, remote_file))
+            get(remote_file, os.getcwd())
 
 
 @task
-def restore(dumpfile):
+def loaddata(local_file):
     '''
     Connect to Dreamhost server, upload a local database dump and
     restore it.
@@ -30,10 +33,18 @@ def restore(dumpfile):
     '''
     require('PROJECT', provided_by=['stage', 'production'])
 
-    remote_file = put(Path(dumpfile), env.PROJECT.tmp)
+    local_file = Path(local_file)
+    remote_file = Path(env.PROJECT.tmp, local_file.name)
 
-    if remote_file.failed:
+    if put(local_file, remote_file).failed:
         abort('Failed to upload "%s"' % local_file)
 
-    remote_file = Path(remote_file.pop())
-    run()
+    with cd(env.PROJECT.current):
+        if '.bz2' in remote_file:
+            run('bunzip2 %s' % remote_file)
+            remote_file = remote_file.replace('.bz2', '')
+
+        with prefix('source bin/activate'):
+            run('python manage.py loaddata %s' % remote_file)
+
+    run('rm %s' % remote_file)
