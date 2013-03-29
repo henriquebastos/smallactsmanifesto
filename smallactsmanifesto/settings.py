@@ -5,7 +5,7 @@ from smallactsmanifesto.config import DjangoConfig
 
 PROJECT_ROOT = Path(__file__).parent
 
-config = DjangoConfig(PROJECT_ROOT.parent.child('settings.ini'))
+config = DjangoConfig(PROJECT_ROOT.child('settings.ini'))
 
 DEBUG = config('DEBUG', default=False, type=bool)
 TEMPLATE_DEBUG = DEBUG
@@ -20,9 +20,9 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_L10N = True
 USE_TZ = True
 
-MEDIA_ROOT = PROJECT_ROOT.parent.child('public', 'media')
+MEDIA_ROOT = PROJECT_ROOT.child('media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = PROJECT_ROOT.parent.child('public', 'static')
+STATIC_ROOT = PROJECT_ROOT.child('static')
 STATIC_URL = '/static/'
 
 SECRET_KEY = config('SECRET_KEY')
