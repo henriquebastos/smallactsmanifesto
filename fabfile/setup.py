@@ -73,7 +73,7 @@ def application():
     run('mkdir -m 755 -p %(logs)s' % env.PROJECT)
 
     # Initialize environment settings file
-    run('touch %(settings)s' % env.PROJECT)
+    run('echo "[settings]\n" >> %(settings)s' % env.PROJECT)
     run('chmod 600 %(settings)s' % env.PROJECT)
 
 
