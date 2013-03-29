@@ -19,12 +19,12 @@ class DjangoConfig(object):
         self.parser = SafeConfigParser()
         self.parser.readfp(open(config_file))
 
-    def get(self, option, default='', type=unicode):
+    def get(self, option, default=None, type=unicode):
         """
         Return the value for option or default option is not defined.
         """
         if not self.parser.has_option(self.SECTION, option):
-            return default
+            return type(default)
 
         return type(self.parser.get(self.SECTION, option))
 
