@@ -11,13 +11,6 @@ import db
 # Always run fabric from the repository root dir.
 Path(__file__).parent.parent.chdir()
 
-'''
-production
-
-deploy
-db.dump - manage.py dumpdata | tar.gz -> download
-db.restore - arquivo (tar.gz, json, sql, yaml) -> upload -> flush e loaddata
-'''
 
 @task
 def stage():
