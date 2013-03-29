@@ -6,6 +6,7 @@ from .helpers import timestamp, Project
 import setup
 import deploy
 import db
+import config
 
 
 # Always run fabric from the repository root dir.
