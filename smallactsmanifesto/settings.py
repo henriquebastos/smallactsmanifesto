@@ -1,22 +1,17 @@
-# Django settings for smallactsmanifesto project.
+# coding: utf-8
+from dj_database_url import parse as db_url
 from unipath import Path
+from smallactsmanifesto.config import DjangoConfig
 
 PROJECT_ROOT = Path(__file__).parent
 
-DEBUG = True
+config = DjangoConfig(PROJECT_ROOT.parent.child('settings.ini'))
+
+DEBUG = config('DEBUG', default=False, type=bool)
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Small Acts Manifesto', 'admin@smallactsmanifesto.org'),
-)
-
-DEFAULT_FROM_EMAIL = 'admin@smallactsmanifesto.org'
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': PROJECT_ROOT.child('database.db'),
-    }
+    'default': config('DATABASE_URL', default='sqlite:///' + PROJECT_ROOT.child('database.db'), type=db_url)
 }
 
 SITE_ID = 1
@@ -30,7 +25,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = PROJECT_ROOT.parent.child('public', 'static')
 STATIC_URL = '/static/'
 
-SECRET_KEY = '4&7-+%-5xeha_awet(s3**b!6+-29k*qq=r@xi!=@#v@f9^l6i'
+SECRET_KEY = config('SECRET_KEY')
 
 ROOT_URLCONF = 'smallactsmanifesto.urls'
 
@@ -51,3 +46,15 @@ INSTALLED_APPS = (
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ADMINS = (
+    ('Small Acts Manifesto', 'admin@smallactsmanifesto.org'),
+)
+
+DEFAULT_FROM_EMAIL = 'admin@smallactsmanifesto.org'
+
+EMAIL_HOST = config('EMAIL_HOST', default='localhost')
+EMAIL_PORT = config('EMAIL_PORT', default=25, type=int)
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, type=bool)

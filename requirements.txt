@@ -5,3 +5,4 @@ south==0.7.6
 Unipath==0.2.1
 model_mommy==0.8.1
 fabric==1.6.0
+dj-database-url==0.2.1
