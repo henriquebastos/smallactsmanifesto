@@ -44,9 +44,6 @@ INSTALLED_APPS = (
     'smallactsmanifesto.signatures',
 )
 
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
 ADMINS = (
     ('Small Acts Manifesto', 'admin@smallactsmanifesto.org'),
 )
