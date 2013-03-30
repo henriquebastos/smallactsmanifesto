@@ -24,6 +24,16 @@ def stage():
 
 
 @task
+def production():
+    project = 'smallactsmanifesto'
+    cname = 'production.smallactsmanifesto.org'
+    env.user = project
+    env.hosts = [cname]
+    env.settings = '%s.settings' % project
+    env.PROJECT = Project('~', cname, project)
+
+
+@task
 def manage(command):
     assert command
     with settings(hide('warnings'), warn_only=True):
