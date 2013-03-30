@@ -15,10 +15,12 @@ Path(__file__).parent.parent.chdir()
 
 @task
 def stage():
-    env.user = 'smallactsmanifesto'
-    env.hosts = ['stage.smallactsmanifesto.org']
-    env.settings = 'smallactsmanifesto.settings'
-    env.PROJECT = Project('~', env.hosts[0], env.user)
+    project = 'smallactsmanifesto'
+    cname = 'stage.smallactsmanifesto.org'
+    env.user = project
+    env.hosts = [cname]
+    env.settings = '%s.settings' % project
+    env.PROJECT = Project('~', cname, project)
 
 
 @task
