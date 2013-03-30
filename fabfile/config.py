@@ -1,5 +1,6 @@
 # coding: utf-8
-from fabric.api import task, run, env, require, settings, hide, fastprint
+from unipath import Path
+from fabric.api import task, run, env, require, settings, hide, fastprint, get, put
 from fabric.contrib.files import append, sed
 
 
@@ -41,6 +42,22 @@ def remove(option):
 
     # sanity check
     assert not contains(env.PROJECT.settings, '%s.*' % option), 'Config found: "%s"' % option
+
+
+@task
+def download():
+    """
+    Download remote settings.ini.
+    """
+    get(env.PROJECT.settings, Path(env.lcwd, Path(env.PROJECT.settings).name))
+
+
+@task
+def upload(config_file):
+    """
+    Upload a config file to replace remote settings.ini.
+    """
+    put(config_file, env.PROJECT.settings)
 
 
 def contains(filename, text):
