@@ -16,6 +16,9 @@ def list():
 
 @task
 def set(option, value):
+    """
+    Update or create option line from remote settings.ini
+    """
     option = option.lower()
 
     before = '%s = .*' % option
@@ -32,6 +35,9 @@ def set(option, value):
 
 @task
 def remove(option):
+    """
+    Remove option line from remote settings.ini
+    """
     option = option.lower()
 
     before = '%s = .*' % option
