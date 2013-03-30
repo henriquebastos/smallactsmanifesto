@@ -26,7 +26,13 @@ class DjangoConfig(object):
         if not self.parser.has_option(self.SECTION, option):
             return type(default)
 
-        return type(self.parser.get(self.SECTION, option))
+        getter = {
+            bool: self.parser.getboolean,
+            float: self.parser.getfloat,
+            int: self.parser.getint,
+        }.get(type, self.parser.get)
+
+        return type(getter(self.SECTION, option))
 
     def __call__(self, *args, **kwargs):
         """
