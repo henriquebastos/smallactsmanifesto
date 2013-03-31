@@ -85,8 +85,15 @@ class SignupViewPostTest(TestCase):
 class SingupViewInvalidPostTest(TestCase):
     'Signup POST failure tests.'
     def setUp(self):
-        data = dict(name='', email='', url='', location='')
+        # Needed for testing captcha
+        os.environ['RECAPTCHA_TESTING'] = 'True'
+
+        data = dict(name='', email='', url='', location='',
+                    recaptcha_response_field='PASSED')
         self.resp = self.client.post(r('signatures:signup'), data)
+
+    def tearDown(self):
+        del os.environ['RECAPTCHA_TESTING']
 
     def test_post(self):
         'POST must return 200 as status_code.'
@@ -108,11 +115,18 @@ class SignupViewResendConfirmationMailTest(TestCase):
     Then the system only resends the email without saving anything.
     """
     def setUp(self):
+        # Needed for testing captcha
+        os.environ['RECAPTCHA_TESTING'] = 'True'
+
         Signatory.objects.create(email='henrique@bastos.net',
              name='dummy', url='dummy', location='dummy')
 
-        data = dict(name='Henrique Bastos', email='henrique@bastos.net')
+        data = dict(name='Henrique Bastos', email='henrique@bastos.net',
+                    recaptcha_response_field='PASSED')
         self.resp = self.client.post(r('signatures:signup'), data)
+
+    def tearDown(self):
+        del os.environ['RECAPTCHA_TESTING']
 
     def test_redirect_to(self):
         'POST must redirect to /signup/success/.'
