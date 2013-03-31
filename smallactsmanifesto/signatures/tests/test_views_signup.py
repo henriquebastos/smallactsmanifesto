@@ -81,6 +81,11 @@ class SignupViewPostTest(TestCase):
         obj = Signatory.objects.get(pk=1)
         self.assertIn(obj.get_confirm_url(), mail.outbox[0].body)
 
+    def test_mail_subject_dont_have_newline(self):
+        """
+        Subject must not contain newline.
+        """
+        self.assertNotIn('\n', mail.outbox[0].subject)
 
 class SingupViewInvalidPostTest(TestCase):
     'Signup POST failure tests.'
