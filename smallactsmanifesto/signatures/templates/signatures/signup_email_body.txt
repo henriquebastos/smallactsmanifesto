@@ -1,0 +1,11 @@
+Hello {{ object.name }}!
+
+You have just signed up for the Small Acts Manifesto.
+
+To confirm your subscription please access the link:
+
+{{ object.get_confirm_url }}
+
+All the best,
+--
+SmallActsManifesto.org

@@ -12,3 +12,7 @@ share
 .DS_Store
 local_settings.py
 *.db
+.idea
+tmp
+smallactsmanifesto/settings.ini
+
