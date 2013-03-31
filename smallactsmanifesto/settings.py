@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
+    'captcha',
     'smallactsmanifesto.core',
     'smallactsmanifesto.signatures',
 )
@@ -88,3 +89,6 @@ if config('CACHE_ENABLED', False, bool):
         ),
     ))
 
+RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_USE_SSL = True

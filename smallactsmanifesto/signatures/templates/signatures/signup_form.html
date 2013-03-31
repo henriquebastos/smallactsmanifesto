@@ -39,6 +39,13 @@
       <small><em>This field is optional.</em> Where are you from?</small>
     </p>
   </div>
+  <div class="field" style="padding-top: 20px;">
+    {{ form.captcha }}
+    <div class="error">{{ form.captcha.errors.as_text }}</div>
+      <p id="info_id_captcha" class="info_label" style="margin-top: -140px;">
+        <small><em>Sorry about this!</em>Just a small act to prevent spam.</small>
+      </p>
+  </div>
   <input type="submit" class="button" value="Send" />
 </form>
 
