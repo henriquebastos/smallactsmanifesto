@@ -1,4 +1,5 @@
 # coding: utf-8
+import os
 from django.conf import settings
 from django.core import mail
 from django.test import TestCase
@@ -28,7 +29,7 @@ class SignupViewTest(TestCase):
     def test_html(self):
         'HTML must contain expected inputs.'
         self.assertContains(self.resp, '<form')
-        self.assertContains(self.resp, '<input', 6)
+        self.assertContains(self.resp, '<input', 7)
         self.assertContains(self.resp, "type='hidden'")
         self.assertContains(self.resp, 'type="text"', 4)
         self.assertContains(self.resp, 'type="submit"')
@@ -37,9 +38,16 @@ class SignupViewTest(TestCase):
 class SignupViewPostTest(TestCase):
     'Signup POST success tests.'
     def setUp(self):
+        # Needed for testing captcha
+        os.environ['RECAPTCHA_TESTING'] = 'True'
+
         data = dict(name='Henrique Bastos', email='henrique@bastos.net',
-                    url='http://henriquebastos.net', location='Brasil')
+                    url='http://henriquebastos.net', location='Brasil',
+                    recaptcha_response_field='PASSED')
         self.resp = self.client.post(r('signatures:signup'), data)
+
+    def tearDown(self):
+        del os.environ['RECAPTCHA_TESTING']
 
     def test_post(self):
         'POST must return 302 as status code.'
@@ -73,12 +81,24 @@ class SignupViewPostTest(TestCase):
         obj = Signatory.objects.get(pk=1)
         self.assertIn(obj.get_confirm_url(), mail.outbox[0].body)
 
+    def test_mail_subject_dont_have_newline(self):
+        """
+        Subject must not contain newline.
+        """
+        self.assertNotIn('\n', mail.outbox[0].subject)
 
 class SingupViewInvalidPostTest(TestCase):
     'Signup POST failure tests.'
     def setUp(self):
-        data = dict(name='', email='', url='', location='')
+        # Needed for testing captcha
+        os.environ['RECAPTCHA_TESTING'] = 'True'
+
+        data = dict(name='', email='', url='', location='',
+                    recaptcha_response_field='PASSED')
         self.resp = self.client.post(r('signatures:signup'), data)
+
+    def tearDown(self):
+        del os.environ['RECAPTCHA_TESTING']
 
     def test_post(self):
         'POST must return 200 as status_code.'
@@ -100,11 +120,18 @@ class SignupViewResendConfirmationMailTest(TestCase):
     Then the system only resends the email without saving anything.
     """
     def setUp(self):
+        # Needed for testing captcha
+        os.environ['RECAPTCHA_TESTING'] = 'True'
+
         Signatory.objects.create(email='henrique@bastos.net',
              name='dummy', url='dummy', location='dummy')
 
-        data = dict(name='Henrique Bastos', email='henrique@bastos.net')
+        data = dict(name='Henrique Bastos', email='henrique@bastos.net',
+                    recaptcha_response_field='PASSED')
         self.resp = self.client.post(r('signatures:signup'), data)
+
+    def tearDown(self):
+        del os.environ['RECAPTCHA_TESTING']
 
     def test_redirect_to(self):
         'POST must redirect to /signup/success/.'
