@@ -20,6 +20,14 @@ SITE_ID = 1
 TIME_ZONE = 'America/Sao_Paulo'
 USE_L10N = True
 USE_TZ = True
+LANGUAGES = (
+    ('en', u'English'),
+    ('pt-br', u'Português'),
+)
+LOCALE_PATHS = (
+    PROJECT_ROOT.child('locale'),
+)
+
 
 MEDIA_ROOT = PROJECT_ROOT.child('media')
 MEDIA_URL = '/media/'
@@ -60,8 +68,9 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, type=bool)
 
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
