@@ -15,4 +15,5 @@ local_settings.py
 .idea
 tmp
 smallactsmanifesto/settings.ini
-
+*.mo
+.noseids
