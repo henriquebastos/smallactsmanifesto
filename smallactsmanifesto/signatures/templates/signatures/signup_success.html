@@ -1,15 +1,16 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 
-<h1>You've just signed up!</h1>
+<h1>{% trans "You've just signed up!" %}</h1>
 
-<p>A message with a confirmation link was sent to your mail.</p>
+<p>{% trans "A message with a confirmation link was sent to your mail." %}</p>
 
-<p>Please, do this last small act so we can list your name as a signatory.</p>
+<p>{% trans "Please, do this last small act so we can list your name as a signatory." %}</p>
 
-<p>Thank you!</p>
+<p>{% trans "Thank you!" %}</p>
 
-<p><a href="/community-badges">Check out our community badges</a> or <a href="/">back to home page</a></p>
+<p><a href="{% url core:community-badges %}">{% trans "Check out our community badges" %}</a> {% trans "or" %} <a href="{% url core:index %}">{% trans "back to home page" %}</a></p>
 
 {% endblock content %}

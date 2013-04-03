@@ -1,11 +1,14 @@
-Hello {{ object.name }}!
+{% load i18n %}
+{% blocktrans with name=object.name url=object.get_confirm_url %}
+Hello {{ name }}!
 
 You have just signed up for the Small Acts Manifesto.
 
 To confirm your subscription please access the link:
 
-{{ object.get_confirm_url }}
+{{ url }}
 
 All the best,
 --
 SmallActsManifesto.org
+{% endblocktrans %}
