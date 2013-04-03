@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admin',
     'south',
+    'django_nose',
     'captcha',
     'smallactsmanifesto.core',
     'smallactsmanifesto.signatures',
@@ -101,3 +102,16 @@ if config('CACHE_ENABLED', False, bool):
 RECAPTCHA_PUBLIC_KEY = config('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = config('RECAPTCHA_PRIVATE_KEY')
 RECAPTCHA_USE_SSL = True
+
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = [
+    '--match=^(must|ensure|should|test|it_should)',
+    '--where=%s' % PROJECT_ROOT,
+    '--id-file=%s' % PROJECT_ROOT.child('.noseids'),
+    '--all-modules',
+    '--with-id',
+    '--verbosity=1',
+    '--nologcapture',
+    '--rednose',
+    ]
+
