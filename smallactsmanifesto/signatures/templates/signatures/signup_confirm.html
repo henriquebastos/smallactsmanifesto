@@ -1,16 +1,17 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 
-<h1>Email confirmation succeeded!</h1>
+<h1>{% trans "Email confirmation succeeded!" %}</h1>
 
-<p>Thank you for endorsing the Small Acts Manifesto.</p>
+<p>{% trans "Thank you for endorsing the Small Acts Manifesto." %}</p>
 
-<p>We're glad you share with us the same set of principles.</p>
+<p>{% trans "We're glad you share with us the same set of principles." %}</p>
 
-<p>Now, this manifesto is yours. We encourage you to spread it and
-above all, to share your experiences on acting according the principles.</p>
+<p>{% trans "Now, this manifesto is yours. We encourage you to spread it and
+above all, to share your experiences on acting according the principles." %}</p>
 
-<p><a href="/community-badges">Check out our community badges</a> or <a href="/">back to home page</a></p>
+<p><a href="{% url core:community-badges %}">{% trans "Check out our community badges" %}</a> {% trans "or" %} <a href="{% url core:index %}">{% trans "back to home page" %}</a></p>
 
 {% endblock content %}

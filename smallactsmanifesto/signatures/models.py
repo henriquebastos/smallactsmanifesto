@@ -4,15 +4,25 @@ from django.contrib.sites.models import Site
 from django.core.urlresolvers import reverse as r
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from .utils import mark_safe_lazy as safe
+
+
+HELP_NAME = safe(_('Your name to be shown on the signatories list.'))
+HELP_EMAIL = safe(_('Your email is important so we can send you a confirmation email.'
+                    '<br />Your email will not be published or used in any other way.'))
+HELP_URL = safe(_('<em>This field is optional.</em> An url that will be linked '
+                  'to you name on the signatories list.'))
+HELP_LOCATION = safe(_('<em>This field is optional.</em> Where are you from?'))
 
 
 class Signatory(models.Model):
-    "Manifesto's signatory"
-
-    name = models.CharField(_('Name'), max_length=200)
-    email = models.EmailField(_('E-mail'))
-    url = models.URLField(_('Url'), blank=True)
-    location = models.CharField(_('Location'), max_length=200, blank=True)
+    """
+    Manifesto's signatory
+    """
+    name = models.CharField(_('Name'), max_length=200, help_text=HELP_NAME)
+    email = models.EmailField(_('E-mail'), help_text=HELP_EMAIL)
+    url = models.URLField(_('Url'), blank=True, help_text=HELP_URL)
+    location = models.CharField(_('Location'), max_length=200, blank=True, help_text=HELP_LOCATION)
 
     signed_at = models.DateTimeField(_('Signed At'), auto_now_add=True)
     is_active = models.BooleanField(_('Is active?'), default=False)

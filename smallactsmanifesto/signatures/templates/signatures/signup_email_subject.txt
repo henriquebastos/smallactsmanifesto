@@ -1,1 +1,1 @@
-Small Acts make Great Revolutions
+{% load i18n %}{% trans "Small Acts make Great Revolutions" %}
