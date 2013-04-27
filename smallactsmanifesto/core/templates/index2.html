@@ -1,0 +1,63 @@
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}
+{% trans "Small Acts Manifesto" as title %}
+{% trans "small acts, manifesto, small acts manifesto, principles, community" as keywords %}
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="{{ title }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta http-equiv='content-Language' content='{{ LANGUAGE_CODE }}' />
+    <link type="image/x-icon" href="{% static "favicon.ico" %}" rel="shortcut icon" />
+
+    <title>{{ title }}</title>
+
+    <link type="text/css" href="{% static "css/style2.css" %}" rel="stylesheet" media="screen" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "js/scripts.js" %}"></script>
+</head>
+<body class="debug">
+    <div class="header row rulerBottom">
+        <p class="logo"><a href="{% url core:index %}"><img src="{% static "images/logo-small-acts.png" %}" alt="Small Acts Manifesto Logo"/></a></p>
+        <blockquote class="col-4 centered"><p>Small Acts Make Great Revolutions</p></blockquote>
+    </div>
+    <hr/>
+    <div class="content">
+        <p>{% trans "We are discovering better ways of building communities by connecting people." %}</p>
+        <p>{% trans "Through this endeavor we have come to value:" %}</p>
+        <ul>
+            <li><strong>{% trans "Trust"  %}</strong>{% trans " - which must be respected and never put at risk;" %}</li>
+            <li><strong>{% trans "Dialog" %}</strong>{% trans " - is the way to establish a truly trustful relationship;" %}</li>
+            <li><strong>{% trans "Personal Contact" %}</strong>{% trans " - the richest experience, not matched by any media or technology;" %}</li>
+            <li><strong>{% trans "Transparency" %}</strong>{% trans " - the mean to maintain a sustainable community;" %}</li>
+            <li><strong>{% trans "Diversity" %}</strong>{% trans " - people have many interests, but if you need a label, label yourself as a human;" %}</li>
+            <li><strong>{% trans "Self-organization" %}</strong>{% trans " - leaders emerge, but there should be no owners;" %}</li>
+            <li><strong>{% trans "Example" %}</strong>{% trans " - that's how you must teach, live and learn;" %}</li>
+            <li><strong>{% trans "Consistency" %}</strong>{% trans " - things take time, intensity is not always the answer;" %}</li>
+            <li><strong>{% trans "Give, give, give!" %}</strong>{% trans " - you'll be impressed by how fast things will come back;" %}</li>
+            <li><strong>{% trans "Do it!" %}</strong>{% trans " - as simple as you can, just what is essential to pass it forward." %}</li>
+        </ul>
+
+        <p>{% trans "Together, these elements build the foundation of a <em>Small Act</em> capable of transforming people's lives." %}</p>
+
+        <p><a href="{% url signatures:signup %}" class="btnBasic btnWhite">{% trans "Get involved" %} &raquo;</a></p>
+
+        <ul>
+        {% for signatory in signatories %}
+            <li>
+            {% if signatory.url %}
+                <a href="{{ signatory.url }}" rel="nofollow">{{ signatory.name }}</a>
+            {% else %}
+                {{ signatory.name }}
+            {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="footer">
+        <p>&copy; 2010. <a rel="license" href="{% url core:index %}">{{ title }}</a>, {% trans "some rights reserved." %} <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" /></a> | <a href="{% url core:community-badges %}">Community badges</a> <a href="http://www.djangoproject.com/" id="django"><img src="{% static "images/djangosite80x15.gif" %}" border="0" alt="A Django site." title="A Django site." /></a></p>
+    </div>
+</body>
+</html>

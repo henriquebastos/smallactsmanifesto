@@ -1,0 +1,467 @@
+/* Default HTML Tags */
+body {
+  background-color: #E8DDCB;
+  color: #363636;
+  font-size: 62.5%;
+  line-height: 1.25em;
+  font-family: Georgia, Serif;
+  text-shadow: 0.01em 0.01em 0 rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-size: 4.2em; line-height: 1.285em; margin: 0 0; padding: 0.380em 0.428em 0.261em; }
+h2 { font-size: 2.7em; line-height: 1.000em; margin: 0 0; padding: 0.259em 0.666em 0.740em;  }
+h3 { font-size: 1.8em; line-height: 1.500em; margin: 0 0; padding: 0.500em 1.000em 1.000em;  }
+h4 { font-size: 1.6em; line-height: 1.687em; margin: 0 0; padding: 0.500em 1.125em 1.187em; }
+h5 { font-size: 1.4em; line-height: 1.928em; margin: 0 0; padding: 0.642em 1.285em 1.285em; }
+h6 { font-size: 1.2em; line-height: 1.750em; margin: 0 0; padding: 1.083em 1.500em 1.666em; }
+
+p, li, dt, dd, th, td, caption{ font-size: 1.9em; line-height: 1.687em;}
+
+li li, li p, li h1, li h2, li h3, li h4 { font-size: 1em;}
+
+p { margin: 0 0 0 0; padding: 0.5em 1.125em 1.187em;  }
+
+ul { margin: 0 0; padding: 0.7em 0 1.7em 5.4em; }
+ol { margin: 0 0; padding: 0.7em 0 1.7em 5.4em; }
+
+dl { margin: 0 0 0 0; padding: 0.7em 2.4em 1.7em; }
+dt { margin: 0 0 0 0; padding: 0 0 0 0; font-weight: 700; }
+dd { margin: 0 0 0 0; padding: 0 0 0 0.75em; }
+
+table { border-collapse: collapse; width: 100%; margin: 0 0 0 1em; }
+th, caption { text-align: left; font-weight: 700; }
+
+blockquote { margin: 0 0; padding: 2.4em 4.8em; }
+
+em { font-style: italic; }
+small { font-size: 0.8em; }
+strong, b { font-weight: 700; }
+
+code { color:#C06;font-size:1.2em; }
+
+hr { display:none; }
+img { vertical-align:middle;border-width:0;}
+
+fieldset { border:solid 1px #cdcdcd; }
+textarea { font-family:inherit; font-size:1.5em; margin:0 1.2em; padding:0.75em 0.5em 0.5em 0.75em; width:93%; border:solid 1px #cdcdcd; }
+
+a         { color: #0066cc; }
+a:visited { color: #0066cc; }
+a:hover   { color: #E14B00; }
+a:active  { color: #0066cc; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* apply a natural box layout model to all elements. Look, IE was right, huh? */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Columns Rulers, tricks and treats ;D */
+.rulerLeft { border-left: 1px solid #6B1025;}
+.rulerRight { border-right: 1px solid #6B1025;}
+.rulerTop { border-top: 1px solid #6B1025;}
+.rulerBottom { border-bottom: 1px solid #6B1025;}
+
+.floatLeft { float: left;}
+.floatRight { float: right;}
+
+.textAlignLeft { text-align: left;}
+.textAlignRight { text-align: right;}
+.textAlignCenter { text-align: center;}
+
+/* Columns Structures */
+.col-1 { max-width: 13.500em; width: 12.5%; }
+.col-2 { max-width: 27.000em; width: 25.0%; }
+.col-3 { max-width: 40.500em; width: 37.5%; }
+.col-4 { max-width: 54.000em; width: 50.0%; }
+.col-5 { max-width: 67.500em; width: 62.5%; }
+.col-6 { max-width: 81.000em; width: 75.0%; }
+.col-7 { max-width: 94.500em; width: 87.5%; }
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7 { float: left; }
+/* Columns Flex */
+.col-12 { width: 12.5%; }
+.col-25 { width: 25.0%; }
+.col-33 { width: 33.0%; }
+.col-50 { width: 50.0%; }
+.col-66 { width: 66.0%; }
+.col-75 { width: 75.0%; }
+.col-12, .col-25, .col-33, .col-50, .col-66, .col-75  { float: left;}
+.row, .col { overflow: hidden; }
+
+.row .centered {
+  float: none;
+  margin: 0 auto;
+}
+
+ .header, .content, .footer { max-width: 108em; margin:0 auto; padding: 0 0; }
+
+ /* Header */
+.headerFrame {}
+.header {
+    border-bottom: 1px dotted rgb(205, 179, 128);
+    margin-bottom: 1.3em;
+    padding-bottom: 1.5em;
+}
+.header .logo {
+    text-align: center;
+    /* Compensa falta de relação na logo */
+    margin-top: 0.9em;
+    padding-bottom: 1.45em;
+}
+
+.header blockquote {
+  margin: 0 0;
+  padding: 0.55em 0em;
+  background: url("../images/quote-left.gif") no-repeat left center,
+              url("../images/quote-right.gif") no-repeat right center;
+}
+
+.header blockquote p {
+  font-size: 2.5em;
+  font-style: italic;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+/* Content */
+.content { }
+
+/* Footer */
+.footer { color: #999; }
+
+.footer h2 { padding-top: 0; }
+
+/* Navigation Combos */
+.navInline ul,
+.navList ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ display: inline-block;
+}
+
+.navInline li {
+ float: left;
+ position: relative;
+}
+
+.navInline a,
+.navList a {
+  font-size: 0.875em;
+  line-height: 1.928em;
+  text-decoration: none;
+  margin: 0 0.642em;
+  padding: 0 0.642em;
+  display: block;
+  -webkit-transition: color 1s;
+     -moz-transition: color 1s;
+       -o-transition: color 1s;
+}
+
+.navInline a:hover,
+.navList a:hover {
+ color: #000;
+ background: rgba(235,235,235,1);
+}
+
+.navInline .current a,
+.navList .current a {
+ color: #000;
+ font-weight: 700;
+}
+
+/* Posts (Articles, etc) */
+
+/* Forms */
+.formRow {
+  margin: 0;
+  padding: 0 1.8em;
+  list-style: none;
+  min-height: 8.1em;
+}
+
+.formRow p,
+.formRow li,
+.formRow dt,
+.formRow dd {
+  font-size: 1.3em;
+}
+
+.formRow label,
+.formRow legend {
+  color: #000;
+  font-size: 1.4em;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+.formRow textarea {
+  font-family:inherit;
+  font-size:1.5em;
+  margin:0;
+  padding:0.75em 0.5em 0.5em 0.75em;
+  width: 100%;
+  border:solid 1px #cdcdcd;
+}
+
+.formRow p {
+  color:#999;
+  line-height:1.4em;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.formRow:hover p,
+.formRow :focus + p {
+  color: #4c4c4c;
+  font-style: normal;
+}
+
+.labelBlock label,
+.formRow legend {
+  padding: 1.150em 0 0.3em;
+  display: block;
+}
+
+.inputText input {
+  font-size: 1.6em;
+  line-height: 1em;
+  vertical-align: middle;
+  margin: 6px 0;
+  padding: 0.35em;
+  width: 100%;
+  display: block;
+  border: 1px solid #999;
+  /* Border Radius - Cross-Browser */
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  /* Box Shadow - Cross-Browser */
+  -webkit-box-shadow: inset 0 1px 2px #CCC;
+     -moz-box-shadow: inset 0 1px 2px #CCC;
+          box-shadow: inset 0 1px 2px #CCC;
+  background-color: #F8F8F9;
+}
+
+.inputText input:focus,
+.inputText textarea:focus {
+  border: 1px solid #666666;
+  /* Box Shadow - Cross-Browser */
+  -webkit-box-shadow: inset 0 0 10px #CCC;
+     -moz-box-shadow: inset 0 0 10px #CCC;
+          box-shadow: inset 0 0 10px #CCC;
+  background-color: #ffffe6;
+}
+
+.inputText-66 input {
+  width: 66%;
+}
+
+.inputText-33 input {
+  width: 33%;
+}
+
+.inputRadio fieldset {
+  padding: 0;
+  border: none;
+}
+
+.inputRadio dl,
+.inputRadio dd {
+  margin: 0;
+  padding: 0;
+}
+
+.inputRadio label {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.inputRadio input {
+  display: inline-block;
+  margin-right: 0.66em
+}
+
+.selectDropdown select {
+  font-size: 1.2em;
+  margin: 6px 0;
+  padding: 2px 5px;
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #DEDFE0;
+  border-radius: 4px 4px 4px 4px;
+  /* Box Shadow - Cross-Browser */
+  -webkit-box-shadow: 0 1px 0 #ADB1B7;
+     -moz-box-shadow: 0 1px 0 #ADB1B7;
+          box-shadow: 0 1px 0 #ADB1B7;
+  background-color: #F8F8F9;
+}
+
+.labelInline label {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.666em;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+/* Form Errors */
+.errorList {
+  color: red;
+}
+
+.errorList p,
+.errorList li,
+.errorList dt,
+.errorList dd {
+  font-size: 1.3em;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.errorList li + li,
+.errorList dd + dd {
+  line-height: 1.25em;
+  margin: 0;
+  padding-bottom:0.7em;
+}
+
+
+.formRow .errorList {
+  margin: 0;
+  padding: 0 0 0 1em;
+  border-left: 6px solid #F66;
+  list-style: none;
+}
+
+.formRow .errorList + input,
+.formRow .errorList + input + input,
+.formRow .errorList + textarea,
+.formRow .errorList + dl,
+.errorInput input {
+  margin: 0 0 6px;
+  padding: 4px 0 5px 5px;
+  box-shadow: none;
+  border: 1px solid #F66;
+  border-left: 6px solid #F66;
+  border-radius: 0;
+  background: #FFE4E1;
+}
+
+.formRow .errorList + dl {
+  border: none;
+  border-left: 6px solid #F66;
+}
+
+.errorInput label{
+  color: red;
+}
+
+/* Messages and Alerts */
+
+/* Buttons */
+.btnBasic,
+.btnBasic:visited {
+  color: #333;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.5em;
+  vertical-align: baseline;
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px 2px rgba(255, 255, 255, 0.8);
+  margin: 0 0;
+  padding: 1em 2em;
+  display: inline-block;
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 1px 1px 0px rgba(250, 250, 250, 0.4) inset,
+              0px -25px 30px 0px rgba(0, 0, 0, 0.2) inset;
+  background-color: #e6e6e6;
+}
+
+.btnBasic:before {
+  content: '';
+  border: 1px solid #d1d1d1;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  position: absolute;
+  bottom: -6px;
+   right: -6px;
+    left: -6px;
+     top: -6px;
+  opacity: 0.5;
+  z-index: -1;
+  background-color: #dcdcdc;
+  transition: background-color 2s linear;
+}
+
+.btnBasic:hover,
+.btnBasic:focus {
+  color: #000;
+  text-shadow: none;
+  border: 1px solid #d1d1d1;
+  background-color: #f5f5f5;
+  outline: 0;
+
+}
+
+.btnBasic:hover:before,
+.btnBasic:focus:before {
+  border: 1px solid #b4deff;
+  box-shadow: 0 0 0px #FFF inset;
+  background-color: #9acdff;
+}
+
+/* Colors */
+.btnMidori,
+.btnMidori:visited {
+  color: #f5f5f5;
+  text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.8);
+  border: 1px solid #393;
+  background-color:#33be33;
+}
+
+.btnMidori:hover {
+  color: #000;
+  text-shadow: none;
+  background-color: #33cc33;
+}
+
+.btnBlue,
+.btnBlue:visited {
+  color: #f5f5f5;
+  text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.8);
+  border: 1px solid #39F;
+  background-color:#0099ff;
+}
+
+.btnBlue:hover {
+  color: #000;
+  text-shadow: none;
+  background-color: #33B4FF;
+}
+
+.btnWhite,
+.btnWhite:visited {
+    color: #033649;
+    text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.2);
+    border: 1px solid #b7b7b7;
+    background-color: #fff;
+}
+
+.btnWhite:hover {
+  color: #033649;
+  text-shadow: none;
+  background-color: #fff;
+}
+
+/* Debug Grid */
+.debug { background: #E8DDCB url(/static/images/grid-1116x27-baseline.png) repeat-y center top !important;}
+
