@@ -17,14 +17,14 @@ h4 { font-size: 1.6em; line-height: 1.687em; margin: 0 0; padding: 0.500em 1.125
 h5 { font-size: 1.4em; line-height: 1.928em; margin: 0 0; padding: 0.642em 1.285em 1.285em; }
 h6 { font-size: 1.2em; line-height: 1.750em; margin: 0 0; padding: 1.083em 1.500em 1.666em; }
 
-p, li, dt, dd, th, td, caption{ font-size: 1.9em; line-height: 1.687em;}
+p, li, dt, dd, th, td, caption{ font-size: 1.9em; line-height: 1.421em;}
 
 li li, li p, li h1, li h2, li h3, li h4 { font-size: 1em;}
 
-p { margin: 0 0 0 0; padding: 0.5em 1.125em 1.187em;  }
+p { margin: 0 0 0 0; padding: 0.263em 1.125em 1.157em;  }
 
-ul { margin: 0 0; padding: 0.7em 0 1.7em 5.4em; }
-ol { margin: 0 0; padding: 0.7em 0 1.7em 5.4em; }
+ul { margin: 0 0; padding: 0.5em 0 2.2em 5.4em; }
+ol { margin: 0 0; padding: 0.5em 0 2.2em 5.4em; }
 
 dl { margin: 0 0 0 0; padding: 0.7em 2.4em 1.7em; }
 dt { margin: 0 0 0 0; padding: 0 0 0 0; font-weight: 700; }
@@ -100,19 +100,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .headerFrame {}
 .header {
     border-bottom: 1px dotted rgb(205, 179, 128);
-    margin-bottom: 1.3em;
-    padding-bottom: 1.5em;
+    min-height: 35.1em;
 }
-.header .logo {
+.header h1 {
     text-align: center;
     /* Compensa falta de relação na logo */
-    margin-top: 0.9em;
-    padding-bottom: 1.45em;
+    margin: 0;
+    padding: 0.642em 0;
 }
 
-.header blockquote {
-  margin: 0 0;
+.header h2 {
+  font-style: italic;
+  text-align: center;
+  margin: 0 auto;
   padding: 0.55em 0em;
+  width: 23.333em;
   background: url("../images/quote-left.gif") no-repeat left center,
               url("../images/quote-right.gif") no-repeat right center;
 }
@@ -368,24 +370,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .btnBasic,
 .btnBasic:visited {
   color: #333;
-  font-size: 1em;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 1.5em;
   vertical-align: baseline;
   text-decoration: none;
   text-shadow: 0.5px 0.5px 2px rgba(255, 255, 255, 0.8);
   margin: 0 0;
-  padding: 1em 2em;
+  padding: 0.5em 1.333em 0.357em;
   display: inline-block;
   border: 1px solid #b4b4b4;
-  border-radius: 8px;
+  border-radius: 4px;
   position: relative;
   box-shadow: 0px 1px 1px 0px rgba(250, 250, 250, 0.4) inset,
-              0px -25px 30px 0px rgba(0, 0, 0, 0.2) inset;
+              0px -25px 30px 0px rgba(0, 0, 0, 0.3) inset;
   background-color: #e6e6e6;
 }
 
-.btnBasic:before {
+/*.btnBasic:before {
   content: '';
   border: 1px solid #d1d1d1;
   -webkit-border-radius: 6px;
@@ -401,7 +403,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: #dcdcdc;
   transition: background-color 2s linear;
 }
-
+*/
 .btnBasic:hover,
 .btnBasic:focus {
   color: #000;
@@ -412,13 +414,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 }
 
-.btnBasic:hover:before,
+/*.btnBasic:hover:before,
 .btnBasic:focus:before {
   border: 1px solid #b4deff;
   box-shadow: 0 0 0px #FFF inset;
   background-color: #9acdff;
 }
-
+*/
 /* Colors */
 .btnMidori,
 .btnMidori:visited {
@@ -450,18 +452,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .btnWhite,
 .btnWhite:visited {
-    color: #033649;
-    text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.2);
-    border: 1px solid #b7b7b7;
-    background-color: #fff;
+  color: #033649;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border: 1px solid #B7B7B7;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: #F5F5F5;
+  display: block;
+  margin: 0 auto 0.315em;
+  padding: 0.473em 0;
+  width: 9.473em;
 }
 
 .btnWhite:hover {
-  color: #033649;
+  color: #000;
   text-shadow: none;
-  background-color: #fff;
+  /*background-color: #DCDCDC;*/
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+  background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
 }
 
 /* Debug Grid */
-.debug { background: #E8DDCB url(/static/images/grid-1116x27-baseline.png) repeat-y center top !important;}
+body:hover { background: #E8DDCB url(/static/images/grid-1116x27-baseline.png) repeat-y center top !important;}
 
