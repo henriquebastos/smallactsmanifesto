@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="header row">
-        <h1><img src="{% static "images/logo-small-acts.png" %}" alt="Small Acts Manifesto Logo"/></h1>
+        <h1><img src="{% static "images/logo-small-acts.png" %}" alt="Logo"/></h1>
         <h2>Small Acts Make Great Revolutions</h2>
     </div>
     <hr/>
@@ -76,18 +76,18 @@
             <dd><a href="https://www.transifex.com/projects/p/smallactsmanifesto/">{% trans "Add yours..." %}</a></dd>
         </dl>
         <dl>
-            <dt>Share</dt>
-            <dd><a href="{% url core:community-badges %}">Community badges</a></dd>
+            <dt>{% trans "Share" %}</dt>
+            <dd><a href="{% url core:community-badges %}">{% trans "Community badges" %}</a></dd>
             <!--<dd><a href="#">Wallpaper</a></dd>-->
         </dl>
         <dl>
             <dd>
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-                    <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" />
+                    <img alt="{% trans "Creative Commons License" %}" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" />
                 </a>
             </dd>
             <dd>
-                <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangosite80x15_grey.gif" alt="A Django site." title="A Django site." /></a>
+                <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangosite80x15_grey.gif" alt="{% trans "A Django site." %}" title="{% trans "A Django site." %}" /></a>
             </dd>
         </dl>
     </div>
