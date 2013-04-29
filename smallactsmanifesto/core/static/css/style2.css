@@ -133,14 +133,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .content .members {
   list-style: none outside none;
   margin: 0;
-  padding-left: 0;
+  padding: 0.6em 0 0;
 }
 .content .members li {
   float: left;
-  font-size: 1.7em;
-  line-height: 1.588em;
+  font-size: 1.3em;
+  line-height: 2.077em;
+  padding: 0 1.384em;
   text-align: center;
-  width: 25%;
+  width: 33.334%;
 }
 
 /* Footer */
