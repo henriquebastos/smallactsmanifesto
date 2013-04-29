@@ -57,33 +57,27 @@
         </ul>
     </div>
     <div class="footer row">
-        <div class="col-25">
-            <h3>Share</h3>
-            <ul>
-                <li><a href="{% url core:community-badges %}">Community badges</a></li>
-                <li><a href="#">Wallpaper</a></li>
-            </ul>
-        </div>
-        <div class="col-25">
-            <h3>Languages</h3>
-            <ul>
-                <li><a href="#">English</a></li>
-                <li><a href="#">Português</a></li>
-                <li><a href="#">Add yours...</a></li>
-            </ul>
-        </div>
-        <div class="col">
-            <ul>
-                <li>
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
-                        <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" />
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangosite80x15_grey.gif" alt="A Django site." title="A Django site." /></a>
-                </li>
-            </ul>
-        </div>
+        <dl class="col-25">
+            <dt>Share</dt>
+            <dd><a href="{% url core:community-badges %}">Community badges</a></dd>
+            <dd><a href="#">Wallpaper</a></dd>
+        </dl>
+        <dl class="col-25">
+            <dt>Languages</dt>
+            <dd><a href="#">English</a></dd>
+            <dd><a href="#">Português</a></dd>
+            <dd><a href="#">Add yours...</a></dd>
+        </dl>
+        <dl class="col">
+            <dd>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+                    <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" />
+                </a>
+            </dd>
+            <dd>
+                <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangosite80x15_grey.gif" alt="A Django site." title="A Django site." /></a>
+            </dd>
+        </dl>
     </div>
 </body>
 </html>
