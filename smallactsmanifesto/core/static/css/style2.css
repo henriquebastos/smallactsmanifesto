@@ -65,10 +65,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /* Columns Rulers, tricks and treats ;D */
-.rulerLeft { border-left: 1px solid #6B1025;}
-.rulerRight { border-right: 1px solid #6B1025;}
-.rulerTop { border-top: 1px solid #6B1025;}
-.rulerBottom { border-bottom: 1px solid #6B1025;}
+.rulerLeft { border-left: 1px solid red;}
+.rulerRight { border-right: 1px solid red;}
+.rulerTop { border-top: 1px solid red;}
+.rulerBottom { border-bottom: 1px solid red;}
 
 .floatLeft { float: left;}
 .floatRight { float: right;}
