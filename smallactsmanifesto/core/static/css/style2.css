@@ -117,11 +117,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 .header h2 {
+  color: #033649;
   font-style: italic;
+  font-weight: 400;
   text-align: center;
   margin: 0 auto;
   padding: 0.55em 0em;
-  width: 23.333em;
+  width: 21.111em;
   background: url("../images/quote-left.gif") no-repeat left center,
               url("../images/quote-right.gif") no-repeat right center;
 }
