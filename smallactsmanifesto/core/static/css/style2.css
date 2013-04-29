@@ -101,7 +101,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 0 auto;
 }
 
- .header, .content, .footer { max-width: 108em; margin:0 auto; padding: 0 0; }
+ .header, .content, .footer { max-width: 81em; margin:0 auto; padding: 0 0; }
 
  /* Header */
 .headerFrame {}
