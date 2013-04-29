@@ -56,8 +56,34 @@
         {% endfor %}
         </ul>
     </div>
-    <div class="footer">
-        <p>&copy; 2010. <a rel="license" href="{% url core:index %}">{{ title }}</a>, {% trans "some rights reserved." %} <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" /></a> | <a href="{% url core:community-badges %}">Community badges</a> <a href="http://www.djangoproject.com/" id="django"><img src="{% static "images/djangosite80x15.gif" %}" border="0" alt="A Django site." title="A Django site." /></a></p>
+    <div class="footer row">
+        <div class="col-25">
+            <h3>Share</h3>
+            <ul>
+                <li><a href="{% url core:community-badges %}">Community badges</a></li>
+                <li><a href="#">Wallpaper</a></li>
+            </ul>
+        </div>
+        <div class="col-25">
+            <h3>Languages</h3>
+            <ul>
+                <li><a href="#">English</a></li>
+                <li><a href="#">Português</a></li>
+                <li><a href="#">Add yours...</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul>
+                <li>
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+                        <img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-nc-sa/3.0/br/80x15.png" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangosite80x15_grey.gif" alt="A Django site." title="A Django site." /></a>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>

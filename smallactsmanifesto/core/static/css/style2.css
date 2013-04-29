@@ -150,9 +150,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* Footer */
-.footer { color: #999; }
-
-.footer h2 { padding-top: 0; }
+.footer { color: #777; }
+.footer h3 {
+  font-size: 1.3em;
+  padding: 0.846em 0 0;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer li {
+  font-size: 1.3em;
+  padding: 0.615em 0 0;
+}
 
 /* Navigation Combos */
 .navInline ul,
