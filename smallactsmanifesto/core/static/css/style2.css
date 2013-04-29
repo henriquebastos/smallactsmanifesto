@@ -47,10 +47,17 @@ img { vertical-align:middle;border-width:0;}
 fieldset { border:solid 1px #cdcdcd; }
 textarea { font-family:inherit; font-size:1.5em; margin:0 1.2em; padding:0.75em 0.5em 0.5em 0.75em; width:93%; border:solid 1px #cdcdcd; }
 
-a         { color: #0066cc; }
-a:visited { color: #0066cc; }
-a:hover   { color: #E14B00; }
-a:active  { color: #0066cc; }
+a,
+a:link,
+a:active,
+a:visited {
+    border-bottom: 1px dotted #363636;
+    color: #363636;
+    text-decoration: none;
+}
+a:hover {
+  border-bottom-style: solid;
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
@@ -129,6 +136,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* Content */
 .content { }
+.content .members {
+  list-style: none outside none;
+  margin: 0;
+  padding-left: 0;
+}
+.content .members li {
+  float: left;
+  font-size: 1.7em;
+  line-height: 1.588em;
+  text-align: center;
+  width: 25%;
+}
 
 /* Footer */
 .footer { color: #999; }

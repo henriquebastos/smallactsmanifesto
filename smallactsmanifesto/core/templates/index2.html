@@ -44,7 +44,7 @@
 
         <p><a href="{% url signatures:signup %}" class="btnBasic btnWhite">{% trans "Get involved" %} &raquo;</a></p>
 
-        <ul>
+        <ul class="members row">
         {% for signatory in signatories %}
             <li>
             {% if signatory.url %}
