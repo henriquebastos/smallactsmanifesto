@@ -129,7 +129,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* Content */
-.content { }
+.content {
+  padding: 0 0 4.8em;
+}
 .content .members {
   list-style: none outside none;
   margin: 0;
@@ -145,18 +147,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* Footer */
-.footer { color: #777; }
+.footer {
+  color: #777;
+  padding: 0 0 2.2em 27em;
+}
 .footer h3 {
   font-size: 1.3em;
   padding: 0.846em 0 0;
 }
-.footer ul {
-  list-style: none;
+.footer dl {
+  float: left;
+  width: 13.5em;
   padding: 0;
 }
-.footer li {
+.footer dt {
   font-size: 1.3em;
-  padding: 0.615em 0 0;
+  padding: 0.769em 0 0;
+}
+.footer dd {
+  font-size: 1.3em;
+  padding: 0.461em 0 0;
 }
 
 /* Navigation Combos */
