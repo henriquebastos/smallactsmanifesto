@@ -4,7 +4,7 @@ from smallactsmanifesto.signatures.models import Signatory
 
 
 def index(request):
-    return direct_to_template(request, 'index.html', {
+    return direct_to_template(request, 'index2.html', {
         'signatories' : Signatory.objects.all(),
     })
 
