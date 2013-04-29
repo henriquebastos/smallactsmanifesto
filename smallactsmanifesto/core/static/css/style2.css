@@ -17,11 +17,11 @@ h4 { font-size: 1.6em; line-height: 1.687em; margin: 0 0; padding: 0.500em 1.125
 h5 { font-size: 1.4em; line-height: 1.928em; margin: 0 0; padding: 0.642em 1.285em 1.285em; }
 h6 { font-size: 1.2em; line-height: 1.750em; margin: 0 0; padding: 1.083em 1.500em 1.666em; }
 
-p, li, dt, dd, th, td, caption{ font-size: 1.9em; line-height: 1.421em;}
+p, li, dt, dd, th, td, caption{ font-size: 1.7em; line-height: 1.588em;}
 
 li li, li p, li h1, li h2, li h3, li h4 { font-size: 1em;}
 
-p { margin: 0 0 0 0; padding: 0.263em 1.125em 1.157em;  }
+p { margin: 0 0 0 0; padding: 0.294em 1.058em 1.294em;  }
 
 ul { margin: 0 0; padding: 0.5em 0 2.2em 5.4em; }
 ol { margin: 0 0; padding: 0.5em 0 2.2em 5.4em; }
