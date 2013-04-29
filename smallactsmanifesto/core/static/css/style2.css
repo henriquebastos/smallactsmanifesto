@@ -128,14 +128,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
               url("../images/quote-right.gif") no-repeat right center;
 }
 
-.header blockquote p {
-  font-size: 2.5em;
-  font-style: italic;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
 /* Content */
 .content { }
 .content .members {
