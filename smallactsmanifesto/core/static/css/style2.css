@@ -26,20 +26,20 @@ p { margin: 0 0 0 0; padding: 0.294em 1.058em 1.294em;  }
 ul { margin: 0 0; padding: 0.6em 0 2.2em 3.6em; }
 ol { margin: 0 0; padding: 0.6em 0 2.2em 3.6em; }
 
-dl { margin: 0 0 0 0; padding: 0.7em 2.4em 1.7em; }
+dl { margin: 0 0 0 0; padding: 0.6em 2.2em 1.8em; }
 dt { margin: 0 0 0 0; padding: 0 0 0 0; font-weight: 700; }
-dd { margin: 0 0 0 0; padding: 0 0 0 0.75em; }
+dd { margin: 0 0 0 0; padding: 0 0 0 0.706em; }
 
 table { border-collapse: collapse; width: 100%; margin: 0 0 0 1em; }
 th, caption { text-align: left; font-weight: 700; }
 
-blockquote { margin: 0 0; padding: 2.4em 4.8em; }
+blockquote { margin: 0 0; padding: 2.259em 4.518em; }
 
 em { font-style: italic; }
-small { font-size: 0.8em; }
+small { font-size: 0.753em; }
 strong, b { font-weight: 700; }
 
-code { color:#C06;font-size:1.2em; }
+code { color:#C06;font-size:1.129em; }
 
 hr { display:none; }
 img { vertical-align:middle;border-width:0;}
@@ -122,7 +122,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: 400;
   text-align: center;
   margin: 0 auto;
-  padding: 0.55em 0em;
+  padding: 0.55em 0;
   width: 21.111em;
   background: url("../images/quote-left.gif") no-repeat left center,
               url("../images/quote-right.gif") no-repeat right center;
