@@ -6,7 +6,7 @@ from .models import Signatory
 from .utils import mark_safe_lazy as safe
 
 
-HELP_CAPTCHA = safe(_('<em>Sorry about this!</em>Just a small act to prevent spam.'))
+HELP_CAPTCHA = safe(_('Just a small act to prevent spam. <em>Sorry about this!</em>'))
 
 
 class SignupForm(forms.ModelForm):
