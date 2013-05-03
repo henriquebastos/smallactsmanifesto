@@ -109,14 +109,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     border-bottom: 1px dotted rgb(205, 179, 128);
     min-height: 35.1em;
 }
-.header h1 {
+h1 {
     text-align: center;
     /* Compensa falta de relação na logo */
     margin: 0;
     padding: 0.642em 0;
 }
 
-.header h2 {
+h2 {
   color: #033649;
   font-style: italic;
   font-weight: 400;
