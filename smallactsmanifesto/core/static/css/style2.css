@@ -128,6 +128,15 @@ h2 {
               url("../images/quote-right.gif") no-repeat right center;
 }
 
+h3 {
+  font-size: 2.7em;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  padding: 1.074em 0 1em;
+  text-align: center;
+}
+
 /* Content */
 .content {
   padding: 0 0 4.8em;
@@ -150,10 +159,6 @@ h2 {
 .footer {
   color: #777;
   padding: 0 0 2.2em 27em;
-}
-.footer h3 {
-  font-size: 1.3em;
-  padding: 0.846em 0 0;
 }
 .footer dl {
   float: left;
