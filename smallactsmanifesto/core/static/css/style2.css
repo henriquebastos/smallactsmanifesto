@@ -274,48 +274,31 @@ h3 {
   width: 33%;
 }
 
+/* Form Errors */
 
-.inputRadio dl,
-.inputRadio dd {
+.errorlist {
+  color: red;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-
-/* Form Errors */
-.errorList {
-  color: red;
-}
-
-.errorList p,
-.errorList li,
-.errorList dt,
-.errorList dd {
+.errorlist p,
+.errorlist li,
+.errorlist dt,
+.errorlist dd {
   font-size: 1.3em;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 1.038em;
 }
 
-.errorList li + li,
-.errorList dd + dd {
-  line-height: 1.25em;
-  margin: 0;
-  padding-bottom:0.7em;
-}
-
-
-.formRow .errorList {
-  margin: 0;
-  padding: 0 0 0 1em;
+.formRow .errorlist {
+  padding: 0 0 0 1.2em;
   border-left: 6px solid #F66;
-  list-style: none;
 }
 
-.formRow .errorList + input,
-.formRow .errorList + input + input,
-.formRow .errorList + textarea,
-.formRow .errorList + dl,
-.errorInput input {
+.formRow .errorlist + input {
   margin: 0 0 6px;
   padding: 4px 0 5px 5px;
   box-shadow: none;
@@ -323,15 +306,6 @@ h3 {
   border-left: 6px solid #F66;
   border-radius: 0;
   background: #FFE4E1;
-}
-
-.formRow .errorList + dl {
-  border: none;
-  border-left: 6px solid #F66;
-}
-
-.errorInput label{
-  color: red;
 }
 
 /* Messages and Alerts */
