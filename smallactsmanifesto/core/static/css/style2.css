@@ -331,23 +331,6 @@ h3 {
   background-color: #e6e6e6;
 }
 
-/*.btnBasic:before {
-  content: '';
-  border: 1px solid #d1d1d1;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  position: absolute;
-  bottom: -6px;
-   right: -6px;
-    left: -6px;
-     top: -6px;
-  opacity: 0.5;
-  z-index: -1;
-  background-color: #dcdcdc;
-  transition: background-color 2s linear;
-}
-*/
 .btnBasic:hover,
 .btnBasic:focus {
   color: #000;
@@ -358,13 +341,6 @@ h3 {
 
 }
 
-/*.btnBasic:hover:before,
-.btnBasic:focus:before {
-  border: 1px solid #b4deff;
-  box-shadow: 0 0 0px #FFF inset;
-  background-color: #9acdff;
-}
-*/
 /* Colors */
 .btnMidori,
 .btnMidori:visited {
@@ -397,7 +373,7 @@ h3 {
 .btnWhite,
 .btnWhite:visited {
   color: #033649;
-  font-size: 1.117em;
+  font-size: 19px;
   font-weight: 400;
   letter-spacing: 0.025em;
   text-align: center;
@@ -420,6 +396,11 @@ h3 {
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
   background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
+.formRow .btnWhite {
+  display: inline;
+
 }
 
 /* Debug Grid */
