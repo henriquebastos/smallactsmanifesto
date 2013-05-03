@@ -174,44 +174,6 @@ h3 {
   padding: 0.461em 0 0;
 }
 
-/* Navigation Combos */
-.navInline ul,
-.navList ul {
- margin: 0;
- padding: 0;
- list-style: none;
- display: inline-block;
-}
-
-.navInline li {
- float: left;
- position: relative;
-}
-
-.navInline a,
-.navList a {
-  font-size: 0.875em;
-  line-height: 1.928em;
-  text-decoration: none;
-  margin: 0 0.642em;
-  padding: 0 0.642em;
-  display: block;
-  -webkit-transition: color 1s;
-     -moz-transition: color 1s;
-       -o-transition: color 1s;
-}
-
-.navInline a:hover,
-.navList a:hover {
- color: #000;
- background: rgba(235,235,235,1);
-}
-
-.navInline .current a,
-.navList .current a {
- color: #000;
- font-weight: 700;
-}
 
 /* Posts (Articles, etc) */
 
@@ -238,15 +200,6 @@ h3 {
   line-height: 1em;
   padding: 0;
   margin: 0;
-}
-
-.formRow textarea {
-  font-family:inherit;
-  font-size:1.5em;
-  margin:0;
-  padding:0.75em 0.5em 0.5em 0.75em;
-  width: 100%;
-  border:solid 1px #cdcdcd;
 }
 
 .formRow p {
@@ -306,10 +259,6 @@ h3 {
   width: 33%;
 }
 
-.inputRadio fieldset {
-  padding: 0;
-  border: none;
-}
 
 .inputRadio dl,
 .inputRadio dd {
@@ -317,39 +266,6 @@ h3 {
   padding: 0;
 }
 
-.inputRadio label {
-  font-size: 1em;
-  font-weight: 300;
-}
-
-.inputRadio input {
-  display: inline-block;
-  margin-right: 0.66em
-}
-
-.selectDropdown select {
-  font-size: 1.2em;
-  margin: 6px 0;
-  padding: 2px 5px;
-  overflow: hidden;
-  display: inline-block;
-  border: 1px solid #DEDFE0;
-  border-radius: 4px 4px 4px 4px;
-  /* Box Shadow - Cross-Browser */
-  -webkit-box-shadow: 0 1px 0 #ADB1B7;
-     -moz-box-shadow: 0 1px 0 #ADB1B7;
-          box-shadow: 0 1px 0 #ADB1B7;
-  background-color: #F8F8F9;
-}
-
-.labelInline label {
-  font-size: 1.2em;
-  font-weight: 400;
-  line-height: 1.666em;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
 
 /* Form Errors */
 .errorList {
