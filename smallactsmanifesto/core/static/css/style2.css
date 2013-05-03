@@ -182,29 +182,31 @@ h3 {
   margin: 0;
   padding: 0 1.8em;
   list-style: none;
-  min-height: 8.1em;
+  min-height: 10.8em;
+}
+.formRow:last-child {
+  min-height: 0;
 }
 
 .formRow p,
 .formRow li,
 .formRow dt,
 .formRow dd {
-  font-size: 1.3em;
+  font-size: 1.7em;
+  line-height: 1.588em;
 }
 
 .formRow label,
 .formRow legend {
-  color: #000;
-  font-size: 1.4em;
-  font-weight: 700;
-  line-height: 1em;
-  padding: 0;
+  display: block;
+  font-size: 1.7em;
+  line-height: 1.588em;
   margin: 0;
+  padding: 0.176em 0 0;
 }
 
 .formRow p {
-  color:#999;
-  line-height:1.4em;
+  color:#777;
   margin: 0 0 0 0;
   padding: 0 0 0 0;
 }
@@ -215,19 +217,30 @@ h3 {
   font-style: normal;
 }
 
-.labelBlock label,
-.formRow legend {
-  padding: 1.150em 0 0.3em;
+.formRow .help {
+  display: none;
+}
+.formRow:hover .help {
+  color: #363636;
+  display: block;
+  float: right;
+  padding: 0 18px;
+  margin: 4px 0 0;
+  width: 47.6%;
+  background-color: #FAFAFA;
+  border: 1px dotted #CDB380;
+}
+.formRow .help em {
   display: block;
 }
 
-.inputText input {
+.formRow input[type="text"] {
   font-size: 1.6em;
   line-height: 1em;
   vertical-align: middle;
-  margin: 6px 0;
+  margin: 0.188em 0 0.938em;
   padding: 0.35em;
-  width: 100%;
+  width: 50%;
   display: block;
   border: 1px solid #999;
   /* Border Radius - Cross-Browser */
@@ -241,14 +254,16 @@ h3 {
   background-color: #F8F8F9;
 }
 
-.inputText input:focus,
-.inputText textarea:focus {
+.formRow input:focus {
   border: 1px solid #666666;
   /* Box Shadow - Cross-Browser */
   -webkit-box-shadow: inset 0 0 10px #CCC;
      -moz-box-shadow: inset 0 0 10px #CCC;
           box-shadow: inset 0 0 10px #CCC;
-  background-color: #ffffe6;
+}
+
+.formRow #recaptcha_widget_div {
+  margin: 0 0 3.7em;
 }
 
 .inputText-66 input {
