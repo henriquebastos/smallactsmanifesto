@@ -182,10 +182,10 @@ h3 {
   margin: 0;
   padding: 0 1.8em;
   list-style: none;
-  min-height: 10.8em;
+  min-height: 8.1em;
 }
 .formRow:last-child {
-  min-height: 0;
+    padding-top: 2.7em;
 }
 
 .formRow p,
@@ -202,7 +202,7 @@ h3 {
   font-size: 1.7em;
   line-height: 1.588em;
   margin: 0;
-  padding: 0.176em 0 0;
+  padding: 0.353em 0 0;
 }
 
 .formRow p {
@@ -238,7 +238,7 @@ h3 {
   font-size: 1.6em;
   line-height: 1em;
   vertical-align: middle;
-  margin: 0.188em 0 0.938em;
+  margin: 0.188em 0 0.813em;
   padding: 0.35em;
   width: 50%;
   display: block;
@@ -263,7 +263,8 @@ h3 {
 }
 
 .formRow #recaptcha_widget_div {
-  margin: 0 0 3.7em;
+  padding: 2.7em 0 0;
+  min-height: 16.2em;
 }
 
 .inputText-66 input {
@@ -288,14 +289,14 @@ h3 {
 .errorlist dt,
 .errorlist dd {
   font-size: 1.3em;
-  padding: 0;
+  padding: 0 0 0 1.2em;
   margin: 0;
   line-height: 1.038em;
+  border-left: 6px solid #F66;
 }
 
 .formRow .errorlist {
-  padding: 0 0 0 1.2em;
-  border-left: 6px solid #F66;
+    padding: 0 0 1.255em;
 }
 
 .formRow .errorlist + input {
