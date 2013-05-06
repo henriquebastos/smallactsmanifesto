@@ -341,6 +341,26 @@ h3 {
 
 }
 
+.btnWhite, .btnWhite:visited {
+    color: #033649;
+    font-size: 1.9em;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    padding: 0.473em 0;
+    width: 9.473em;
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #B7B7B7;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.btnWhite:hover {
+  color: #000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+  background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
 /* Colors */
 .btnMidori,
 .btnMidori:visited {
@@ -370,38 +390,6 @@ h3 {
   background-color: #33B4FF;
 }
 
-.btnWhite,
-.btnWhite:visited {
-  color: #033649;
-  font-size: 19px;
-  font-weight: 400;
-  letter-spacing: 0.025em;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  border: 1px solid #B7B7B7;
-  border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  background: #F5F5F5;
-  display: block;
-  margin: 0 auto 0.315em;
-  padding: 0.473em 0;
-  width: 9.473em;
-}
-
-.btnWhite:hover {
-  color: #000;
-  text-shadow: none;
-  /*background-color: #DCDCDC;*/
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
-  background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
-  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
-}
-
-.formRow .btnWhite {
-  display: inline;
-
-}
 
 /* Debug Grid */
 body:hover { background: #E8DDCB url(/static/images/grid-1116x27-baseline.png) repeat-y center top !important;}
