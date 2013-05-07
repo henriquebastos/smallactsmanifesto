@@ -233,10 +233,13 @@ h3 {
   display: block;
   float: right;
   padding: 0 18px;
-  margin: 4px 0 0;
+  margin: 26px 0 0;
   width: 47.6%;
   background-color: #FAFAFA;
   border: 1px dotted #CDB380;
+}
+.formRow:hover label + .help {
+  margin: 4px 0 0;
 }
 .formRow .help em {
   display: block;
