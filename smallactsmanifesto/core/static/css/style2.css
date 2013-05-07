@@ -139,7 +139,8 @@ h3 {
 
 /* Content */
 .content {
-  padding: 0 0 4.8em;
+  padding: 0 0 5.4em;
+  border-bottom: 1px dotted rgb(205, 179, 128);
 }
 .content .members {
   list-style: none outside none;
@@ -158,12 +159,13 @@ h3 {
 /* Footer */
 .footer {
   color: #777;
-  padding: 0 0 2.2em 27em;
+  padding: 2.7em 0 2.2em;
+  width: 54em;
 }
 .footer dl {
   float: left;
   width: 13.5em;
-  padding: 0;
+  padding: 0 1.8em;
 }
 .footer dt {
   font-size: 1.3em;
@@ -172,6 +174,12 @@ h3 {
 .footer dd {
   font-size: 1.3em;
   padding: 0.461em 0 0;
+}
+.footer div {
+    text-align: center;
+    width: 13.5em;
+    float: left;
+    padding: 3.8em 0 0;
 }
 
 
