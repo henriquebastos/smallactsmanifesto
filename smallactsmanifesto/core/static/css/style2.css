@@ -138,6 +138,9 @@ h3 {
 }
 
 /* Content */
+#success {
+    max-width: 54em;
+}
 .content {
   padding: 0 0 5.4em;
   border-bottom: 1px dotted rgb(205, 179, 128);
