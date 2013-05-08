@@ -3,50 +3,24 @@
 
 {% block content %}
 
-<h1>{% trans "Get involved" %}</h1>
+<h3>{% trans "Get involved" %}</h3>
 
 <form action="." method="POST">
   {% csrf_token %}
-  <div class="field">
-    <label for="id_name">{{ form.name.label }} <span>*</span></label>
-    {{ form.name }}
-    <div class="error">{{ form.name.errors.as_text }}</div>
-    <p id="info" class="info_label">
-      <small>{{ form.name.help_text }}</small>
-    </p>
-  </div>
-  <div class="field">
-    <label for="id_email">{{ form.email.label }} <span>*</span></label>
-    {{ form.email }}
-    <div class="error">{{ form.email.errors.as_text }}</div>
-    <p id="info_id_email" class="info_label">
-      <small>{{ form.email.help_text }}</small>
-    </p>
-  </div>
-  <div class="field">
-    <label for="id_url">{{ form.url.label }}</label>
-    {{ form.url }}
-    <div class="error">{{ form.url.errors.as_text }}</div>
-    <p id="info_id_url" class="info_label">
-      <small>{{ form.url.help_text }}</small>
-    </p>
-  </div>
-  <div class="field">
-    <label for="id_location">{{ form.location.label }}</label>
-    {{ form.location }}
-    <div class="error">{{ form.location.errors.as_text }}</div>
-    <p id="info_id_location" class="info_label">
-      <small>{{ form.location.help_text }}</small>
-    </p>
-  </div>
-  <div class="field" style="padding-top: 20px;">
-    {{ form.captcha }}
-    <div class="error">{{ form.captcha.errors.as_text }}</div>
-      <p id="info_id_captcha" class="info_label" style="margin-top: -140px;">
-        <small>{{ form.captcha.help_text }}</small>
-      </p>
-  </div>
-  <input type="submit" class="button" value="{% trans "Send" %}" />
+
+  {% for field in form %}
+    <div class="formRow">
+    {% if not forloop.last %}
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% endif %}
+      <p class="help"><small>{{ field.help_text }}</small></p>
+      {{ field }}
+      {{ field.errors }}
+    </div>
+  {% endfor %}
+    <div class="formRow">
+      <input type="submit" class="btnWhite" value="{% trans "Send" %}" />
+    </div>
 </form>
 
 {% endblock content %}

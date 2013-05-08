@@ -8,11 +8,11 @@ from .utils import mark_safe_lazy as safe
 
 
 HELP_NAME = safe(_('Your name to be shown on the signatories list.'))
-HELP_EMAIL = safe(_('Your email is important so we can send you a confirmation email.'
-                    '<br />Your email will not be published or used in any other way.'))
-HELP_URL = safe(_('<em>This field is optional.</em> An url that will be linked '
-                  'to you name on the signatories list.'))
-HELP_LOCATION = safe(_('<em>This field is optional.</em> Where are you from?'))
+HELP_EMAIL = safe(_('We need it to send you a confirmation email.'
+                    " <em>We'll not use it in any other way.</em>"))
+HELP_URL = safe(_('This will be linked to you name on the signatories list.'
+                  ' <em>This field is optional.</em>'))
+HELP_LOCATION = safe(_('Where are you from? <em>This field is optional.</em>'))
 
 
 class Signatory(models.Model):

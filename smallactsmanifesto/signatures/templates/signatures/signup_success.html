@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block content %}
-
-<h1>{% trans "You've just signed up!" %}</h1>
+{% block content-tag %}
+<div id="success" class="content">
+<h3>{% trans "You've just signed up!" %}</h3>
 
 <p>{% trans "A message with a confirmation link was sent to your mail." %}</p>
 
@@ -12,5 +12,5 @@
 <p>{% trans "Thank you!" %}</p>
 
 <p><a href="{% url core:community-badges %}">{% trans "Check out our community badges" %}</a> {% trans "or" %} <a href="{% url core:index %}">{% trans "back to home page" %}</a></p>
-
-{% endblock content %}
+</div>
+{% endblock content-tag %}
