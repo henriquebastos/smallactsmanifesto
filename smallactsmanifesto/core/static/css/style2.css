@@ -168,7 +168,7 @@ h3 {
 .footer dl {
   float: left;
   width: 13.5em;
-  padding: 0 1.8em;
+  padding: 0;
 }
 .footer dt {
   font-size: 1.3em;
