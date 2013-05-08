@@ -101,6 +101,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 0 auto;
 }
 
+.row-2 {
+    min-height: 5.4em;
+}
+
+.row-2 p {
+    margin: 0;
+    padding: 0.353em 0 0 1.059em;
+}
+
  .header, .content, .footer { max-width: 81em; margin:0 auto; padding: 0 0; }
 
  /* Header */
@@ -287,6 +296,20 @@ h3 {
 
 .inputText-33 input {
   width: 33%;
+}
+
+textarea {
+    font-family: monospace;
+    background-color: #FFFFFF;
+    color: #031634;
+    background-color: #FFFFFF;
+    color: #031634;
+    font-family: monospace;
+    margin: 0 18px 27px 18px;
+    min-height: 81px;
+    padding: 10px 18px;
+    max-width: 774px;
+    width: 100%;
 }
 
 /* Form Errors */
