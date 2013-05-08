@@ -29,7 +29,7 @@ class SignupViewTest(TestCase):
     def test_html(self):
         'HTML must contain expected inputs.'
         self.assertContains(self.resp, '<form')
-        self.assertContains(self.resp, '<input', 7)
+        self.assertContains(self.resp, '<input', 9)
         self.assertContains(self.resp, "type='hidden'")
         self.assertContains(self.resp, 'type="text"', 4)
         self.assertContains(self.resp, 'type="submit"')
