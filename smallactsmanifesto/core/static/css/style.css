@@ -115,7 +115,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
  /* Header */
 .headerFrame {}
 .header {
-    border-bottom: 1px dotted rgb(205, 179, 128);
     min-height: 35.1em;
 }
 h1 {
@@ -150,6 +149,7 @@ h3 {
 /* Content */
 .content {
   padding: 0 0 2.7em;
+  border-top: 1px dotted rgb(205, 179, 128);
   border-bottom: 1px dotted rgb(205, 179, 128);
 }
 .principles {
