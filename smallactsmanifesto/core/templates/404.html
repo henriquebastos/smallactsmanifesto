@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 
-<h1>Oops! Page not found.</h1>
+<h3>{% trans "Oops! Page not found." %}</h3>
 
-<p>Sorry, but the requested page could not be found.</p>
+<p>{% trans "Sorry, but the requested page could not be found." %}</p>
 
-<p><a href="/">&laquo; Back to home page</p>
+<p><a href="{% url core:index %}">&laquo; {% trans "Back to home page" %}</p>
 
 {% endblock content %}

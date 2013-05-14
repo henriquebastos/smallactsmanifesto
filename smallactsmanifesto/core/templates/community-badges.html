@@ -1,22 +1,20 @@
 {% extends "base.html" %}
+{% load i18n %}
 
 {% block content %}
 
-<h1>Community badges {{ some }}</h1>
+<h3>{% trans "Community badges" %}</h3>
 
-<h2 id="badge-subtitle">Do you agree with us? Display one of these handy badges to promote the idea.</h2>
+<p>{% trans "Display one of these handy badges to promote the principles." %}</p>
 
-<p>Copy and paste the source below each image to link to <strong>smallactsmanifesto.org</strong>.</p>
-
-<div id="badge-content">
+<p>{% trans "Copy and paste the source below each image to link to <strong>smallactsmanifesto.org</strong>." %}</p>
 
 {% for b in badges %}
-
-<p><img src="{{ STATIC_URL }}images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="Small Acts Manifesto" /> <strong>{{ b.size }}</strong> {{ b.name }}</p>
-<textarea cols="50" rows="3">&lt;a href="http://smallactsmanifesto.org" title="Small Acts Manifesto"&gt;&lt;img src="http://smallactsmanifesto.org/media/images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="Small Acts Manifesto" /&gt;&lt;/a&gt;</textarea>
-
-{% endfor %}
-
+<div class="row-2">
+<p><img src="{{ STATIC_URL }}images/smallacts-badge-{{ b.sufix }}.png" alt="{%  trans "Small Acts Manifesto" %}" /> <strong>{{ b.size }}</strong> {{ b.name }}</p>
 </div>
+
+<textarea>&lt;a href="http://smallactsmanifesto.org" title="{{ title }}"&gt;&lt;img src="http://smallactsmanifesto.org{{ STATIC_URL }}images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="{{ title }}" /&gt;&lt;/a&gt;</textarea>
+{% endfor %}
 
 {% endblock content %}

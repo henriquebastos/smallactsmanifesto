@@ -1,0 +1,432 @@
+/* Default HTML Tags */
+body {
+  background-color: #E8DDCB;
+  color: #363636;
+  font-size: 62.5%;
+  line-height: 1.25em;
+  font-family: Georgia, Serif;
+  text-shadow: 0.01em 0.01em 0 rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-size: 4.2em; line-height: 1.285em; margin: 0 0; padding: 0.380em 0.428em 0.261em; }
+h2 { font-size: 2.5em; line-height: 1.000em; margin: 0 0; padding: 0.259em 0.666em 0.740em;  }
+h3 { font-size: 1.8em; line-height: 1.500em; margin: 0 0; padding: 0.500em 1.000em 1.000em;  }
+h4 { font-size: 1.6em; line-height: 1.687em; margin: 0 0; padding: 0.500em 1.125em 1.187em; }
+h5 { font-size: 1.4em; line-height: 1.928em; margin: 0 0; padding: 0.642em 1.285em 1.285em; }
+h6 { font-size: 1.2em; line-height: 1.750em; margin: 0 0; padding: 1.083em 1.500em 1.666em; }
+
+p, li, dt, dd, th, td, caption{ font-size: 1.7em; line-height: 1.588em;}
+
+li li, li p, li h1, li h2, li h3, li h4 { font-size: 1em;}
+
+p { margin: 0 0 0 0; padding: 0.294em 1.058em 1.294em;  }
+
+ul { margin: 0 0; padding: 0.6em 0 2.2em 3.6em; }
+ol { margin: 0 0; padding: 0.6em 0 2.2em 3.6em; }
+
+dl { margin: 0 0 0 0; padding: 0.6em 2.2em 1.8em; }
+dt { margin: 0 0 0 0; padding: 0 0 0 0; font-weight: 700; }
+dd { margin: 0 0 0 0; padding: 0 0 0 0.706em; }
+
+table { border-collapse: collapse; width: 100%; margin: 0 0 0 1em; }
+th, caption { text-align: left; font-weight: 700; }
+
+blockquote { margin: 0 0; padding: 2.259em 4.518em; }
+
+em { font-style: italic; }
+small { font-size: 0.753em; }
+strong, b { font-weight: 700; }
+
+code { color:#C06;font-size:1.129em; }
+
+hr { display:none; }
+img { vertical-align:middle;border-width:0;}
+
+fieldset { border:solid 1px #cdcdcd; }
+textarea { font-family:inherit; font-size:1.5em; margin:0 1.2em; padding:0.75em 0.5em 0.5em 0.75em; width:93%; border:solid 1px #cdcdcd; }
+
+a,
+a:link,
+a:active,
+a:visited {
+    border-bottom: 1px dotted #363636;
+    color: #363636;
+    text-decoration: none;
+}
+a:hover {
+  border-bottom-style: solid;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/* apply a natural box layout model to all elements. Look, IE was right, huh? */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Columns Rulers, tricks and treats ;D */
+.rulerLeft { border-left: 1px solid red;}
+.rulerRight { border-right: 1px solid red;}
+.rulerTop { border-top: 1px solid red;}
+.rulerBottom { border-bottom: 1px solid red;}
+
+.floatLeft { float: left;}
+.floatRight { float: right;}
+
+.textAlignLeft { text-align: left;}
+.textAlignRight { text-align: right;}
+.textAlignCenter { text-align: center;}
+
+/* Columns Structures */
+.col-1 { max-width: 13.500em; width: 12.5%; }
+.col-2 { max-width: 27.000em; width: 25.0%; }
+.col-3 { max-width: 40.500em; width: 37.5%; }
+.col-4 { max-width: 54.000em; width: 50.0%; }
+.col-5 { max-width: 67.500em; width: 62.5%; }
+.col-6 { max-width: 81.000em; width: 75.0%; }
+.col-7 { max-width: 94.500em; width: 87.5%; }
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7 { float: left; }
+/* Columns Flex */
+.col-12 { width: 12.5%; }
+.col-25 { width: 25.0%; }
+.col-33 { width: 33.0%; }
+.col-50 { width: 50.0%; }
+.col-66 { width: 66.0%; }
+.col-75 { width: 75.0%; }
+.col-12, .col-25, .col-33, .col-50, .col-66, .col-75  { float: left;}
+.row, .col { overflow: hidden; }
+
+.row .centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.row-2 {
+    min-height: 5.4em;
+}
+
+.row-2 p {
+    margin: 0;
+    padding: 0.353em 0 0 1.059em;
+}
+
+.header, .content, .footer { max-width: 54em; margin:0 auto; padding: 0 0; }
+
+ /* Header */
+.headerFrame {}
+.header {
+    min-height: 35.1em;
+}
+h1 {
+    text-align: center;
+    /* Compensa falta de relação na logo */
+    margin: 0;
+    padding: 0.642em 0;
+}
+
+h2 {
+  color: #033649;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.55em 2em;
+  max-width: 21.111em;
+  width: 100%;
+  background: url("../images/quote-left.gif") no-repeat left center,
+              url("../images/quote-right.gif") no-repeat right center;
+}
+
+h3 {
+  font-size: 2.7em;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  padding: 1.074em 0 0.889em;
+  text-align: center;
+}
+
+/* Content */
+.content {
+  padding: 0 0 2.7em;
+  border-top: 1px dotted rgb(205, 179, 128);
+  border-bottom: 1px dotted rgb(205, 179, 128);
+}
+.principles {
+    max-width: 81em;
+}
+.principles .members {
+  text-align: center;
+  list-style: none outside none;
+  margin: 0 auto;
+  padding: 0.6em 0 0;
+}
+.principles .members li {
+  float: left;
+  font-size: 1.3em;
+  line-height: 2.077em;
+  padding: 0 1.384em;
+  text-align: center;
+  max-width: 20.769em;
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  color: #777;
+  padding: 2.7em 0 2.2em;
+}
+.footer dl {
+  float: left;
+  max-width: 13.5em;
+  width: 100%;
+  padding: 0;
+}
+.footer dt {
+  font-size: 1.3em;
+  padding: 0.769em 0 0;
+}
+.footer dd {
+  font-size: 1.3em;
+  padding: 0.461em 0 0;
+}
+.footer div {
+    text-align: center;
+    max-width: 13.5em;
+    width: 100%;
+    float: left;
+    padding: 3.8em 0 0;
+}
+
+
+/* Posts (Articles, etc) */
+
+/* Forms */
+.formRow {
+  margin: 0;
+  padding: 0 1.8em;
+  list-style: none;
+  min-height: 8.1em;
+}
+.formRow:last-child {
+    padding-top: 2.7em;
+}
+
+.formRow p,
+.formRow li,
+.formRow dt,
+.formRow dd {
+  font-size: 1.7em;
+  line-height: 1.588em;
+}
+
+.formRow label,
+.formRow legend {
+  display: block;
+  font-size: 1.7em;
+  line-height: 1.588em;
+  margin: 0;
+  padding: 0.353em 0 0;
+}
+
+.formRow p {
+  color:#777;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.formRow:hover p,
+.formRow :focus + p {
+  color: #4c4c4c;
+  font-style: normal;
+}
+
+.formRow .help {
+  display: none;
+}
+/*
+.formRow:hover .help {
+  color: #363636;
+  display: block;
+  float: right;
+  padding: 0 18px;
+  margin: 26px 0 0;
+  width: 47.6%;
+  background-color: #FAFAFA;
+  border: 1px dotted #CDB380;
+}
+.formRow:hover label + .help {
+  margin: 4px 0 0;
+}
+.formRow .help em {
+  display: block;
+}
+*/
+.formRow input[type="text"] {
+  font-size: 1.6em;
+  line-height: 1em;
+  vertical-align: middle;
+  margin: 0.188em 0 0.813em;
+  padding: 0.35em;
+  max-width: 23.063em;
+  width: 100%;
+  display: block;
+  border: 1px solid #999;
+  /* Border Radius - Cross-Browser */
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  /* Box Shadow - Cross-Browser */
+  -webkit-box-shadow: inset 0 1px 2px #CCC;
+     -moz-box-shadow: inset 0 1px 2px #CCC;
+          box-shadow: inset 0 1px 2px #CCC;
+  background-color: #F8F8F9;
+}
+
+.formRow input:focus {
+  border: 1px solid #666666;
+  /* Box Shadow - Cross-Browser */
+  -webkit-box-shadow: inset 0 0 10px #CCC;
+     -moz-box-shadow: inset 0 0 10px #CCC;
+          box-shadow: inset 0 0 10px #CCC;
+}
+
+.formRow #recaptcha_widget_div {
+  padding: 2.7em 0 0;
+  min-height: 16.2em;
+}
+
+textarea {
+    color: #031634;
+    margin: 0 18px 27px 18px;
+    min-height: 81px;
+    padding: 10px 18px;
+    max-width: 774px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+/* Form Errors */
+
+.errorlist {
+  color: red;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.errorlist p,
+.errorlist li,
+.errorlist dt,
+.errorlist dd {
+  font-size: 1.3em;
+  padding: 0 0 0 1.2em;
+  margin: 0;
+  line-height: 1.038em;
+  border-left: 6px solid #F66;
+}
+
+.formRow .errorlist {
+    padding: 0 0 1.255em;
+}
+
+.formRow .errorlist + input {
+  margin: 0 0 6px;
+  padding: 4px 0 5px 5px;
+  box-shadow: none;
+  border: 1px solid #F66;
+  border-left: 6px solid #F66;
+  border-radius: 0;
+  background: #FFE4E1;
+}
+
+/* Messages and Alerts */
+
+/* Buttons */
+.btnBasic,
+.btnBasic:visited {
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5em;
+  vertical-align: baseline;
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px 2px rgba(255, 255, 255, 0.8);
+  margin: 0 0;
+  padding: 0.5em 1.333em 0.357em;
+  display: inline-block;
+  border: 1px solid #b4b4b4;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0px 1px 1px 0px rgba(250, 250, 250, 0.4) inset,
+              0px -25px 30px 0px rgba(0, 0, 0, 0.3) inset;
+  background-color: #e6e6e6;
+}
+
+.btnBasic:hover,
+.btnBasic:focus {
+  color: #000;
+  text-shadow: none;
+  border: 1px solid #d1d1d1;
+  background-color: #f5f5f5;
+  outline: 0;
+
+}
+
+.formRow .btnWhite, .btnWhite:visited {
+    display: block;
+    text-align: center;
+}
+
+/* Colors */
+.btnMidori,
+.btnMidori:visited {
+  color: #f5f5f5;
+  text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.8);
+  border: 1px solid #393;
+  background-color:#33be33;
+}
+
+.btnMidori:hover {
+  color: #000;
+  text-shadow: none;
+  background-color: #33cc33;
+}
+
+.btnBlue,
+.btnBlue:visited {
+  color: #f5f5f5;
+  text-shadow: 0.5px 0.5px 2px rgba(0,0,0,0.8);
+  border: 1px solid #39F;
+  background-color:#0099ff;
+}
+
+.btnBlue:hover {
+  color: #000;
+  text-shadow: none;
+  background-color: #33B4FF;
+}
+
+.btnWhite, .btnWhite:visited {
+    color: #033649;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    padding: 0.473em 0;
+    width: 9.473em;
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #B7B7B7 !important;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.btnWhite:hover {
+  color: #000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+  background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
+/* Debug Grid */
+/*body:hover { background: #E8DDCB url(/static/images/grid-1116x27-baseline.png) repeat-y center top !important;}*/
+
