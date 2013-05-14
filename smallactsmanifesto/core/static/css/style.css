@@ -132,7 +132,8 @@ h2 {
   text-align: center;
   margin: 0 auto;
   padding: 0.55em 0;
-  width: 21.111em;
+  max-width: 21.111em;
+  width: 100%;
   background: url("../images/quote-left.gif") no-repeat left center,
               url("../images/quote-right.gif") no-repeat right center;
 }
