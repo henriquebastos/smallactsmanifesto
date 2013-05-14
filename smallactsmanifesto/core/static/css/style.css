@@ -243,6 +243,7 @@ h3 {
 .formRow .help {
   display: none;
 }
+/*
 .formRow:hover .help {
   color: #363636;
   display: block;
@@ -259,14 +260,15 @@ h3 {
 .formRow .help em {
   display: block;
 }
-
+*/
 .formRow input[type="text"] {
   font-size: 1.6em;
   line-height: 1em;
   vertical-align: middle;
   margin: 0.188em 0 0.813em;
   padding: 0.35em;
-  width: 50%;
+  max-width: 23.063em;
+  width: 100%;
   display: block;
   border: 1px solid #999;
   /* Border Radius - Cross-Browser */
@@ -291,14 +293,6 @@ h3 {
 .formRow #recaptcha_widget_div {
   padding: 2.7em 0 0;
   min-height: 16.2em;
-}
-
-.inputText-66 input {
-  width: 66%;
-}
-
-.inputText-33 input {
-  width: 33%;
 }
 
 textarea {
