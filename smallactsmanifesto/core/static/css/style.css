@@ -11,7 +11,7 @@ body {
 }
 
 h1 { font-size: 4.2em; line-height: 1.285em; margin: 0 0; padding: 0.380em 0.428em 0.261em; }
-h2 { font-size: 2.7em; line-height: 1.000em; margin: 0 0; padding: 0.259em 0.666em 0.740em;  }
+h2 { font-size: 2.5em; line-height: 1.000em; margin: 0 0; padding: 0.259em 0.666em 0.740em;  }
 h3 { font-size: 1.8em; line-height: 1.500em; margin: 0 0; padding: 0.500em 1.000em 1.000em;  }
 h4 { font-size: 1.6em; line-height: 1.687em; margin: 0 0; padding: 0.500em 1.125em 1.187em; }
 h5 { font-size: 1.4em; line-height: 1.928em; margin: 0 0; padding: 0.642em 1.285em 1.285em; }
@@ -110,7 +110,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     padding: 0.353em 0 0 1.059em;
 }
 
- .header, .content, .footer { max-width: 81em; margin:0 auto; padding: 0 0; }
+.header, .content, .footer { max-width: 54em; margin:0 auto; padding: 0 0; }
 
  /* Header */
 .headerFrame {}
@@ -147,36 +147,38 @@ h3 {
 }
 
 /* Content */
-#success {
-    max-width: 54em;
-}
 .content {
   padding: 0 0 2.7em;
   border-bottom: 1px dotted rgb(205, 179, 128);
 }
-.content .members {
+.principles {
+    max-width: 81em;
+}
+.principles .members {
+  text-align: center;
   list-style: none outside none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0.6em 0 0;
 }
-.content .members li {
+.principles .members li {
   float: left;
   font-size: 1.3em;
   line-height: 2.077em;
   padding: 0 1.384em;
   text-align: center;
-  width: 33.334%;
+  max-width: 20.769em;
+  width: 100%;
 }
 
 /* Footer */
 .footer {
   color: #777;
   padding: 2.7em 0 2.2em;
-  width: 54em;
 }
 .footer dl {
   float: left;
-  width: 13.5em;
+  max-width: 13.5em;
+  width: 100%;
   padding: 0;
 }
 .footer dt {
@@ -189,7 +191,8 @@ h3 {
 }
 .footer div {
     text-align: center;
-    width: 13.5em;
+    max-width: 13.5em;
+    width: 100%;
     float: left;
     padding: 3.8em 0 0;
 }

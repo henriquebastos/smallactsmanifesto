@@ -23,12 +23,12 @@
         <h2>Small Acts Make Great Revolutions</h2>
     </div>
     <hr>
-    {% block content-tag %}
+    {% block contentHeader %}
     <div class="content">
       {% block content %}
       {% endblock content %}
     </div>
-    {% endblock content-tag %}
+    {% endblock contentHeader %}
     <div class="footer row">
         <form id="setlang" action="{% url django.views.i18n.set_language %}" method="post">
             {% csrf_token %}
