@@ -22,6 +22,7 @@ USE_L10N = True
 USE_TZ = True
 LANGUAGES = (
     ('en', u'English'),
+    ('es', u'Español'),
     ('pt-br', u'Português'),
 )
 LOCALE_PATHS = (
