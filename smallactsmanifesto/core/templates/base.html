@@ -44,7 +44,7 @@
             <dt>{% trans "Languages" %}</dt>
             {% get_language_info_list for LANGUAGES as languages %}
             {% for language in languages %}
-                <dd><a href="javascript:setlang('{{ language.code }}');">{{ language.name_local }}</a></dd>
+                <dd><a href="javascript:setlang('{{ language.code }}');">{{ language.name_local|title }}</a></dd>
             {% endfor %}
             <dd><a href="https://www.transifex.com/projects/p/smallactsmanifesto/" target="_blank">{% trans "Add yours..." %}</a></dd>
         </dl>
