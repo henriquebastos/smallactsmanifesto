@@ -117,7 +117,7 @@ msgstr "Diversidad"
 msgid ""
 " - people have many interests, but if you need a label, label yourself as a "
 "human;"
-msgstr " - la personas tienen muchos intereses, mas si necesitas de una etiqueta, defínite como humano;"
+msgstr " - todos tienen muchos intereses, mas si necesitas de una etiqueta, defínite como humano;"
 
 #: core/templates/index.html:16
 msgid "Self-organization"
@@ -125,7 +125,7 @@ msgstr "Auto-organización"
 
 #: core/templates/index.html:16
 msgid " - leaders emerge, but there should be no owners;"
-msgstr " - los líderes emergen, mas no debe haber propietarios;"
+msgstr " - líderes emergen, mas no debe haber dueños;"
 
 #: core/templates/index.html:17
 msgid "Example"
@@ -133,42 +133,42 @@ msgstr "Ejemplo"
 
 #: core/templates/index.html:17
 msgid " - that's how you must teach, live and learn;"
-msgstr " - es así como usted debe enseñar, vivir y aprender."
+msgstr " - así debes enseñar, vivir y aprender."
 
 #: core/templates/index.html:18
 msgid "Consistency"
-msgstr "Constancia"
+msgstr "Consistencia"
 
 #: core/templates/index.html:18
 msgid " - things take time, intensity is not always the answer;"
-msgstr " - las cosas toman tiempo, forzar no siempre es la respuesta;"
+msgstr " - las cosas llevan tiempo, intensidad no siempre es la respuesta;"
 
 #: core/templates/index.html:19
 msgid "Give, give, give!"
-msgstr "¡Dé, dé, dé!"
+msgstr "¡Dar, dar, dar!"
 
 #: core/templates/index.html:19
 msgid " - you'll be impressed by how fast things will come back;"
-msgstr " - usted se impresionará por cuán rápido las cosas retornan;"
+msgstr " - te impresionarás por cuán rápido las cosas retornan;"
 
 #: core/templates/index.html:20
 msgid "Do it!"
-msgstr "¡Hágalo!"
+msgstr "¡Hazlo!"
 
 #: core/templates/index.html:20
 msgid " - as simple as you can, just what is essential to pass it forward."
-msgstr " - tan simple como le sea posible, sólo lo esencial para seguir adelante."
+msgstr " - lo más simples que puedas, sólo lo esencial para seguir adelante."
 
 #: core/templates/index.html:23
 msgid ""
 "Together, these elements build the foundation of a <em>Small Act</em> "
 "capable of transforming people's lives."
-msgstr "Juntos, estos son los fundamentos del <em>Pequeño Acto</em> capaz de transformar la vida de las personas."
+msgstr "Juntos, estos son los fundamentos de un <em>Pequeño Acto</em> capaz de transformar la vida de las personas."
 
 #: core/templates/index.html:25
 #: signatures/templates/signatures/signup_form.html:6
 msgid "Get involved"
-msgstr "Involúcrese"
+msgstr "Participar"
 
 #: signatures/forms.py:9
 msgid "<em>Sorry about this!</em>Just a small act to prevent spam."
