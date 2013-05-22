@@ -10,7 +10,7 @@ def push(revision):
     Push the code to the right place on the server.
     """
     rev = local('git rev-parse %s' % revision, capture=True)
-    local_archive = Path('/tmp/%s.tar.bz2' % rev)
+    local_archive = Path('%s.tar.bz2' % rev)
     remote_archive = Path(env.PROJECT.tmp, local_archive.name)
 
     local('git archive --format=tar %s | bzip2 -c > %s' % (rev, local_archive))
