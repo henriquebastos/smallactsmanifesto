@@ -1,12 +1,13 @@
 # coding: utf-8
-from fabric.api import env, task, settings, hide, cd, run, prefix
 from unipath import Path
 from .helpers import Project
 
+# Exposes other functionalities
 import setup
 import deploy
 import db
 import config
+import django
 
 
 # Always run fabric from the repository root dir.
@@ -32,11 +33,3 @@ def production():
     env.settings = '%s.settings' % project
     env.PROJECT = Project('~', cname, project)
 
-
-@task
-def manage(command):
-    assert command
-    with settings(hide('warnings'), warn_only=True):
-        with cd(env.PROJECT.current):
-            with prefix('source bin/activate'):
-                run('python manage.py %s' % command)
