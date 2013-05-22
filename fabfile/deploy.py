@@ -20,6 +20,9 @@ def push(revision):
     run('mkdir -p %s' % release_dir)
     run('tar jxf %s -C %s' % (remote_archive, release_dir))
 
+    # cleanup
+    local('rm %s' % local_archive)
+
     return release_dir
 
 
