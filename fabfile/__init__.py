@@ -1,7 +1,7 @@
 # coding: utf-8
 from fabric.api import env, task, settings, hide, cd, run, prefix
 from unipath import Path
-from .helpers import timestamp, Project
+from .helpers import Project
 
 import setup
 import deploy
