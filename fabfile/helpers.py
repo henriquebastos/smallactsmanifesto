@@ -1,8 +1,12 @@
 # coding: utf-8
 from datetime import datetime
+from fabric.api import env
 
 
 class Project(dict):
+    """
+    Describes the remote directory structure for a project.
+    """
     def __init__(self, rootdir, appname, package):
         appdir = '%s/%s' % (rootdir, appname)
 
@@ -29,3 +33,15 @@ class Project(dict):
 
 def timestamp():
     return datetime.now().strftime("%Y-%m-%d-%Hh%Mm%Ss")
+
+
+def make_environment(name, domain):
+    """
+    Configure Fabric's environment according our conventions.
+    """
+    project = domain.partition('.')[0]
+    cname = '%s.%s' % (name, domain)
+    env.user = project
+    env.hosts = [cname]
+    env.settings = '%s.settings' % project
+    env.PROJECT = Project('~', cname, project)
