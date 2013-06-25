@@ -2,11 +2,11 @@
 from itertools import chain
 from dj_database_url import parse as db_url
 from unipath import Path
-from smallactsmanifesto.config import DjangoConfig
+from decouple import Config
 
 PROJECT_ROOT = Path(__file__).parent
 
-config = DjangoConfig(PROJECT_ROOT.child('settings.ini'))
+config = Config(PROJECT_ROOT.child('settings.ini'))
 
 DEBUG = config('DEBUG', default=False, type=bool)
 TEMPLATE_DEBUG = DEBUG
@@ -115,4 +115,3 @@ NOSE_ARGS = [
     '--nologcapture',
     '--rednose',
     ]
-
