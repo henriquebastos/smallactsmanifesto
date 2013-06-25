@@ -8,11 +8,11 @@ PROJECT_ROOT = Path(__file__).parent
 
 config = Config(PROJECT_ROOT.child('settings.ini'))
 
-DEBUG = config('DEBUG', default=False, type=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)
 TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
-    'default': config('DATABASE_URL', default='sqlite:///' + PROJECT_ROOT.child('database.db'), type=db_url)
+    'default': config('DATABASE_URL', default='sqlite:///' + PROJECT_ROOT.child('database.db'), cast=db_url)
 }
 
 SITE_ID = 1
@@ -63,10 +63,10 @@ ADMINS = (
 DEFAULT_FROM_EMAIL = 'admin@smallactsmanifesto.org'
 
 EMAIL_HOST = config('EMAIL_HOST', default='localhost')
-EMAIL_PORT = config('EMAIL_PORT', default=25, type=int)
+EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, type=bool)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)
 
 
 MIDDLEWARE_CLASSES = (
