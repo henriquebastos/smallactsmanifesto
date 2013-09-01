@@ -124,7 +124,7 @@ msgstr "Self-organization"
 
 #: core/templates/index.html:16
 msgid " - leaders emerge, but there should be no owners;"
-msgstr " - leaders emerge, but there should be no owners;"
+msgstr " - leaders come and go, but there should be no owners;"
 
 #: core/templates/index.html:17
 msgid "Example"
@@ -132,7 +132,7 @@ msgstr "Example"
 
 #: core/templates/index.html:17
 msgid " - that's how you must teach, live and learn;"
-msgstr " - that's how you must teach, live and learn;"
+msgstr " - that's how you teach, live and learn;"
 
 #: core/templates/index.html:18
 msgid "Consistency"
