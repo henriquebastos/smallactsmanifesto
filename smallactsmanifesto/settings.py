@@ -21,6 +21,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_L10N = True
 USE_TZ = True
 LANGUAGES = (
+    ('de', u'Deutsch'),
     ('en', u'English'),
     ('es', u'Español'),
     ('pt-br', u'Português'),

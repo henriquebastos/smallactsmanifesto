@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# eclipse, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: Small Acts Manifesto\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-03 14:31-0300\n"
+"PO-Revision-Date: 2013-10-15 10:58+0000\n"
+"Last-Translator: eclipse\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/smallactsmanifesto/language/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: core/templates/404.html:6
+msgid "Oops! Page not found."
+msgstr "Hoppla! Seite nicht gefunden."
+
+#: core/templates/404.html:8
+msgid "Sorry, but the requested page could not be found."
+msgstr "Leider konnte die angeforderte Seite nicht gefunden werden."
+
+#: core/templates/404.html:10 core/templates/500.html:10
+msgid "Back to home page"
+msgstr "Zurück zur Hauptseite"
+
+#: core/templates/500.html:6
+msgid "Outch! Server error."
+msgstr "Autsch! Server-Fehler."
+
+#: core/templates/500.html:8
+msgid "Sorry, but something veeeery bad happened."
+msgstr "Leider ist etwas sehr schlechtes passiert."
+
+#: core/templates/base.html:3
+msgid "Small Acts Manifesto"
+msgstr "Kleine Taten - Manifest"
+
+#: core/templates/base.html:4
+msgid "small acts, manifesto, small acts manifesto, principles, community"
+msgstr "kleine Taten, Manifest, kleine Taten - Manifest, Prinzipien, Gemeinschaft"
+
+#: core/templates/base.html:26
+msgid "Small Acts Make Great Revolutions"
+msgstr "Kleine Taten machen große Revoltuionen"
+
+#: core/templates/base.html:36
+msgid "some rights reserved."
+msgstr "einige Rechte vorbehalten."
+
+#: core/templates/community-badges.html:6
+msgid "Community badges"
+msgstr "Gemeinschaftsabzeichen"
+
+#: core/templates/community-badges.html:8
+msgid "Display one of these handy badges to promote the principles."
+msgstr "Zeigen Sie eines dieser praktischen Kennzeichen um für die Prinzipien zu werben."
+
+#: core/templates/community-badges.html:10
+msgid ""
+"Copy and paste the source below each image to link to "
+"<strong>smallactsmanifesto.org</strong>."
+msgstr "Kopieren und fügen Sie den Quellcode unter jedem Bild ein um <strong>smallactsmanifesto.org</strong> zu verlinken."
+
+#: core/templates/index.html:6
+msgid ""
+"We are discovering better ways of building communities by connecting people."
+msgstr "Wir entdecken bessere Wege beim Aufbauen von Gemeinschaften indem wir Menschen verbinden."
+
+#: core/templates/index.html:8
+msgid "Through this endeavor we have come to value:"
+msgstr "Durch dieses Bestreben haben wir folgendes zu schätzen gelernt:"
+
+#: core/templates/index.html:11
+msgid "Trust"
+msgstr "Vertrauen"
+
+#: core/templates/index.html:11
+msgid " - which must be respected and never put at risk;"
+msgstr " - welches zu achten ist und nie gefährdet werden darf;"
+
+#: core/templates/index.html:12
+msgid "Dialog"
+msgstr "Dialog"
+
+#: core/templates/index.html:12
+msgid " - is the way to establish a truly trustful relationship;"
+msgstr " - ist der Weg um eine wirklich vertrauensvolle Beziehung aufzubauen;"
+
+#: core/templates/index.html:13
+msgid "Personal Contact"
+msgstr "Persönlicher Kontakt"
+
+#: core/templates/index.html:13
+msgid " - the richest experience, not matched by any media or technology;"
+msgstr " - die reichste Erfahrung, nicht durch irgendwelche Medien oder Technologie beeinflusst;"
+
+#: core/templates/index.html:14
+msgid "Transparency"
+msgstr "Transparenz"
+
+#: core/templates/index.html:14
+msgid " - the mean to maintain a sustainable community;"
+msgstr " - das Mittel um eine nachhaltige Gemeinschaft aufrecht zu erhalten;"
+
+#: core/templates/index.html:15
+msgid "Diversity"
+msgstr "Vielfalt"
+
+#: core/templates/index.html:15
+msgid ""
+" - people have many interests, but if you need a label, label yourself as a "
+"human;"
+msgstr " - Menschen haben viele Interessen, aber wenn Sie eine Bezeichnung benötigen, bezeichnen Sie sich als Mensch;"
+
+#: core/templates/index.html:16
+msgid "Self-organization"
+msgstr "Selbstorganisation"
+
+#: core/templates/index.html:16
+msgid " - leaders emerge, but there should be no owners;"
+msgstr " - Führungskräfte gehen hervor, aber es sollten keine Eigentümer sein;"
+
+#: core/templates/index.html:17
+msgid "Example"
+msgstr "Beispiel"
+
+#: core/templates/index.html:17
+msgid " - that's how you must teach, live and learn;"
+msgstr " - das ist, wie Sie lehren, leben und lernen müssen;"
+
+#: core/templates/index.html:18
+msgid "Consistency"
+msgstr "Beständigkeit"
+
+#: core/templates/index.html:18
+msgid " - things take time, intensity is not always the answer;"
+msgstr " - Dinge brauchen Zeit, Intensität ist nicht immer die Antwort;"
+
+#: core/templates/index.html:19
+msgid "Give, give, give!"
+msgstr "Geben, geben, geben!"
+
+#: core/templates/index.html:19
+msgid " - you'll be impressed by how fast things will come back;"
+msgstr " - Sie werden beeindruckt sein, wie schnell Dinge wieder zurückkommen;"
+
+#: core/templates/index.html:20
+msgid "Do it!"
+msgstr "Tun Sie es!"
+
+#: core/templates/index.html:20
+msgid " - as simple as you can, just what is essential to pass it forward."
+msgstr " - so einfach wie möglich, nur was wichtig ist, um es nach vorne zu bringen."
+
+#: core/templates/index.html:23
+msgid ""
+"Together, these elements build the foundation of a <em>Small Act</em> "
+"capable of transforming people's lives."
+msgstr "Zusammen bilden diese Elemente die Grundlage einer <em>Kleinen Tat</ em>, die es vermag das Leben der Menschen zu verändern."
+
+#: core/templates/index.html:25
+#: signatures/templates/signatures/signup_form.html:6
+msgid "Get involved"
+msgstr "MItmachen"
+
+#: signatures/forms.py:9
+msgid "<em>Sorry about this!</em>Just a small act to prevent spam."
+msgstr "<em>Entschuldigen Sie dies!</em> Nur eine kleine Tat um Spam zu verhindern."
+
+#: signatures/models.py:10
+msgid "Your name to be shown on the signatories list."
+msgstr "Ihr Name, der auf der Unterzeichner-Liste angezeigt wird."
+
+#: signatures/models.py:11
+msgid ""
+"Your email is important so we can send you a confirmation email.<br />Your "
+"email will not be published or used in any other way."
+msgstr "Ihre E-Mail-Adresse ist wichtig, damit wir Ihnen eine Bestätigung per E-Mail schicken können.<br />Ihre E-Mail-Adresse wird nicht veröffentlicht oder in irgendeiner Weise verwendet."
+
+#: signatures/models.py:13
+msgid ""
+"<em>This field is optional.</em> An url that will be linked to you name on "
+"the signatories list."
+msgstr "<em>Dieses Feld ist optional.</em> Eine URL, die auf ihren Namen in der Unterzeichner-Liste verlinkt wird."
+
+#: signatures/models.py:15
+msgid "<em>This field is optional.</em> Where are you from?"
+msgstr "<em>Dieses Feld ist optional.</em> Wo kommen Sie her?"
+
+#: signatures/models.py:22
+msgid "Name"
+msgstr "Name"
+
+#: signatures/models.py:23
+msgid "E-mail"
+msgstr "E-Mail"
+
+#: signatures/models.py:24
+msgid "Url"
+msgstr "URL"
+
+#: signatures/models.py:25
+msgid "Location"
+msgstr "Herkunft"
+
+#: signatures/models.py:27
+msgid "Signed At"
+msgstr "Unterzeichnet in"
+
+#: signatures/models.py:28
+msgid "Is active?"
+msgstr "Ist aktiv?"
+
+#: signatures/models.py:30
+msgid "Confirmation Key"
+msgstr "Bestätigungs-Schlüssel"
+
+#: signatures/templates/signatures/signup_confirm.html:6
+msgid "Email confirmation succeeded!"
+msgstr "E-Mail-Bestätigung erfolgreich!"
+
+#: signatures/templates/signatures/signup_confirm.html:8
+msgid "Thank you for endorsing the Small Acts Manifesto."
+msgstr "Vielen Dank für die Unterzeichnung des kleinen Taten - Manifest."
+
+#: signatures/templates/signatures/signup_confirm.html:10
+msgid "We're glad you share with us the same set of principles."
+msgstr "Wir sind froh, dass Sie mit uns die gleichen Prinzipien teilen."
+
+#: signatures/templates/signatures/signup_confirm.html:15
+#: signatures/templates/signatures/signup_success.html:14
+msgid "Check out our community badges"
+msgstr "Schauen Sie sich unsere Gemeinschafts-Kennzeichen an"
+
+#: signatures/templates/signatures/signup_confirm.html:15
+#: signatures/templates/signatures/signup_success.html:14
+msgid "or"
+msgstr "oder"
+
+#: signatures/templates/signatures/signup_confirm.html:15
+#: signatures/templates/signatures/signup_success.html:14
+msgid "back to home page"
+msgstr "gehen Sie zurück zur Hauptseite"
+
+#: signatures/templates/signatures/signup_email_body.txt:2
+#, python-format
+msgid ""
+"\n"
+"Hello %(name)s!\n"
+"\n"
+"You have just signed up for the Small Acts Manifesto.\n"
+"\n"
+"To confirm your subscription please access the link:\n"
+"\n"
+"%(url)s\n"
+"\n"
+"All the best,\n"
+"--\n"
+"SmallActsManifesto.org\n"
+msgstr "\nHallo %(name)s!\n\nSie haben gerade das kleine Taten - Manifest unterzeichnet.\n\nUm Ihre Unterzeichnung zu bestätigen, klicken Sie bitte auf den folgenden Link:\n\n%(url)s\n\nMit freundlichen Grüßen,\n--\nSmallActsManifesto.org\n"
+
+#: signatures/templates/signatures/signup_email_subject.txt:1
+msgid "Small Acts make Great Revolutions"
+msgstr "Kleine Taten machen große Revoltuionen"
+
+#: signatures/templates/signatures/signup_form.html:49
+msgid "Send"
+msgstr "Senden"
+
+#: signatures/templates/signatures/signup_success.html:6
+msgid "You've just signed up!"
+msgstr "Sie haben gerade unterzeichnet!"
+
+#: signatures/templates/signatures/signup_success.html:8
+msgid "A message with a confirmation link was sent to your mail."
+msgstr "Eine Nachricht mit einem Bestätigungs-Link wurde an Ihre E-Mail-Adresse gesendet."
+
+#: signatures/templates/signatures/signup_success.html:10
+msgid ""
+"Please, do this last small act so we can list your name as a signatory."
+msgstr "Bitte tun Sie diese letzte kleine Tat, damit wir Ihren Namen als einen Unterzeichner auf die Liste setzen können."
+
+#: signatures/templates/signatures/signup_success.html:12
+msgid "Thank you!"
+msgstr "Vielen Dank!"
