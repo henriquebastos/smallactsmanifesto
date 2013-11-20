@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -187,7 +187,7 @@ msgstr "Your email is important so we can send you a confirmation email.<br />Yo
 msgid ""
 "<em>This field is optional.</em> An url that will be linked to you name on "
 "the signatories list."
-msgstr "<em>This field is optional.</em> An url that will be linked to you name on the signatories list."
+msgstr "<em>This field is optional.</em> An url that will be linked to your name on the signatories list."
 
 #: signatures/models.py:15
 msgid "<em>This field is optional.</em> Where are you from?"
