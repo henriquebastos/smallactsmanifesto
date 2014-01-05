@@ -113,9 +113,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .header, .content, .footer { max-width: 54em; margin:0 auto; padding: 0 0; }
 
  /* Header */
-.headerFrame {}
 .header {
-    min-height: 35.1em;
+  padding-bottom: 2em;
 }
 h1 {
     text-align: center;
@@ -123,7 +122,16 @@ h1 {
     margin: 0;
     padding: 0.642em 0;
 }
-
+h1 a,
+h1 a:link,
+h1 a:active,
+h1 a:visited {
+  display: inline-block;
+  border: none;
+}
+h1 a:hover {
+  opacity: .95;
+}
 h2 {
   color: #033649;
   font-style: italic;
@@ -153,7 +161,8 @@ h3 {
   border-bottom: 1px dotted rgb(205, 179, 128);
 }
 .principles {
-    max-width: 81em;
+  padding-top: 2em;
+  max-width: 81em;
 }
 .principles .members {
   text-align: center;
