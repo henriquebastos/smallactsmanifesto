@@ -9,4 +9,4 @@ dj-database-url==0.2.1
 django-recaptcha==0.0.6
 django-nose==1.1
 rednose==0.3
-django-decouple==1.1
+python-decouple==2.2
