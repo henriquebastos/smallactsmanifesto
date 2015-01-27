@@ -6,3 +6,4 @@ Unipath==0.2.1
 dj-database-url==0.2.1
 django-recaptcha==0.0.6
 python-decouple==2.2
+django-nose==1.1

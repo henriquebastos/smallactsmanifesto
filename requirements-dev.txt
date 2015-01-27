@@ -1,5 +1,4 @@
 -r requirements.txt
 model_mommy==0.8.1
 fabric==1.6.0
-django-nose==1.1
 rednose==0.3
