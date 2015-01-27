@@ -11,6 +11,7 @@ After you fork the repository, simply:
 git clone git@github.com:[YOUR NAME]/smallactsmanifesto.git
 cd smallactsmanifesto
 python bootstrap
+pip install -r requirements-dev.txt
 ```
 
 This will create [Virtualenv][v] for the project and install all the dependencies.
