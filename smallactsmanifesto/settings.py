@@ -22,6 +22,8 @@ LANGUAGES = (
     ('de', u'Deutsch'),
     ('en', u'English'),
     ('es', u'Español'),
+    ('fr', u'Français'),
+    ('it', u'Italiano'),
     ('pt-br', u'Português'),
 )
 LOCALE_PATHS = (
