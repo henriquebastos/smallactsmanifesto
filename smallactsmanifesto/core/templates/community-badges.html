@@ -14,7 +14,7 @@
 <p><img src="{{ STATIC_URL }}images/smallacts-badge-{{ b.sufix }}.png" alt="{%  trans "Small Acts Manifesto" %}" /> <strong>{{ b.size }}</strong> {{ b.name }}</p>
 </div>
 
-<textarea>&lt;a href="http://smallactsmanifesto.org" title="{{ title }}"&gt;&lt;img src="http://smallactsmanifesto.org{{ STATIC_URL }}images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="{{ title }}" /&gt;&lt;/a&gt;</textarea>
+<textarea>&lt;a target="_blank" href="http://smallactsmanifesto.org" title="{{ title }}"&gt;&lt;img src="http://smallactsmanifesto.org{{ STATIC_URL }}images/smallacts-badge-{{ b.sufix }}.png" style="border: none;" alt="{{ title }}" /&gt;&lt;/a&gt;</textarea>
 {% endfor %}
 
 {% endblock content %}
