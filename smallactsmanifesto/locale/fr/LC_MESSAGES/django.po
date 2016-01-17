@@ -3,200 +3,200 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Henrique Bastos <henrique@bastos.net>, 2013
+# Adrien Giboire <adrien.giboire+transifex@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Small Acts Manifesto\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-03 14:31-0300\n"
 "PO-Revision-Date: 2013-11-20 09:48+0000\n"
-"Last-Translator: Henrique Bastos <henrique@bastos.net>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/henriquebastos/smallactsmanifesto/language/pt_BR/)\n"
+"Last-Translator: Adrien Giboire <adrien.giboire+transifex@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/henriquebastos/smallactsmanifesto/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
+"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: core/templates/404.html:6
 msgid "Oops! Page not found."
-msgstr "Opa! Página não encontrada."
+msgstr "Oups ! Page introuvable."
 
 #: core/templates/404.html:8
 msgid "Sorry, but the requested page could not be found."
-msgstr "Desculpe, mas não encontramos a página solicitada."
+msgstr "Désolé mais la page demandée ne peut être trouvée."
 
 #: core/templates/404.html:10 core/templates/500.html:10
 msgid "Back to home page"
-msgstr "Voltar ao início"
+msgstr "Retour à la page d'accueil"
 
 #: core/templates/500.html:6
 msgid "Outch! Server error."
-msgstr "Eita! Erro no servidor."
+msgstr "Aïe ! Erreur serveur."
 
 #: core/templates/500.html:8
 msgid "Sorry, but something veeeery bad happened."
-msgstr "Desculpe, mas algo muiiiito errado aconteceu."
+msgstr "Désolé mais quelque chose de vraaaaaaiment mal vient de se passer."
 
 #: core/templates/base.html:3
 msgid "Small Acts Manifesto"
-msgstr "Small Acts Manifesto"
+msgstr "Manifeste Small Acts"
 
 #: core/templates/base.html:4
 msgid "small acts, manifesto, small acts manifesto, principles, community"
-msgstr "pequenos atos, manifesto, manifesto dos pequenos atos, princípios, comunidade"
+msgstr "small acts, manifeste, manifeste small acts, principes, communauté"
 
 #: core/templates/base.html:26
 msgid "Small Acts Make Great Revolutions"
-msgstr "Pequenas Ações geram Grandes Revoluções"
+msgstr "Small Acts fait de grandes révolutions"
 
 #: core/templates/base.html:36
 msgid "some rights reserved."
-msgstr "alguns direitos reservados."
+msgstr "droits protégés."
 
 #: core/templates/community-badges.html:6
 msgid "Community badges"
-msgstr "Logos da Comunidade"
+msgstr "Badges communautaires"
 
 #: core/templates/community-badges.html:8
 msgid "Display one of these handy badges to promote the principles."
-msgstr "Use uma dessas logos para promover os princípios no seu site."
+msgstr "Affiche un de ces badges pour promouvoir les principes."
 
 #: core/templates/community-badges.html:10
 msgid ""
 "Copy and paste the source below each image to link to "
 "<strong>smallactsmanifesto.org</strong>."
-msgstr "Copie e cole o código das imagens abaixo para divulgar o <strong>smallactsmanifesto.org</strong>."
+msgstr "Copier et coller la source qui suit chaque image pour créer un lien vers <strong>smallactsmanifesto.org</strong>."
 
 #: core/templates/index.html:6
 msgid ""
 "We are discovering better ways of building communities by connecting people."
-msgstr "Estamos descobrindo melhores formas de construir comunidades conectando pessoas."
+msgstr "Nous sommes en train de découvrir de nouvelles façons de construire des communautés en connectant les gens entre eux."
 
 #: core/templates/index.html:8
 msgid "Through this endeavor we have come to value:"
-msgstr "Através desta busca, aprendemos a valorizar:"
+msgstr "Au travers de cette tentative, nous sommes arrivé à faire valoir :"
 
 #: core/templates/index.html:11
 msgid "Trust"
-msgstr "Confiança"
+msgstr "La confiance"
 
 #: core/templates/index.html:11
 msgid " - which must be respected and never put at risk;"
-msgstr " - que deve ser respeitada e nunca ameaçada;"
+msgstr "- qui doit être respectée et jamais mise en danger;"
 
 #: core/templates/index.html:12
 msgid "Dialog"
-msgstr "Diálogo"
+msgstr "Le dialogue"
 
 #: core/templates/index.html:12
 msgid " - is the way to establish a truly trustful relationship;"
-msgstr " - é a maneira de construir uma verdadeira relação de confiança;"
+msgstr "- qui est la façon d'établir une véritable relation de confiance;"
 
 #: core/templates/index.html:13
 msgid "Personal Contact"
-msgstr "Contato Pessoal"
+msgstr "Le contact personnel"
 
 #: core/templates/index.html:13
 msgid " - the richest experience, not matched by any media or technology;"
-msgstr " - é experiência mais rica existente, insuperável por qualquer mídia ou tecnologia;"
+msgstr "- l'expérience la plus riche, atteinte par aucun média ou technologie;"
 
 #: core/templates/index.html:14
 msgid "Transparency"
-msgstr "Transparência"
+msgstr "La transparence"
 
 #: core/templates/index.html:14
 msgid " - the mean to maintain a sustainable community;"
-msgstr " - é o meio para manter uma comunidade sustentável;"
+msgstr "- le moyen de maintenir une communauté durable;"
 
 #: core/templates/index.html:15
 msgid "Diversity"
-msgstr "Diversidade"
+msgstr "La diversité"
 
 #: core/templates/index.html:15
 msgid ""
 " - people have many interests, but if you need a label, label yourself as a "
 "human;"
-msgstr " - se você precisa de um rótulo, defina-se como Humano;"
+msgstr "- les gens ont beaucoup d'intérêts mais si vous avez besoin d'une étiquette, désignez vous comme un humain;"
 
 #: core/templates/index.html:16
 msgid "Self-organization"
-msgstr "Auto-organização"
+msgstr "L'auto-organisation"
 
 #: core/templates/index.html:16
 msgid " - leaders emerge, but there should be no owners;"
-msgstr " - líderes emergem, mas não devem existir donos;"
+msgstr "- les leaders émergent mais il ne devrait pas y avoir de propriétaires;"
 
 #: core/templates/index.html:17
 msgid "Example"
-msgstr "Exemplo"
+msgstr "L'exemple"
 
 #: core/templates/index.html:17
 msgid " - that's how you must teach, live and learn;"
-msgstr " - é como você deve ensinar, viver e aprender;"
+msgstr "- la façon dont vous devez enseigner, vivre et apprendre;"
 
 #: core/templates/index.html:18
 msgid "Consistency"
-msgstr "Consistência"
+msgstr "La consistence"
 
 #: core/templates/index.html:18
 msgid " - things take time, intensity is not always the answer;"
-msgstr " - tudo tem seu tempo, intensidade nem sempre é a resposta;"
+msgstr "- les choses prennent du temps, l'intensité n'est pas toujours la réponse;"
 
 #: core/templates/index.html:19
 msgid "Give, give, give!"
-msgstr "Doe, doe, doe!"
+msgstr "Donnez, donnez, donnez !"
 
 #: core/templates/index.html:19
 msgid " - you'll be impressed by how fast things will come back;"
-msgstr " - você se surpreenderá como isso retorna rápido;"
+msgstr "- vous serez impressionnés par la vitesse à laquelle les choses vous sont rendues;"
 
 #: core/templates/index.html:20
 msgid "Do it!"
-msgstr "Faça!"
+msgstr "Faîtes le !"
 
 #: core/templates/index.html:20
 msgid " - as simple as you can, just what is essential to pass it forward."
-msgstr " - o mais simples possível, apenas o essencial para passar adiante."
+msgstr "- aussi simple que vous pouvez, juste l'essentiel qui vous permet d'avancer;"
 
 #: core/templates/index.html:23
 msgid ""
 "Together, these elements build the foundation of a <em>Small Act</em> "
 "capable of transforming people's lives."
-msgstr "Juntos, estes elementos constituem os fundamentos de um <em>Pequeno Ato</em> capaz de transformar vidas."
+msgstr "Ensemble, ces éléments construisent la fondation <em>Small Act</em>, capable de transformer la vie des gens."
 
 #: core/templates/index.html:25
 #: signatures/templates/signatures/signup_form.html:6
 msgid "Get involved"
-msgstr "Envolva-se"
+msgstr "Impliquez vous"
 
 #: signatures/forms.py:9
 msgid "<em>Sorry about this!</em>Just a small act to prevent spam."
-msgstr "<em>Sinto muito por isso!</em>Apenas uma pequena ação para evitar spam."
+msgstr "<em>Désolé pour ça !</em> Juste un petit quelque chose pour empêcher le spam."
 
 #: signatures/models.py:10
 msgid "Your name to be shown on the signatories list."
-msgstr "Seu nome para ser exibido na lista de signatários."
+msgstr "Votre nom à afficher dans la liste des signatures."
 
 #: signatures/models.py:11
 msgid ""
 "Your email is important so we can send you a confirmation email.<br />Your "
 "email will not be published or used in any other way."
-msgstr "Seu email é importante para lhe enviarmos um email de confirmação.<br />Ele não será exibido e será usado apenas para isso."
+msgstr "Votre email est important pour que nous puissions vous envoyer un email de confirmation.<br />Votre email ne sera pas publié ou utilisé à d'autres fins."
 
 #: signatures/models.py:13
 msgid ""
 "<em>This field is optional.</em> An url that will be linked to you name on "
 "the signatories list."
-msgstr "<em>Este campo é opcional.</em> Uma url que será referenciado no seu nome na lista de signatários"
+msgstr "<em>Ce champ est facultatif.</em> Une URL qui sera liée à votre nom dans la liste des signatures."
 
 #: signatures/models.py:15
 msgid "<em>This field is optional.</em> Where are you from?"
-msgstr "<em>Este campo é opcional.</em> De onde você é?"
+msgstr "<em>Ce champ est facultatif.</em> D'où venez vous ?"
 
 #: signatures/models.py:22
 msgid "Name"
-msgstr "Nome"
+msgstr "Nom"
 
 #: signatures/models.py:23
 msgid "E-mail"
@@ -204,40 +204,40 @@ msgstr "E-mail"
 
 #: signatures/models.py:24
 msgid "Url"
-msgstr "Url"
+msgstr "URL"
 
 #: signatures/models.py:25
 msgid "Location"
-msgstr "Localidade"
+msgstr "Adresse"
 
 #: signatures/models.py:27
 msgid "Signed At"
-msgstr "Assinado em"
+msgstr "Signé le"
 
 #: signatures/models.py:28
 msgid "Is active?"
-msgstr "É ativo?"
+msgstr "Est actif ?"
 
 #: signatures/models.py:30
 msgid "Confirmation Key"
-msgstr "Chave de Confirmação"
+msgstr "Clé de confirmation"
 
 #: signatures/templates/signatures/signup_confirm.html:6
 msgid "Email confirmation succeeded!"
-msgstr "Email confirmado com sucesso!"
+msgstr "Confirmation de l'email réussie !"
 
 #: signatures/templates/signatures/signup_confirm.html:8
 msgid "Thank you for endorsing the Small Acts Manifesto."
-msgstr "Obrigado por endossar o Small Acts Manifesto."
+msgstr "Merci d'avoir signer le manifeste Small Acts."
 
 #: signatures/templates/signatures/signup_confirm.html:10
 msgid "We're glad you share with us the same set of principles."
-msgstr "Estamos felizes por você também compartilhar destes princípios."
+msgstr "Nous sommes heureux que vous partagiez avec nous les mêmes principes."
 
 #: signatures/templates/signatures/signup_confirm.html:15
 #: signatures/templates/signatures/signup_success.html:14
 msgid "Check out our community badges"
-msgstr "Veja nossas logos"
+msgstr "Jetez un œil à nos badges communautaires."
 
 #: signatures/templates/signatures/signup_confirm.html:15
 #: signatures/templates/signatures/signup_success.html:14
@@ -247,7 +247,7 @@ msgstr "ou"
 #: signatures/templates/signatures/signup_confirm.html:15
 #: signatures/templates/signatures/signup_success.html:14
 msgid "back to home page"
-msgstr "volte ao início"
+msgstr "retournez à la page d'accueil"
 
 #: signatures/templates/signatures/signup_email_body.txt:2
 #, python-format
@@ -264,29 +264,29 @@ msgid ""
 "All the best,\n"
 "--\n"
 "SmallActsManifesto.org\n"
-msgstr "\nOlá %(name)s!\n\nVocê acabou de assinar o Small Acts Manifesto.\n\nPara confirmar sua assinatura por favor acesse o link:\n\n%(url)s\n\nMuito obrigado,\n--\nSmallActsManifesto.org\n"
+msgstr "\nBonjour %(name)s!\n\nVous venez de signer le manifeste Small Acts.\n\nPour confirmer votre inscription, veuillez suivre le lien :\n\n%(url)s\n\nAmitiés,\n--\nSmallActsManifesto.org\n"
 
 #: signatures/templates/signatures/signup_email_subject.txt:1
 msgid "Small Acts make Great Revolutions"
-msgstr "Pequenas Ações geram Grandes Revoluções"
+msgstr "Small Acts fait de grandes révolutions"
 
 #: signatures/templates/signatures/signup_form.html:49
 msgid "Send"
-msgstr "Enviar"
+msgstr "Envoyer"
 
 #: signatures/templates/signatures/signup_success.html:6
 msgid "You've just signed up!"
-msgstr "Assinatura recebida!"
+msgstr "Vous êtes inscrit !"
 
 #: signatures/templates/signatures/signup_success.html:8
 msgid "A message with a confirmation link was sent to your mail."
-msgstr "Acabamos de lhe enviar um email com um link para confirmar sua assinatura."
+msgstr "Un message avec un lien de confirmation a été envoyé à votre boite mail."
 
 #: signatures/templates/signatures/signup_success.html:10
 msgid ""
 "Please, do this last small act so we can list your name as a signatory."
-msgstr "Por favor, faça esta última pequena ação para que possamos listar o seu nome."
+msgstr "S'il vous plait, faîtes ce dernier petit geste pour que nous puissions lister votre nom comme signature."
 
 #: signatures/templates/signatures/signup_success.html:12
 msgid "Thank you!"
-msgstr "Muito obrigado!"
+msgstr "Merci !"

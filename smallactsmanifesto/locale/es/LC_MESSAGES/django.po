@@ -1,17 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
+# Diego Ubirajara <xamanblues10@gmail.com>, 2016
 # Henrique Bastos <henrique@bastos.net>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Small Acts Manifesto\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-04-03 14:31-0300\n"
-"PO-Revision-Date: 2013-05-15 15:08+0000\n"
-"Last-Translator: Henrique Bastos <henrique@bastos.net>\n"
-"Language-Team: Spanish (http://www.transifex.com/projects/p/smallactsmanifesto/language/es/)\n"
+"PO-Revision-Date: 2016-01-15 23:14+0000\n"
+"Last-Translator: Diego Ubirajara <xamanblues10@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/henriquebastos/smallactsmanifesto/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -232,7 +233,7 @@ msgstr "Gracias por apoyar al Small Acts Manifesto."
 
 #: signatures/templates/signatures/signup_confirm.html:10
 msgid "We're glad you share with us the same set of principles."
-msgstr "Estamos contentos de que usted comparte con nosotros principios."
+msgstr "Estamos contentos de que usted comparte con nosotros los mismos principios."
 
 #: signatures/templates/signatures/signup_confirm.html:15
 #: signatures/templates/signatures/signup_success.html:14
