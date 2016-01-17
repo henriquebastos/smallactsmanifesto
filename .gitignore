@@ -16,3 +16,7 @@ local_settings.py
 tmp
 smallactsmanifesto/settings.ini
 .noseids
+.tx
+.sam
+.python-version
+translations/
