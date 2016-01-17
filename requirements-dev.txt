@@ -2,3 +2,4 @@
 model_mommy==0.8.1
 fabric==1.6.0
 rednose==0.3
+transifex-client==0.11
