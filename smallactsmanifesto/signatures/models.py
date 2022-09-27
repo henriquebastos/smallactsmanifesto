@@ -33,7 +33,7 @@ class Signatory(models.Model):
         ordering = ['name', 'signed_at']
 
     def __unicode__(self):
-        return "%s - %s" % (self.name, self.email)
+        return f"{self.name} - {self.email}"
 
     def save(self, *args, **kwargs):
         # create a confirmation_key
@@ -48,4 +48,4 @@ class Signatory(models.Model):
     def get_confirm_url(self):
         site = Site.objects.get_current()
         path = r('signatures:confirm', args=[self.confirmation_key])
-        return u"http://%s%s" % (site.domain, path)
+        return f"http://{site.domain}{path}"

@@ -8,19 +8,18 @@ class Project(dict):
     Describes the remote directory structure for a project.
     """
     def __init__(self, rootdir, appname, package):
-        appdir = '%s/%s' % (rootdir, appname)
+        appdir = f'{rootdir}/{appname}'
 
         super(Project, self).__init__(
-            appdir   = appdir,
-            releases = '%s/releases' % appdir,
-            current  = '%s/releases/current' % appdir,
-            share    = '%s/share' % appdir,
-            media    = '%s/share/media' % appdir,
-            settings = '%s/share/settings.ini' % appdir,
-            tmp      = '%s/tmp' % appdir,
-            logs     = '%s/logs/%s' % (rootdir, appname),
-
-            package  = package,
+            appdir=appdir,
+            releases=f'{appdir}/releases',
+            current=f'{appdir}/releases/current',
+            share=f'{appdir}/share',
+            media=f'{appdir}/share/media',
+            settings=f'{appdir}/share/settings.ini',
+            tmp=f'{appdir}/tmp',
+            logs=f'{rootdir}/logs/{appname}',
+            package=package,
         )
 
     def __getattr__(self, item):
@@ -40,8 +39,8 @@ def make_environment(name, domain):
     Configure Fabric's environment according our conventions.
     """
     project = domain.partition('.')[0]
-    cname = '%s.%s' % (name, domain)
+    cname = f'{name}.{domain}'
     env.user = project
     env.hosts = [cname]
-    env.settings = '%s.settings' % project
+    env.settings = f'{project}.settings'
     env.PROJECT = Project('~', cname, project)

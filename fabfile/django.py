@@ -8,4 +8,4 @@ def manage(command):
     with settings(hide('warnings'), warn_only=True):
         with cd(env.PROJECT.current):
             with prefix('source bin/activate'):
-                run('python manage.py %s' % command)
+                run(f'python manage.py {command}')

@@ -9,19 +9,19 @@ def push(revision):
     """
     Push the code to the right place on the server.
     """
-    rev = local('git rev-parse %s' % revision, capture=True)
-    local_archive = Path('%s.tar.bz2' % rev)
+    rev = local(f'git rev-parse {revision}', capture=True)
+    local_archive = Path(f'{rev}.tar.bz2')
     remote_archive = Path(env.PROJECT.tmp, local_archive.name)
 
-    local('git archive --format=tar %s | bzip2 -c > %s' % (rev, local_archive))
+    local(f'git archive --format=tar {rev} | bzip2 -c > {local_archive}')
     put(local_archive, remote_archive)
 
     release_dir = Path(env.PROJECT.releases, timestamp())
-    run('mkdir -p %s' % release_dir)
-    run('tar jxf %s -C %s' % (remote_archive, release_dir))
+    run(f'mkdir -p {release_dir}')
+    run(f'tar jxf {remote_archive} -C {release_dir}')
 
     # cleanup
-    local('rm %s' % local_archive)
+    local(f'rm {local_archive}')
 
     return release_dir
 
@@ -36,7 +36,7 @@ def build(release_dir):
         release_media = Path(release_dir, env.PROJECT.package, 'media')
         release_settings = Path(release_dir, env.PROJECT.package, 'settings.ini')
 
-        run('ln -s %s %s' % (env.PROJECT.settings, release_settings))
+        run(f'ln -s {env.PROJECT.settings} {release_settings}')
         run("python bootstrap")
 
         with prefix('source bin/activate'):
@@ -44,9 +44,9 @@ def build(release_dir):
             run("python manage.py collectstatic --noinput --settings=%(settings)s" % env)
 
         run('mkdir -p public')
-        run('ln -s %s public/' % release_static)
-        run('ln -s %s public/' % env.PROJECT.media)
-        run('ln -s %s %s' % (env.PROJECT.media, release_media))
+        run(f'ln -s {release_static} public/')
+        run(f'ln -s {env.PROJECT.media} public/')
+        run(f'ln -s {env.PROJECT.media} {release_media}')
 
 
 @task
@@ -56,7 +56,7 @@ def release(release_dir):
     """
     with cd(env.PROJECT.releases):
         run('rm -rf current')
-        run('ln -s %s current' % release_dir)
+        run(f'ln -s {release_dir} current')
 
 
 @task

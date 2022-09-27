@@ -108,11 +108,11 @@ RECAPTCHA_USE_SSL = True
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--match=^(must|ensure|should|test|it_should)',
-    '--where=%s' % PROJECT_ROOT,
-    '--id-file=%s' % PROJECT_ROOT.child('.noseids'),
+    f'--where={PROJECT_ROOT}',
+    f"--id-file={PROJECT_ROOT.child('.noseids')}",
     '--all-modules',
     '--with-id',
     '--verbosity=1',
     '--nologcapture',
     '--rednose',
-    ]
+]

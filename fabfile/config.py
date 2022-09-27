@@ -21,8 +21,8 @@ def set(option, value):
     """
     option = option.lower()
 
-    before = '%s = .*' % option
-    after = '%s = %s' % (option, value)
+    before = f'{option} = .*'
+    after = f'{option} = {value}'
 
     if contains(env.PROJECT.settings, before):
         sed(env.PROJECT.settings, before, after, backup='')
@@ -40,14 +40,16 @@ def remove(option):
     """
     option = option.lower()
 
-    before = '%s = .*' % option
-    after = ''
-
+    before = f'{option} = .*'
     if contains(env.PROJECT.settings, before):
+        after = ''
+
         sed(env.PROJECT.settings, before, after, backup='')
 
     # sanity check
-    assert not contains(env.PROJECT.settings, '%s.*' % option), 'Config found: "%s"' % option
+    assert not contains(env.PROJECT.settings, f'{option}.*'), (
+        'Config found: "%s"' % option
+    )
 
 
 @task

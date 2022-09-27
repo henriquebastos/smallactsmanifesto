@@ -15,11 +15,14 @@ def dumpdata(apps_or_models=''):
     '''
     require('PROJECT', provided_by=['stage', 'production'])
 
-    remote_file = '%s/%s-%s.json.bz2' % (env.PROJECT.tmp, env.host, timestamp())
+    remote_file = f'{env.PROJECT.tmp}/{env.host}-{timestamp()}.json.bz2'
 
     with cd(env.PROJECT.current):
         with prefix('source bin/activate'):
-            run('python manage.py dumpdata %s --indent 4 | bzip2 -c  > %s' % (apps_or_models, remote_file))
+            run(
+                f'python manage.py dumpdata {apps_or_models} --indent 4 | bzip2 -c  > {remote_file}'
+            )
+
             get(remote_file, os.getcwd())
 
 
@@ -41,10 +44,10 @@ def loaddata(local_file):
 
     with cd(env.PROJECT.current):
         if '.bz2' in remote_file:
-            run('bunzip2 %s' % remote_file)
+            run(f'bunzip2 {remote_file}')
             remote_file = remote_file.replace('.bz2', '')
 
         with prefix('source bin/activate'):
-            run('python manage.py loaddata %s' % remote_file)
+            run(f'python manage.py loaddata {remote_file}')
 
-    run('rm %s' % remote_file)
+    run(f'rm {remote_file}')
